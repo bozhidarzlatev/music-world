@@ -35,6 +35,8 @@ nav {
 
 
 .main  img {
+    fill: black;
+    color: black;
     width: 50px;
     aspect-ratio: 1/1;
 }

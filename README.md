@@ -24,3 +24,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - Added Categories component - only HTML and CSS
     - Added basic Login and Register components - only HTML and CSS
     - Added basic Catalog components - only HTML and CSS
+    - Added basic Details components - only HTML and CSS

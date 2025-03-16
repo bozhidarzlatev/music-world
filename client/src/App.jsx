@@ -8,6 +8,7 @@ import './App.css'
 import Login from './components/authentification/login/Login'
 import Register from './components/authentification/register/Register'
 import Catalog from './components/catalog/Catalog'
+import Details from './details/Details'
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
               <Route index element={<Home />}/>
               <Route path="/categories" element={<Categories />}/>
               <Route path="/categories/:categoriId" element={<Catalog />}/>
+              <Route path="/categories/:categoriId/:itemId/details" element={<Details />}/>
               <Route path="/login" element={<Login />}/>
               <Route path="/register" element={<Register />}/>
             </Routes>
