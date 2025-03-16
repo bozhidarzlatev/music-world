@@ -1,10 +1,15 @@
-import './App.css'
+import { useState } from 'react'
+
 
 function App() {
+  const [count, setCount] = useState(0)
 
   return (
     <>
-  <h1>Music world</h1>
+    <div className="container">
+      
+      <h1>Music World</h1>
+    </div>
     </>
   )
 }
