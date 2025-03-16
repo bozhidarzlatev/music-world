@@ -11,7 +11,7 @@ export default function Header() {
                 <p>Music World</p>
             </div>
             <nav>
-                <Link to="/catalog">Browse all</Link>
+                <Link to="/categories">Browse all</Link>
                 <div className={styles.user}>
 
                     <Link to="/create">Add</Link>

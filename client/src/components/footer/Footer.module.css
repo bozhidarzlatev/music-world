@@ -1,27 +1,21 @@
 .footer {
   background: #ffc170;
-    color: black;
-    text-align: center; 
-    padding: 1em 0; 
-    font-size: 1em; 
-    /* position: fixed;
+  color: black;
+  text-align: center;
+  padding: 1em 0;
+  font-size: 1em;
+  /* position: fixed;
     bottom: 0;
     left: 0;
     width: 100%;
     z-index: 1; */
-  }
-  
-  .footer p {
-    margin: 0; 
-    font-size: 1em; 
-  }
-  
-  .footer a {
-    color: #ff9900; /* Highlighted color for links */
-    text-decoration: none; /* Remove underline */
-  }
-  
-  .footer a:hover {
-    text-decoration: underline; /* Underline on hover */
-  }
-  
+}
+
+.footer p {
+  margin: 0;
+  font-size: 1em;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
