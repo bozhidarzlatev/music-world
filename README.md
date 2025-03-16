@@ -22,3 +22,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - Added bacis Home component - only HTML and CSS
     - Added basic Footer component - only HTML and CSS
     - Added Categories component - only HTML and CSS
+    - Added basic Login and Register components - only HTML and CSS
