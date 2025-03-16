@@ -15,3 +15,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
 
 # Development steps
     - Add basic summary
+    - Add SoftUni Practice server
