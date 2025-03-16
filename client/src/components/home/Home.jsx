@@ -25,8 +25,11 @@ export default function Home() {
             <hr />
             <div className={styles["featured-products"]}>
                 <div className={styles["products"]}>
+
                     <Link className={styles["top-rated"]} to={`/categories/category/id/details`}>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI-LcNlicYGdnG4wZYXQYiMRm7J6GD9tfd4Q&s" />
+                        <div className={styles.img}>
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI-LcNlicYGdnG4wZYXQYiMRm7J6GD9tfd4Q&s" />
+                        </div>
                         <p>Rating</p>
                         <p>Product 1</p>
                         <p>Category</p>
@@ -38,13 +41,13 @@ export default function Home() {
                 </div>
                 <hr />
                 <div className={styles["products"]}>
-                <Link className={styles["recently-added"]} to={`/categories/category/id/details`}>
+                    <Link className={styles["recently-added"]} to={`/categories/category/id/details`}>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI-LcNlicYGdnG4wZYXQYiMRm7J6GD9tfd4Q&s" />
                         <p>Rating</p>
                         <p>Product 1</p>
                         <p>Category</p>
                         <p>Price</p>
-                    </Link>                  
+                    </Link>
                     <Link className={styles["recently-added"]} to={`/categories/category/id/details`}>
                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI-LcNlicYGdnG4wZYXQYiMRm7J6GD9tfd4Q&s" />
                         <p>Rating</p>
