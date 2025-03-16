@@ -1,0 +1,30 @@
+
+header > div > p {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+header , .main, nav, .user, .guest {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+    text-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header {
+    padding: 0.5em;
+    background: #ffc170;
+}
+nav{
+    flex-grow: 1;
+    justify-content: space-evenly;
+
+}
+
+
+.main > img {
+    width: 50px;
+    aspect-ratio: 1/1;
+}

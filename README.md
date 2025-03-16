@@ -18,3 +18,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - Add SoftUni Practice server
     - Set React and clean default views        
     - Add basic reset.css, Site Icon, fonts and etc.
+    - Added basic Header component - only HTML and CSS
