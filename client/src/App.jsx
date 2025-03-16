@@ -1,17 +1,23 @@
-import { useState } from 'react'
-import Header from './components/header/Header'
+import { Routes, Route } from 'react-router'
 
+import Header from './components/header/Header'
+import Home from './components/home/Home'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-    <div className="container">
-      <Header />
-      
-      <h1>Music World</h1>
-    </div>
+      <div id="container">
+        <Header />
+
+        <main id="main-contennt" >
+
+            <Routes>
+              <Route index element={<Home />}/>
+            </Routes>
+
+        </main>
+      </div>
     </>
   )
 }

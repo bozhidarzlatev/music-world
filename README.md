@@ -19,3 +19,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - Set React and clean default views        
     - Add basic reset.css, Site Icon, fonts and etc.
     - Added basic Header component - only HTML and CSS
+    - Added bacis Home component - only HTML and CSS

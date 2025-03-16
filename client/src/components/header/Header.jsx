@@ -5,7 +5,9 @@ export default function Header() {
     return (
         <header>
             <div className={styles.main}>
-                <img src="/logo.svg" alt="" />
+                <Link to="/">
+                <img src="/logo.svg" alt="Music World Logo" />
+                </Link>
                 <p>Music World</p>
             </div>
             <nav>

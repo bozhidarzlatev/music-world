@@ -14,17 +14,28 @@ header , .main, nav, .user, .guest {
 }
 
 header {
+    width: 100%;
     padding: 0.5em;
     background: #ffc170;
 }
-nav{
-    flex-grow: 1;
-    justify-content: space-evenly;
 
+.main {
+    justify-content: start;
+}
+.main {
+    flex-basis: 45%; 
+}
+
+nav {
+    flex-basis: 55%; 
+    
 }
 
 
-.main > img {
+
+
+.main  img {
     width: 50px;
     aspect-ratio: 1/1;
 }
+
