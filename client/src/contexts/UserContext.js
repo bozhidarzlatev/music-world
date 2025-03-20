@@ -3,7 +3,9 @@ import { createContext } from "react";
 
 export const UserContext = createContext({
         email: '',
-        username: 'Admin',
+        firstName: '',
+        lastName: '',
+        avatar: '',
         _id: '',
         accessToken: '',
         userLoginHandler: () => null

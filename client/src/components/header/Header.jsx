@@ -4,7 +4,7 @@ import { Link } from "react-router"
 import { UserContext } from "../../contexts/UserContext"
 
 export default function Header() {
-    const { username } = useContext(UserContext)
+    const { email } = useContext(UserContext)
 
     return (
         <header>
@@ -17,9 +17,9 @@ export default function Header() {
             <nav>
                 <Link to="/categories">Browse all</Link>
 
-                {username ? (
+                {email ? (
                 <div className={styles.user}>
-                    <span>Weclome, {username}</span>
+                    <span>Weclome, {email}</span>
                     <Link to="/create">Add</Link>
                     <Link to="/profile">Profile</Link>
                     <Link to="/logout">Logout</Link>
