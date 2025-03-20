@@ -27,3 +27,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - Added basic Details components - only HTML and CSS
     - Login Functionality added
     - Context added
+    - Dynamic Header navigarion added
