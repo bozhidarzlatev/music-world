@@ -5,7 +5,7 @@ import { useNavigate } from "react-router";
 
 export default function Register() {
   const { register } = useRegister();
-  const { userLoginHandler } = useContext(UserContext)
+  const { userDateHandler } = useContext(UserContext)
   const navigate = useNavigate()
 
 
@@ -28,9 +28,10 @@ export default function Register() {
       lastName: userData.lastName,
       email: userData.email,
       _id: userData._id,
-      avatar: userData.avatar
+      avatar: userData.avatar,
+      accessToken: userData.accessToken
     }
-    userLoginHandler(regUserData)
+    userDateHandler(regUserData)
     navigate('/')
 
   }

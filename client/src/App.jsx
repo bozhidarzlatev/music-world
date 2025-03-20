@@ -11,18 +11,22 @@ import Catalog from './components/catalog/Catalog'
 import Details from './details/Details'
 import { useState } from 'react'
 import { UserContext } from './contexts/UserContext'
+import Logout from './components/authentification/logout/Logout'
 
 
 function App() {
   const [userData, setUserData] = useState({})
 
-  const userLoginHandler = (data) => {
+  const userDateHandler = (data) => {
+    
     setUserData(data);
   };
 
+
+
   return (
     <>
-      <UserContext.Provider value={{...userData, userLoginHandler}}>
+      <UserContext.Provider value={{...userData, userDateHandler}}>
 
         <div id="container">
           <Header />
@@ -36,6 +40,7 @@ function App() {
               <Route path="/categories/:categoriId/:itemId/details" element={<Details />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
+              <Route path="/logout" element={<Logout />} />
             </Routes>
 
           </main>

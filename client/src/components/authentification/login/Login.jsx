@@ -7,15 +7,25 @@ import { UserContext } from "../../../contexts/UserContext";
 export default function Login() {
   const { login } = useLogin()
   const navigate = useNavigate()
-  const {userLoginHandler} = useContext(UserContext)
+  const {userDateHandler} = useContext(UserContext)
 
   const loginHandler = async (_, formData) => {
     const userData = Object.fromEntries(formData)
     
     const authData = await login(userData.email, userData.password)
     
+    //TODO - ERROR HANDLING + REGISTER
 
-    userLoginHandler(authData);
+    const logUserData = {
+      firstName: authData.firstName,
+      lastName: authData.lastName,
+      email: authData.email,
+      _id: authData._id,
+      avatar: authData.avatar,
+      accessToken: authData.accessToken
+    }
+
+    userDateHandler(logUserData)
     navigate('/')
   }
 

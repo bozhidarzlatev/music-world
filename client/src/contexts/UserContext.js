@@ -8,5 +8,5 @@ export const UserContext = createContext({
         avatar: '',
         _id: '',
         accessToken: '',
-        userLoginHandler: () => null
+        userDateHandler: () => null,
 })
