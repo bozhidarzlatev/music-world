@@ -2,6 +2,10 @@
 header > div > p {
     font-size: 2em;
     font-weight: bold;
+    background: linear-gradient(100deg, #5ff4ff, #013af5,  #f54601); 
+    -webkit-background-clip: text; 
+    background-clip: text;
+    color: transparent; 
 }
 
 header , .main, nav, .user, .guest {
@@ -16,7 +20,8 @@ header , .main, nav, .user, .guest {
 header {
     width: 100%;
     padding: 0.5em;
-    background: #ffc170;
+    background: black;
+    color: white;
 }
 
 .main {
@@ -54,7 +59,7 @@ nav {
 
     & img {
         width: 100%;
-        height: ;: 100%;
+        height: 100%;
         object-fit: cover;
     }
 }

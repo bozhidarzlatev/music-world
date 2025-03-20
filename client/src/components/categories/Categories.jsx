@@ -33,7 +33,6 @@ export default function Categories () {
             className="flex flex-col items-center space-y-4 justify-center"
           >
             <div className="relative w-40 h-40 aspect-w-1 aspect-h-1 rounded-full overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-              {/* Image inside the circle */}
               <img
                 src={category.catImg}
                 alt={category.name}
@@ -41,9 +40,9 @@ export default function Categories () {
               />
               <Link
                 to={`/categories/${category.name.toLowerCase()}`}
-                className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-30 text-white font-semibold text-lg opacity-0 hover:opacity-80 transition-opacity duration-300"
+                className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-30 text-black font-black text-3xl opacity-0 hover:opacity-80 transition-opacity duration-300"
               >
-                View {category.name}
+                Explore
               </Link>
             </div>
             <h2 className="text-xl font-semibold text-center">{category.name}</h2>
