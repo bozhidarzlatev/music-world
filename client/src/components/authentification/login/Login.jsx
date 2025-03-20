@@ -1,24 +1,28 @@
 import { useActionState } from "react";
 import { useLogin } from "../../../api/authApi";
 import { useNavigate } from "react-router";
+import { useContext } from "react";
+import { UserContext } from "../../../contexts/UserContext";
 
 export default function Login() {
   const { login } = useLogin()
-
   const navigate = useNavigate()
+  const {userLoginHandler} = useContext(UserContext)
 
-  const loginHandler = async (value, formData) => {
+  const loginHandler = async (_, formData) => {
     const userData = Object.fromEntries(formData)
     console.log(userData);
-
+    
     const authData = await login(userData.email, userData.password)
-
     console.log(authData);
-    navigate('/game')
+    
+
+    userLoginHandler(authData);
+    navigate('/')
   }
 
 
-  const [value , loginAction, isPending] = useActionState(loginHandler, {email: '', password: ''})
+  const [_ , loginAction, isPending] = useActionState(loginHandler, {email: '', password: ''})
 
   return (
     <div className="h-screen flex justify-center items-center bg-gray-100 px-6">

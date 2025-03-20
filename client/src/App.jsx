@@ -9,30 +9,40 @@ import Login from './components/authentification/login/Login'
 import Register from './components/authentification/register/Register'
 import Catalog from './components/catalog/Catalog'
 import Details from './details/Details'
+import { useState } from 'react'
+import { UserContext } from './contexts/UserContext'
 
 
 function App() {
+  const [userData, setUserData] = useState({})
+
+  const userLoginHandler = (data) => {
+    setUserData(data);
+  };
 
   return (
     <>
-      <div id="container">
-        <Header />
+      <UserContext.Provider value={{...userData, userLoginHandler}}>
 
-        <main id="main-contennt" >
+        <div id="container">
+          <Header />
+
+          <main id="main-contennt" >
 
             <Routes>
-              <Route index element={<Home />}/>
-              <Route path="/categories" element={<Categories />}/>
-              <Route path="/categories/:categoriId" element={<Catalog />}/>
-              <Route path="/categories/:categoriId/:itemId/details" element={<Details />}/>
-              <Route path="/login" element={<Login />}/>
-              <Route path="/register" element={<Register />}/>
+              <Route index element={<Home />} />
+              <Route path="/categories" element={<Categories />} />
+              <Route path="/categories/:categoriId" element={<Catalog />} />
+              <Route path="/categories/:categoriId/:itemId/details" element={<Details />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
             </Routes>
 
-        </main>
+          </main>
 
-        <Footer />
-      </div>
+          <Footer />
+        </div>
+      </UserContext.Provider>
 
     </>
   )
