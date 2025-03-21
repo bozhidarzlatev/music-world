@@ -1,4 +1,7 @@
-import { useParams } from "react-router"
+import { useContext } from "react"
+import { useNavigate, useParams } from "react-router"
+import { UserContext } from "../../contexts/UserContext"
+import { useCreateItem } from "../../api/itemApi"
 
 const item = {
     albums: {
@@ -12,6 +15,8 @@ const item = {
         descriptions: { render: true, type: 'text', name: 'descriptions' },
         price: { render: true, type: 'number', name: 'price' },
         options: { render: false, items: ['cd', 'vinyl'] },
+        color: { render: false, type: 'text', name: 'color' },
+        imageUrl: { render: true, type: 'text', name: 'image' }
     },
     instruments: {
         id: 2,
@@ -24,6 +29,8 @@ const item = {
         descriptions: { render: true, type: 'text', name: 'descriptions' },
         price: { render: true, type: 'number', name: 'price' },
         options: { render: false, items: [] },
+        color: { render: false, type: 'text', name: 'color' },
+        imageUrl: { render: true, type: 'text', name: 'image' }
     },
     events: {
         id: 3,
@@ -36,6 +43,8 @@ const item = {
         descriptions: { render: true, type: 'text', name: 'descriptions' },
         price: { render: true, type: 'number', name: 'price' },
         options: { render: false, items: [] },
+        color: { render: false, type: 'text', name: 'color' },
+        imageUrl: { render: true, type: 'text', name: 'image' }
     },
     merch: {
         id: 4,
@@ -48,6 +57,8 @@ const item = {
         descriptions: { render: true, type: 'text', name: 'descriptions' },
         price: { render: true, type: 'number', name: 'price' },
         options: { render: false, items: [] },
+        color: { render: true, type: 'text', name: 'color' },
+        imageUrl: { render: true, type: 'text', name: 'image' }
 
     },
 }
@@ -55,11 +66,20 @@ const item = {
 export default function CreateItem() {
     const params = useParams()
     const itemsToRender = Object.entries(item[params.addCategoryId])
+    const {firstName, lastName, _id} = useContext(UserContext);
+    const {create} = useCreateItem()
+    const navigate = useNavigate()
 
-    const createItemHanler = (formData) => {
-        const itemData = Object.fromEntries(formData)
-        console.log(itemData);
+    const createItemHanler = async (formData) => {
+        console.log(params);
         
+        const itemData = Object.fromEntries(formData)
+        const createItemData = {...itemData, category: params.addCategoryId, uploadedBy: `${firstName} ${lastName}`}
+
+        await create(createItemData)
+
+        navigate(`/categories/${params.addCategoryId}`)
+
     }
 
     return (

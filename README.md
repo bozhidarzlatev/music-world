@@ -31,3 +31,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - Register Func Added
     - Logout Func Added
     - Create new item component added
+    - Add create new item func
