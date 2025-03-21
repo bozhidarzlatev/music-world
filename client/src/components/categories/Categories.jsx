@@ -24,7 +24,7 @@ const categories = [
   },
 ];
 
-export default function Categories ({route}) {
+export default function Categories ({route, action}) {
   const [title, setTitle] = useState('')
 
   useEffect(()=> {
@@ -52,7 +52,7 @@ export default function Categories ({route}) {
                 to={`/${route}/${category.name.toLowerCase()}`}
                 className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-30 text-black font-black text-3xl opacity-0 hover:opacity-80 transition-opacity duration-300"
               >
-                Explore
+                {action}
               </Link>
             </div>
             <h2 className="text-xl font-semibold text-center">{category.name}</h2>

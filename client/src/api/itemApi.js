@@ -30,3 +30,16 @@ export const useItems = (categoriId) => {
     return {items}
 
 }
+
+export const useItem = (itemId) => {
+    const [item, setItem] = useState({});
+
+    useEffect(() => {
+        request.get(`${baseUrl}/${itemId}`)
+            .then(setItem);
+    }, [itemId])
+
+    return {
+        item,
+    };
+};

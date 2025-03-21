@@ -35,10 +35,10 @@ function App() {
 
             <Routes>
               <Route index element={<Home />} />
-              <Route path="/categories" element={<Categories route="categories" />} />
+              <Route path="/categories" element={<Categories route="categories" action="Explore"/>} />
               <Route path="/categories/:categoriId" element={<Catalog />} />
               <Route path="/categories/:categoriId/:itemId/details" element={<Details />} />
-              <Route path="/create" element={<Categories route="create"/>} />
+              <Route path="/create" element={<Categories route="create" action="Create"/>} />
               <Route path="/create/:addCategoryId" element={<CreateItem />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />

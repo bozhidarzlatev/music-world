@@ -1,49 +1,13 @@
 import { useParams } from 'react-router';
-
-
-const products = [
-    {
-        id: 1,
-        title: "Acoustic Guitar",
-        category: "Instruments",
-        price: "$299",
-        rating: 4.5,
-        image: "https://images.pexels.com/photos/164743/pexels-photo-164743.jpeg",
-    },
-    {
-        id: 33,
-        title: "Acoustic Guitar",
-        category: "Instruments",
-        price: "$299",
-        rating: 4.5,
-        image: "https://images.pexels.com/photos/164743/pexels-photo-164743.jpeg",
-    },
-    {
-        id: 2,
-        title: "Electric Keyboard",
-        category: "Instruments",
-        price: "$499",
-        rating: 4.2,
-        image: "https://images.pexels.com/photos/164743/pexels-photo-164743.jpeg",
-    },
-    {
-        id: 3,
-        title: "Drum Set",
-        category: "Instruments",
-        price: "$799",
-        rating: 4.8,
-        image: "https://images.pexels.com/photos/164743/pexels-photo-164743.jpeg",
-    },
-];
+import { useItem } from '../api/itemApi';
 
 export default function Details() {
     const { categoriId, itemId } = useParams();
+    const { item } = useItem(itemId)
 
 
-    const product = products.find((prod) => prod.id === Number(itemId));
-
-    if (!product) {
-        return <div>Product not found</div>;
+    if (!item) {
+        return <div>Item not found</div>;
     }
 
 
@@ -52,36 +16,36 @@ export default function Details() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-gray-50 p-6 rounded-lg shadow-md">
                 <div className="relative w-full" >
                     <img
-                        src={product.image}
-                        alt={product.title}
+                        src={item.imageUrl}
+                        alt={item.title}
                         className="absolute inset-0 w-full h-full object-cover rounded-lg shadow-md"
                     />
                 </div>
 
                 {/* Middle: Product Info */}
                 <div className="flex flex-col justify-between p-6 space-y-4">
-                    <h1 className="text-3xl font-semibold">{product.title}</h1>
-                    <p className="text-gray-500 text-lg">{product.category}</p>
+                    <h1 className="text-3xl font-semibold">{item.title}</h1>
+                    <p className="text-gray-500 text-lg">{item.category}</p>
 
                     {/* Rating */}
-                    <div className="flex items-center mt-4">
+                    {/* <div className="flex items-center mt-4">
                         {Array.from({ length: 5 }, (_, index) => (
                             <span
                                 key={index}
-                                className={`text-yellow-400 ${index < Math.floor(product.rating) ? "text-yellow-400" : "text-gray-300"
+                                className={`text-yellow-400 ${index < Math.floor(item.rating) ? "text-yellow-400" : "text-gray-300"
                                     }`}
                             >
                                 ★
                             </span>
                         ))}
-                        <span className="text-sm text-gray-600 ml-2">{product.rating}</span>
-                    </div>
+                        <span className="text-sm text-gray-600 ml-2">{item.rating}</span>
+                    </div> */}
 
                     <div className="mt-4 text-gray-700">
                         <h3 className="font-semibold text-xl">Desctiption:</h3>
-                        <p>dsadsadsa dsa dhuisaghd igsahjd hgwqi ghwqkj giwqgh ijwqgh kjgqwiu giqwgiu</p>
+                        <p>{item.descriptions}</p>
                     </div>
-                    <p className="text-xl font-bold text-green-500 mt-4">{product.price}</p>
+                    <p className="text-xl font-bold text-green-500 mt-4">{Number(item.price).toFixed(2)} lv</p>
 
                     {/* Product Description */}
                 </div>
