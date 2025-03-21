@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import {Link} from "react-router"
 import { useParams } from 'react-router';
 
@@ -38,6 +39,7 @@ const products = [
   export default function Catalog(){
     const {categoriId } = useParams();
 
+    
     return (
         <div className="min-h-screen bg-gray-100 p-8">
           <h1 className="text-3xl font-bold text-center mb-8">Product Catalog</h1>

@@ -12,6 +12,7 @@ import Details from './details/Details'
 import { useState } from 'react'
 import { UserContext } from './contexts/UserContext'
 import Logout from './components/authentification/logout/Logout'
+import CreateItem from './components/createItem/CreateItem'
 
 
 function App() {
@@ -21,7 +22,6 @@ function App() {
     
     setUserData(data);
   };
-
 
 
   return (
@@ -35,9 +35,11 @@ function App() {
 
             <Routes>
               <Route index element={<Home />} />
-              <Route path="/categories" element={<Categories />} />
+              <Route path="/categories" element={<Categories route="categories" />} />
               <Route path="/categories/:categoriId" element={<Catalog />} />
               <Route path="/categories/:categoriId/:itemId/details" element={<Details />} />
+              <Route path="/create" element={<Categories route="create"/>} />
+              <Route path="/create/:addCategoryId" element={<CreateItem />} />
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/logout" element={<Logout />} />

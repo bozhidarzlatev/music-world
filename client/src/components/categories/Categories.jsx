@@ -1,4 +1,5 @@
-import { Link } from 'react-router';
+import { useEffect, useState } from 'react';
+import { Link, useParams } from 'react-router';
 
 const categories = [
   {
@@ -23,9 +24,18 @@ const categories = [
   },
 ];
 
-export default function Categories () {
+export default function Categories ({route}) {
+  const [title, setTitle] = useState('')
+
+  useEffect(()=> {
+    route ==='create' ? setTitle('Choose what you want to add.') :setTitle('Browse categories.')
+
+  })
+
+
   return (
-    <div className="h-screen flex justify-center items-center bg-gray-100">
+    <div className="h-screen flex flex-col justify-center items-center bg-gray-100 space-y-8">
+      <h1 className="text-4xl font-bold text-center">{title}</h1>
       <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
         {categories.map((category) => (
           <div
@@ -39,7 +49,7 @@ export default function Categories () {
                 className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
               />
               <Link
-                to={`/categories/${category.name.toLowerCase()}`}
+                to={`/${route}/${category.name.toLowerCase()}`}
                 className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-30 text-black font-black text-3xl opacity-0 hover:opacity-80 transition-opacity duration-300"
               >
                 Explore
@@ -51,6 +61,7 @@ export default function Categories () {
       </div>
     </div>
   );
+  
 
 };
 
