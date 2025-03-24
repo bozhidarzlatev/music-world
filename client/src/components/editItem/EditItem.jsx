@@ -1,9 +1,7 @@
-import { useContext } from "react"
-import { useNavigate, useParams } from "react-router"
-import { UserContext } from "../../contexts/UserContext"
-import { useCreateItem } from "../../api/itemApi"
+import { useNavigate, useParams } from "react-router";
+import { useEditItem, useItem } from "../../api/itemApi";
 
-const item = {
+const catItem = {
     albums: {
         id: 1,
         subCategory: { render: false, type: 'option', name: 'subCat' },
@@ -63,56 +61,57 @@ const item = {
     },
 }
 
-export default function CreateItem() {
+export default function (){
     const params = useParams()
-    const itemsToRender = Object.entries(item[params.addCategoryId])
-    const {firstName, lastName, _id} = useContext(UserContext);
-    const {create} = useCreateItem()
+    const itemsToRender = Object.entries(catItem[params.categoriId])
+    const itemId = params.itemId
+
+    const {item} = useItem(itemId)
+    const {edit} = useEditItem(item)
+    
     const navigate = useNavigate()
 
-    const createItemHanler = async (formData) => {
+    const editItemHanlder = async (formData) => {
+        const editData = Object.fromEntries(formData);
         
-        const itemData = Object.fromEntries(formData)
-        const createItemData = {...itemData, category: params.addCategoryId, uploadedBy: `${firstName} ${lastName}`}
-
-        await create(createItemData)
-
-        navigate(`/categories/${params.addCategoryId}`)
-
+        await edit(itemId, editData);
+        navigate(`/categories/${params.categoriId}/${itemId}/details`)
     }
+    
 
     return (
         <div>
-            <div className="min-h-screen m-10 flex items-center justify-center  px-6">
-                <div className="bg-white p-10 rounded-2xl shadow-2xl w-full max-w-lg">
-                    <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Create new {params.addCategoryId}</h2>
-                    <form className="space-y-5" action={createItemHanler}>
-                        {itemsToRender.map(([key, value] )=> 
-                           value.render ? 
-                            <div key={key}>
-                                <label htmlFor={key} className="block font-medium text-gray-700">{value.name}</label>
-                                <input
-                                    type={value.type}
-                                    id={key}
-                                    name={key}
-                                    placeholder={`Enter ${value.name}`}
-                                    className="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
-                                />
-                            </div>
-                            : null
-                            )}
+        <div className="min-h-screen m-10 flex items-center justify-center  px-6">
+            <div className="bg-white p-10 rounded-2xl shadow-2xl w-full max-w-lg">
+                <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Edit Item {params.categoriId}</h2>
+                <form className="space-y-5" action={editItemHanlder}>
+                    {itemsToRender.map(([key, value] )=> 
+                       value.render ? 
+                        <div key={key}>
+                            <label htmlFor={key} className="block font-medium text-gray-700">{value.name}</label>
+                            <input
+                                type={value.type}
+                                id={key}
+                                name={key}
+                                placeholder={`Enter ${value.name}`}
+                                className="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                                defaultValue={item[key]}
+                            />
+                        </div>
+                        : null
+                        )}
 
-                        <button
-                            type="submit"
-                            className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300"
+                    <button
+                        type="submit"
+                        className="w-full py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition duration-300"
 
-                        >
-                            Create
-                        </button>
-                    </form>
+                    >
+                        Create
+                    </button>
+                </form>
 
-                </div>
             </div>
         </div>
+    </div>
     )
 }

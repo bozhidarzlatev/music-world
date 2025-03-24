@@ -4,7 +4,8 @@ import request from "../utils/request";
 
 export default function useAuth() {
     const authData = useContext(UserContext);
-
+    console.log('token', authData.accessToken);
+    
     const requestWrapper = (method, url, data, options = {}) => {
         const authOptions = {
             ...options,

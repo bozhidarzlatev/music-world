@@ -1,15 +1,17 @@
-import { useParams } from 'react-router';
-import { useItem } from '../api/itemApi';
+import { Link, useParams } from 'react-router';
+import { useItem } from '../../api/itemApi';
+import useAuth from '../../hooks/useAuth';
 
 export default function Details() {
     const { categoriId, itemId } = useParams();
     const { item } = useItem(itemId)
-
+    const { _id: userId } = useAuth()
 
     if (!item) {
         return <div>Item not found</div>;
     }
 
+    const isOwner = userId === item._ownerId;
 
     return (
         <div className="min-h-screen bg-gray-200 p-8">
@@ -22,13 +24,12 @@ export default function Details() {
                     />
                 </div>
 
-                {/* Middle: Product Info */}
                 <div className="flex flex-col justify-between p-6 space-y-4">
                     <h1 className="text-3xl font-semibold">{item.title}</h1>
                     <p className="text-gray-500 text-lg">{item.category}</p>
 
-                    {/* Rating */}
-                    {/* <div className="flex items-center mt-4">
+                    Rating 
+                     <div className="flex items-center mt-4">
                         {Array.from({ length: 5 }, (_, index) => (
                             <span
                                 key={index}
@@ -39,7 +40,7 @@ export default function Details() {
                             </span>
                         ))}
                         <span className="text-sm text-gray-600 ml-2">{item.rating}</span>
-                    </div> */}
+                    </div>
 
                     <div className="mt-4 text-gray-700">
                         <h3 className="font-semibold text-xl">Desctiption:</h3>
@@ -47,17 +48,23 @@ export default function Details() {
                     </div>
                     <p className="text-xl font-bold text-green-500 mt-4">{Number(item.price).toFixed(2)} lv</p>
 
-                    {/* Product Description */}
                 </div>
 
-                {/* Right: Buttons & Price */}
                 <div className="flex flex-col space-y-4 p-6">
                     <button className="w-full bg-green-600 text-white py-3 rounded-md transition-transform transform hover:scale-105 hover:bg-green-700 hover:shadow-lg">
-                        Buy Now
+                    Add to Cart
                     </button>
+
+                    {isOwner && 
+                        <>
+                    <Link to={`/categories/${categoriId}/${itemId}/edit`}className="w-full bg-gray-300 text-black py-3 rounded-md hover:bg-gray-400 transition-colors">
+                        Edit Item
+                    </Link>
                     <button className="w-full bg-gray-300 text-black py-3 rounded-md hover:bg-gray-400 transition-colors">
-                        Add to Cart
+                        Delete Item
                     </button>
+                        </>
+                    }
                 </div>
             </div>
         </div>

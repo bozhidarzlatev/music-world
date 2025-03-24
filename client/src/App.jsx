@@ -8,11 +8,12 @@ import './App.css'
 import Login from './components/authentification/login/Login'
 import Register from './components/authentification/register/Register'
 import Catalog from './components/catalog/Catalog'
-import Details from './details/Details'
 import { useState } from 'react'
 import { UserContext } from './contexts/UserContext'
 import Logout from './components/authentification/logout/Logout'
 import CreateItem from './components/createItem/CreateItem'
+import Details from './components/details/Details'
+import EditItem from './components/editItem/EditItem'
 
 
 function App() {
@@ -38,6 +39,7 @@ function App() {
               <Route path="/categories" element={<Categories route="categories" action="Explore"/>} />
               <Route path="/categories/:categoriId" element={<Catalog />} />
               <Route path="/categories/:categoriId/:itemId/details" element={<Details />} />
+              <Route path="/categories/:categoriId/:itemId/edit" element={<EditItem />} />
               <Route path="/create" element={<Categories route="create" action="Create"/>} />
               <Route path="/create/:addCategoryId" element={<CreateItem />} />
               <Route path="/login" element={<Login />} />

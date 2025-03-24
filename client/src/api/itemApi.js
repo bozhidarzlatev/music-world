@@ -43,3 +43,14 @@ export const useItem = (itemId) => {
         item,
     };
 };
+
+export const useEditItem = () => {
+    const {request } = useAuth()
+
+    const edit = (itemId, itemData) => 
+        request.put(`${baseUrl}/${itemId}`, { ...itemData, _id: itemId });
+
+    return {
+        edit
+    }
+}

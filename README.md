@@ -34,3 +34,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - Add create new item func
     - Add view catalog items func
     - Deails view func added
+    - Edit func added
