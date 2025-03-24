@@ -16,7 +16,9 @@ const item = {
         price: { render: true, type: 'number', name: 'price' },
         options: { render: false, items: ['cd', 'vinyl'] },
         color: { render: false, type: 'text', name: 'color' },
-        imageUrl: { render: true, type: 'text', name: 'image' }
+        imageUrl: { render: true, type: 'text', name: 'image' },
+        city:  { render: false, type: 'city', name: 'city' },
+        venue:  { render: false, type: 'venue', name: 'venue' },
     },
     instruments: {
         id: 2,
@@ -30,7 +32,9 @@ const item = {
         price: { render: true, type: 'number', name: 'price' },
         options: { render: false, items: [] },
         color: { render: false, type: 'text', name: 'color' },
-        imageUrl: { render: true, type: 'text', name: 'image' }
+        imageUrl: { render: true, type: 'text', name: 'image' },
+        city:  { render: false, type: 'city', name: 'city' },
+        venue:  { render: false, type: 'venue', name: 'venue' },
     },
     events: {
         id: 3,
@@ -44,7 +48,9 @@ const item = {
         price: { render: true, type: 'number', name: 'price' },
         options: { render: false, items: [] },
         color: { render: false, type: 'text', name: 'color' },
-        imageUrl: { render: true, type: 'text', name: 'image' }
+        imageUrl: { render: true, type: 'text', name: 'image' },
+        city:  { render: true, type: 'city', name: 'city' },
+        venue:  { render: true, type: 'venue', name: 'venue' },
     },
     merch: {
         id: 4,
@@ -58,7 +64,9 @@ const item = {
         price: { render: true, type: 'number', name: 'price' },
         options: { render: false, items: [] },
         color: { render: true, type: 'text', name: 'color' },
-        imageUrl: { render: true, type: 'text', name: 'image' }
+        imageUrl: { render: true, type: 'text', name: 'image' },
+        city:  { render: false, type: 'city', name: 'city' },
+        venue:  { render: false, type: 'venue', name: 'venue' },
 
     },
 }

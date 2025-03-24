@@ -1329,17 +1329,23 @@
         users: {
             "35c62d76-8152-4626-8712-eeb96381bea8": {
                 email: "peter@abv.bg",
-                username: "Peter",
+                firstName: "Pesho",
+                lastName: "Minkov",
+                avatar: "https://media.istockphoto.com/id/1325727757/photo/serious-funny-white-fold-cat-with-painted-black-eyebrows.jpg?s=612x612&w=0&k=20&c=_lxDK3xrun-VAg1hlV9qoHv1TmI2BhBwSNjlmvHvs2U=",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             },
             "847ec027-f659-4086-8032-5173e2f9c93a": {
                 email: "george@abv.bg",
-                username: "George",
+                firstName: "George",
+                lastName: "No Ne Lucas",
+                avatar: "https://ichef.bbci.co.uk/ace/branded_news/1200/cpsprodpb/532A/production/_91409212_55df76d5-2245-41c1-8031-07a4da3f313f.jpg",
                 hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
             },
             "60f0cf0b-34b0-4abd-9769-8c42f830dffc": {
                 email: "admin@abv.bg",
-                username: "Admin",
+                firstName: "Admin",
+                lastName: "Adminov",
+                avatar: "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMWFRUXFhgYFxgYGBcXFxgXFRcYFxgXFxcYHSggGB0lHRUVITEhJSkrLi4uFx8zODMtNygtLisBCgoKDg0OGhAQGy0lHyYrLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tK//AABEIAKMBNgMBIgACEQEDEQH/xAAcAAACAgMBAQAAAAAAAAAAAAAEBQMGAAIHAQj/xAA8EAABAwIEBAMGBQMDBAMAAAABAAIRAwQFEiExBkFRcSJhgRMyQpGhsQcUUsHRYuHwFSOSM3KC8Raisv/EABkBAAMBAQEAAAAAAAAAAAAAAAECAwQABf/EACcRAAMAAQQCAgICAwEAAAAAAAABAhEDEiExE0EEIlFhFDIjQtGR/9oADAMBAAIRAxEAPwDjAKkaVGFu0KhFhVKoUdQunDYpcxFU0lICY+ssaqM2cfmrJh/GNQe9qqMwomkVCtOWXjWqemdTseL6TveEJ5b3ltVES094XHKL0fQuCNiVF6K9GmfkN9nVqvDVtU1DQPMafZLbngcb03+hVUssbqs2efmrHYcX1Bo4AobaQ+6aBqvC1Zvwz2UH5BzTDmkdwrlY8VU3e8CPqnNG6oVObT3hNlgxg55Styj7ekru7A6DtcsdlA/hsfC75hFA3oU4bVcw6bdFZ7S4a8Qd+iWDCHt5A9lNQoFp6I4OrDQw/K5TLfkpywOC8t6s7qUuTpIg2wdtCFM5mi1dUWhqqb1JQcNhDRChFMTKjNZamqlevAVDMumzohRYyiWVER7YBGXNcjZcrANTsWt1Ql7eBugUt5cE7JLXYTylCl+B4Xti7ELou3KR3OqsbsLqO2afsvW8LVHbkN+qCRR0ik1qaEq0l0mnwa34nk9tEVT4Zt26lgPcyjuwTbTOSm2J2BU1PAaz9qbvlH3XVnst6XJjfkEFX4ht2c57IeR+grTTKJQ4Jru3hvdMKH4fj43n0EJpd8bME5Wz3SC943qn3YC7NsONOex5Q4MtmbjN3KmfZWlIe6wR2VAveJazt3n00+yTXGIOO7iUPHT7YHrxPSOl3OPWtPYg9gkl7xswaMbPdc/rXJ6oOrWTL4y9kq+W/RbrvjOoToAAvVR31Vip/Hj8Ev5Wp+RYApGrxoUjQtZnZJTCJphRMaiKTVNsKJmBFUwoKbUTTCRjJE9NFUUOwIum1KVlBFJG0ihqbEXSalKoPoOTS2qHqldBqZ27ErKpD2xxKo2IcU/s8bf8QB+iq9qwprbU1yC5T7LTQxJrt5CK9oCkNtRPRMBTICfc0RcL0EPcFq9yhBSXirFvy9B9TnENHVx2Xn6/yHnCKRp5eCXGeJKFuCXvE/pGpP8ACpF1+KWV5b7D0LoP2VYtKr6pObV5cd/FM9IKnZwTWqOe47QMvInXWPRZ905+7Ny+OkuB4PxIqO8QpgN7k/VP8B44o1yGP8DuUnQnvyXPb/DzbMyupkAyPF9IjTmFTLeo/OdcpExrHp5p40VqptHaszGFg+oaT5UoC5R+F/GeZ35Ws7Uf9Mny3BXVG7ITVaVbWZbkJpUm9ApSWN6BK6jiOaX3NQ9V6c3lEfH+x3VxGm3n8kuueImjYJDcvSqs8oZyP45Q6veKX8oCQX2P1HfEUHcuS2s5BTkL46N7m+cdylta4PVbVXIOqU6RKqNK1VCVKikehaiZIlTI6j0M96lqIaomRFkT3IZ7lK8qConQjIXlYsKxOAja1TU2KanaoqnaqbodIgpsU9NqKpWoRlK1HRI7HUNgdOmiqdJMrbDnHZpPonNnw7Vd8Md9Ej1Ei06LK/RoHoi6VBXC04QefecAndpwfSGriT9FPyIr4cFCo2xTO0w5x2aT6Loltg1tT+Fvrqihf29P4mD5LtzY21Ip9lw5Vd8B9dE+s+FXaZiB9UdU4poN2M9goHcXt+Fh9TCPAG69IY23D7G7klMKVjTbs1Vn/wCTVHbBo+v3WzMTqO3cfTT7J1UoVzb7ZbNB0UFaoOqTW7yecpnSo9V1XlcC7MEVR0CSuUceYtnr+zJOVkQBsXHYLqWJsJaQNJXFsWpj86/3jlO7naAR06np5LyqWbbZv+NOS38G4SxjWvIBeZJOmk8h0CuMhUC/4up2zAMrRtlzODXO6lrN8vmnmC8TMuLf2wGg3EzBHJY6Vr7UuGadWdzwgjiS0ZWpuaRMrj2OWIpPLYJPI7EA9eqsV/8AiSQ9/wDtAMDsoccztdYkjSdDoqzd4p+YqFxidNWkxp1BEhbPj6WrDy1wTpw52+xVhYNKsx40IcvqDDDNNhPNoP0XzPfOJg/pgbbgc13D8N8cNxagO95mncclo+RzimZbnjCLmaDTuhq+Eg7GFHXuCNihxjLm7wVo06WCG2/QJeYLU5CeyQ3li5u7SFbmY+z4gR9VO2/ovEZmnv8A3TPHoKql2jmVzSKW16a6vc4RQqch6aJLfcHtPuOjvqhnAcpnNKrEFUarriHClZswMw8lXbvDHt95pHomVoSoYiqBCVE0rW5CCq01RMlSAKiHejHsQ1RqYiwR6HeEW9qge1MmKCOCxSuasTZBgtFrgFR3KE3teFT8ToUdTipo2CEq8WVDtAWL/Kzd/hn9lmteG6TfeMpjTs7anyaufVMerO+I+iHdfOO7ifVDxW+2HzwukdPGMW9PmPRRu4wpN90SuZisVKyoitJID+Q2X6pxu/4Wgd0LU4rru+KOyqLKimY5NsR3kpj5+K1HbvcfUrG3BSmm9F0nIMKbGlKsjqFRKqBTayoFx0CXJSeRhblPsPtS7yQlhaBupTB2JNbsl3FNo8taTWBe1b5uwVZqYmXc1lO6lHdwT8WXljy4uYaSdgCfkuJ4tWzXD6mwdUBP/bMFdauXk0neY+645xRWa24hwim1wLiNTl228uixYdW0bfjpSsl6r8M29YOJa058uadZLJynyiTsibi0Zb21UNHLkAJ89Es4XxWaZk6DY9RyUeP8Rf7VSnSZ7RxB2IGUQSSZ3WBLVutj9GukpeQTB8Lo1qLmGILg4jQ6iYPcSdfNLuIMLo29MtYPE4ySdXfNJsB4gcx7nP8ACDEiIEjoh8fxN1R0nnt0hblo6q1cN8Et8VOfYnNciGn0PPsuqfg645n9IXHbisS4Douu/hNLYI2Mhw9NFt+TOIRiT3OjrF1a5hpuqxeNLSQd1YKeJAOyu080TdWbKzfsQu0uVwZ9zh8lCrVCg33BCbYzhj6R1EjkeX9lX7kpinYQzF6jPdcR66I2jxhVbvDvoq1VehKlVdgV0X+jxnTPvtI+oRbcWtqo95p8jC5a+uoTcFc4AtTB0y8wa3qawPRIL/hAGcjo7qrUsXqM917h6o2jxdWbvqhtr0HfD/sDX/DVVvKeyS3Ng5uhBHorjS4va73xCmOJUKnT1hFXS7Felp10znNW3QtSkV0evhdB+0eiVXfDQ+Ep1rL2Rr4z9FGcxYrBcYDUB2lYq+REvDX4K0Ki3a9CtKlaiTCmOUjXIZpUrSlGCmuUrHIZiIYUrY6QQwoimUNTCKosStjyE0Uwt6ZKitLbqmtAtapVZoiPyFWVnzcm7LljAq/UxDoh3XZKTlldyXRYq2Kk84Cg/OeaRiupGVkcHbh5TuUwtKskKu0aspzaPyiUGxkWMVRlg9FyH8RagFR4HMj7LotG8B5qgfiCxpeHRuNf2UY41VkrPKaQiw3EneyDW+QPorNSwAGkHw1znbl5Mdssqj2FXK4g89u6fHGnNaBPJW1opP6D6dL/AGBsdwr2XiAAPlsR5dEgzOP7Jxid+58a/wCeaHtqBIzRsrabaj7E3h1wJn6mRvOqvv4d4i5lUCdyJ7dVSPy5a4yrbwUWtqhztOQTfJw4J6WdzOuYhUjWd1rh2OupHq3ooBVDmwk13LTCyabwgUkzpNveUrhsaGdwf4VV4i4aLZfS1b+nmOyrdtiTqbg5pghXPBuJ2VRkfo76FUpsltcvjo51cNS6quncQ8PMrAvZAf8AQ91znE7R9Nxa4QUZrJ1TxkWPch3vUtVC1CqpkWaueoHPXryh3FMmSZIXrX2xULioy5MKHU8Se3Zx+aNo8RVBuZSJzloXobEwq6XTLXT4lB3GqxVHOsQ8UjeawBpUrCoWqRqoyeCdpUzFAxT0wkbHUk7ETTaoaTEwoUgN1OqHU5JLeimNuwBB+2AUb7nzU28lUkhu68A2UDrqUs9qvfarsI7eMPzC9FZAB63D0TsjBlVTsqJfTciKD1zQyY8sBzKJrXXIJK6/gaLy2u5O6Ryym9LgdMuIVQxvEGvc7Wd9Tz8hGys1OCI6qCy4ONRwzn2bNPd989QJ90R6qTqZfJfSyU/h7DzWuGsALm6l/RrIImeWpEJ5ecKvpkkkOaNtOXounWWBUqDXNpU2tnpuQNpJ1PqvLqzDiGxuoany6dZXRaJnacc/0kzPLomFvYiMoBV9xDhwASwaovBOGjGZwE9eid67YmEuSgN4YfUhuQ/3VxwD8PadGH13mo7cMBhrT6e8Vd7PDWN1A16ot1IJfJbWCV6izwVq4wyNWiEnxS0dGyu9d7WgkkAdToFUsYx6kJFMe0d5SG+rufohFUnwcmqKjWJCg9uQUwvC8tNSoA0AawDAH3KUVTIDh7p2Oy2y8ohWUWrBOLHMhtTVvXmE/v7ejdM5GdiNwuVufBR2GY0+kdDp05FLUfgaNRf7EmO4I+iZiW8j/Kr1ZdMs8YpXDcronmCq1j/D0S6lt0/hCNXDxR2ppZWZKfUQ7yiqzIMFCvWlMxtETyonOUj1E9NkXaakqMuWzionJkwbTM6xRrETtpE0KRoRLrJ3wjN6hessKhGsjsP7oOl+Smxr0aMai6VNe0rN4gmPXRbtY7cFpHkfnqpUx1DJmGFs6uh3U6nSVrEe+QPXX5bn0SJBwyc1V42ohm1PCDB389omdlGb1o5T2MfcahPsYjaD863a9K/z5OwaAO5n5qe3u5Oug+v10P0XOGgbkMWuU9MqKnbkxBGu3+FE0rN+kAHsQpbkuyqin6JeSidXypjUsXBkkJDcNcHQVbTao6pc9hNGoSrXw9w4agD3y1p2A3d/AQnCmCioZeDkbv8A1O5DsOa6LZsgLN8vX2/Wey/x9Hd9q6BrXCm0xo0AfMoxtGDKKpCVI+mvMbb5Zs3pcG1Kq0+8YKmDWTMhLxmJ2lG0GnoumskrnHslYxpO0ogt5LIA23UlMK6kzVRmWEJiN4KbJPp5lF1zoqleV/avMmGgEk9Gt3Pc/ui/wdCzyDXNOpcukmBPoPIdT9UxsOH2t1IA6Tq7ueQTPCbWG53CDHhb+hvTueZRBBOpS54KbvwLrjDWhvhAn5k+qpHEGFblgiDOXlrvpyXSWtSLHrEQT1VNO2mc+eDklU79VC5yaY1aZXF3ImD3/ulr6Jjl81tVJrJmaaeCOndFpkGFY8K4inw1NfNVN7DO4+YH3WmVwPL5hLUzQ01Ul0xfCWVhmbAKpV9auYYcE2w3E6jIBMjuEwuWNrDlPcKU04fJa4WosrspbwoXFNsQw57ToZHdLHWzp2WqbTMtabT6ICVE5EPtH9B82/yo3Wz+g+Y/lUTQu1kErFL+Tf8Ap+yxNlfkG2vwWJlJkRmEdDMfJY2nTAnwgT0J+U/slDMWpHVrXZiRLSWgeeUwR8xyRVxjlDMIYXxt8I7ku0WZ6Op+zX5Yx2EFh3YwOGmsxJ9dCt6NF53phnQmCNvJwSWpjNUP9ymyYO4Bg884In0Wza9H3nVajH9Q/PtuAWkz6wqeG8c/9E8sjpjHM3Gn9Oh+62DC6ZDjJ18Qk9/DqkT8e8UMzOBA9/I0gx1Mz9Fu3F3A8p6e0pc+vhiO2qXwagfNA3qUKIPiawafG9oPyH8KL/T6TtWspu5wKs/JoMqGjWpvBqvYzwkT4faOIkCc4I116D1QNTFKJOluG9CMkunTWWnLseqK0q/LBVz+hq22buKMAf0OOn/HVFW9q0xApGdm5RJ7AiSO0oDD75xa9zGh4GpY0uDmiCdXRBOmwnVT0cZlsCm3PEwXBrtiRA1nlpPPlyW9O+kGaj2MhbtB0bTZ0ggE9hGvoj7C3hwADRB5tc3xfTVJqeMtJDXBslsaS4gnoY29J7o+jdGnIzMbrJAmT5ZniOvP5rPenXTLTqT2h9itdvswDA56Bw+kaKnPdmqIzEb7NGVgZPJwJns7WVPg+He0qN0gCC6Nt/mraM+Ocsjq09R4ResEtvZ0mt8pPWTqU1dc5WiI1/zTz3QlMwD2U1uxrmtB1H8DdeZrU6rJ6cSlOCc4pDvD4h02O2o8neR3TG3uW1Gy0z9CD0I5FV24tRsSQd2PHOORGxIS6lxDlIcAQ8OAqRs5h0zjrHzB8ipzlsF6SxlF+DA0KSYUNrcB7A4GQRIW1OSVUxv9krZ3RQKGrTAHmFs+pCpnBJrIux68ysge87YeQ3QeDW+YyRpMn/xII+v/AOUlxS89rX8IJAORrpETzMbgTOqseGghmnPY+Q2P7+qFcYKSuA66ug2O8DzK1NQyAlTnl9UdG7fuUyaNZU2xtqSC2IDHGEs05Ix0rKrJaQeYTyya4Zy7FaBdmj/CEmyeHb6D+FZ8VtoqOaSRql1TKxpJka7kFwHnO2/VaFWEU2rOSvkx8JP/AB/Zqz2s6ZCfmT9tVDf3VHO7M9r55+yP0IeI+S0OJ02+BlOo5pHJpIHaCDC56bfQFcp9k/t2/p+k/de07trdh9FoL5jojTbR7HN/++v1laOvaeaN+wGX5uMn5JHD/BRWhrTumPEEfQIS7wvm0KFt41pGoPmIMQt6mLAtgmNNJAIPp6JFNJ8Du5a5FlWzj4fsUK9jdpb8wiLpjnjwuI5+Ex9lV7qxcwyZ33/ut2jCrtmLU1NvSHnsh/THcD99VirFQEmSZPVeLT/HX5JfyP0MPybjoygQ4akucDHnlMR6qV9pWbrVoGoOvxCf6m6j10S2tVBaNACDsNiNIPde/wCoP2nTmIGU927HYLRhkcokNWqySA5oOmreWwEkIasHE+KZMctTyEImliVbNLXu7DaI1luxEJ7Suva0p1BJEODC4tIHiaY1jSQQeaFU59BmVXsqxYeh+SzKVZH06oBDKkxrDmgZgDBhznO2nUaLewu6bwadSocxGWSP9szyHQ9CUr1MLOMhWnl4yVumXDYkdjC9FInVPLnBZdNF7HNOwza9v8KFdg9cb03eUag9oXLVl+xXp0vQDSJbqCQfIkfZT0KhaZGp116TzHmjxglQCXFjesk6fILejh5EHM1zerTI9eYPkQkepIPHWRjYXlTIASNNnQM3bNug725JMDZTV6oaICXAyVGFl5KXTxgbW169rYbA7Aefl5q68IPmnPMkz5kKht2V24MfFPX4ifuhrpbOCnxW3XJbxOUx0XuEvzDfQafyo2VPCTtClw9oZRd55vqvJpLk9ZVxgnxFxJGVpcI6bEdJ6qs49ZAuloykiROkE7t7H7gKw4ex7QD7cPHmBPzSPi++Lx7Jh1BBcfLoCl0lihqbxhDDgHFs9P2eb3DlHp/7j0V2pkbyuP8AClUULnKTDXQRPlv9wr/WxEOcKbDqRJ7c1fU0+eDG/wBj72xc4H4Rp3PVKeJ8U9nTIafE7QRuBzI80aaoEDYAEnyAVYvKntahcYjef0tH9l0z7YmPSArFxBp048dZ0f8AbTaJeZ5fp9Srlf3Ap09NCdAFWMBpe0uPanQNENHRv+a+qPq1DcVSW+40wDy03KF/Z5HSwMMHHPmnDQhMPpBrUU+5aBLiAPNIsMFMI5aKOpCrmJ8X0WeFhzu/p1+uwVNxHiCu8lzRlHck/NVnTquifC7Hv4gUYAeBrsf8C50/EnsPhcR5Toe42KPZjLsj21Hlzn7SSfkkF4Cdlt0dPCwzPrW/Q4s7mlVEPa0P5mAA7+D2/svKbGguaHBuUS74hliZMgEDXz3SZlNjS0VCTOpHl3+aMxmuWMyBpyvbzA0AMBoMTyUnp/bCKzq/XldAGO4gKZApOI8M+E6Sf1SJOwSA4tV1l8z1AO/caLWuyChXtXoaemksGK9SnWSzWjTUaH0yCDoRsQ79Op19N0eLEGBm16EtHyE6qpWWIPpTlOhIJBAM5SCN+y3xe79rUNSdCBp0jkpV8duuHwaJ1pS5XJbBZmmRLwAZImJMCfCJ1UF/Vplnhh+sEn4T0gc99VUri9e8gvcSRsenyXtlSc90AwAJceQaNyRzXL42OW+Tnrp8JBz3UwTnp9spIHnOY9vqsUtKj7RsskwY8Tmg914q7scC7We4XWpv0NJu24y5u+kEctgoLm/pa5aYLhADnCdBzIOk+iGLqREZSw9dXAjzH8IFUU5eRHXGA2lib2wQdQezf+IgddVu7GqxEF8jmCBB0jaOiCpUS7b1PId0SLIA+Ko2P6TmJ7DRFpCp0HUMXpmn7OrTkZpGXwxpGzSJ5c0VYto1g4U6WVzWzqA/NG8AwZ9Sl1e3oMAk1CSJy+EEdzrHaFpaYoaZlrWgQREax5vGp+x6JHHH1KK+fsMW2ty/RlMUmnlDWOMEAyYn7KG4tKwIbUfAa2WyTEbkM031CCucVqvOryPIaD6KW2xiqxpAeZManUgNnQTtv9ENtfoDqeuTV1RzyMznGNBJOw6SnmH1zSbGmpBMgHaevcrTA71znTWdnb0fqJ1ykdDOmnIo++q0GZgKbnciRL2DmDII37rPqVl7cDxOFuyeXtYNLoyEbtmk0mDyJ5R+yCGIOOhyH/wZ/CbWDqBbLg5jTqAQ6H9ZmeaJOEUs8hwAnbl05qPlU8NFfFVcpiaTvOqvuEiGNHQD+6Stw6mCG5mzmB2kxOysdnTEQEurqqkU0NNw3kPt5doBurFZWAbTh2pIM+vJCYDbCM3+QEzrV9coWC+zVuKZc8MPpVfbsylo0LZMQd3Zf1Sd+gQ+I2p9/rur9Rggg7KqYpScwmnHhPuuJA0/T3C503gpFcvJScYOVzHjcb9oTvhzEizxuh07kax5IqhhAfJOqkt8GYPFETorzqpTtZLU09zyhljl2fy9RzebD6jTRIbDEjWpVGkDUsYZ/SZcfmWAdkyuMNZlMzljUSdfIAboWjhRYHgANa/KY1OXJPOZ1B1TTUucEnDVZGBr+ytnOaYLhkDuk6SEVgl+1tGXCA3fz8/VKrhzn0msDYA1jTWNtN0uvLgsp+zEgvIY6R7oJ95K5T4Gy+x/Wx2tcEttoY0GDUI57wOpha2+FBxLa9SpWO8ucQDrqIGiEw2/oUWNaMxAGmh7kydyTzTWlcioM7DPSPJTr6vCKKMrLIaOC0abv+mInmoeKLYOoy0AAdBEKwGk2owHrz6FC3LA6m5jt4XRbdZJ1KwcixejDR5FLq1U5VYcYoeBw6O/dI7qjovV03wedrLkUPrmd9key7zMDTqAZj6aJfUp6rKTiCncrBGW0e1badG6nppPprr90vqsIJB07p9clrgCAB1WVrGpVYD7Rr9tD7w35n1XTqY7Hennorbmrw7J5WwZrJL6wgGPC2TPbNoga2H6Zmva5sE8wdOUddlWdSX0K4pEuD0aVQFrgM0zqYkDkDyP3TT2dI0nMp+GYOukE6CTEnnC3tMCawA5czhrmJcBI1iBy/haYlimRpyavmHuLXZQY0DZ5jz6qFVvr6s1Sts/YROtaskCm7QwYB+6xRDEamviJnUzB19dl6tOGZvr+zoDrGm+m0uaDoDzGvokzKYJMgHxEbDbTRerF52k2b6SNMCsqY8WXWOpP0OiLxHBaEZvZgE9C4D5AwvVipVPydiYWwpd42Hkeff7qSzotJ1H+SsWLd6Mfskv7drSYEepQtIarFiC6BXY1Z7qnw8ku1J5cysWKD6ZRdoOo3LwSMxjmCZBkRqDunt9UIYHCAYGsDofksWLFq/2Rr0/6slwc52ku1M7wB9lYcM9xerEllNLoteDH/bHY/spmHVYsWdlQ6iNFXOLj/thvJz2td5tJ1CxYpz/AHQ1dA1BuSpUpt0Y33RvEzzOqmoOJj1WLE1dhk2qDUD+oKV3PsvVib2cyE+6084/ZL6lMNpeERpPqdSfqsWLl2F9GtuPEfICPLZaXzzSqUTT8Od0OiIO24Ok+axYj7GRZ8IOtRvIHQd1FUPicOh0WLEkf2ZGjnWOHxVh/UfuFXq7isWL1NPo87X7FNxuo1ixXRmZlu4zHkn2FWrCzMW+IPifKB/KxYo63RfQ7J7eyp53ywHwg66ideR0Ub7djWZgxoJc2fCCNuQOg9FixZ03n/w0tcFcxS9qFx8Z3jQxoBtpySqrVcRBJI3iTErFi9LSX1Rjt8kKxYsVRD//2Q==",
                 hashedPassword: "fac7060c3e17e6f151f247eacb2cd5ae80b8c36aedb8764e18a41bbdc16aa302"
             }
             ,
@@ -1356,6 +1362,92 @@
         }
     };
     var seedData = {
+        items: {
+            "149de21e-a780-43c4-9c09-088181ff0337": {
+                "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806",
+                "title": "Godsmack Tour 2025",
+                "genre": "metal",
+                "artist": "Godsmack ",
+                "date": "2025-03-22",
+                "descriptions": "European tour 2025",
+                "price": "100",
+                "imageUrl": "https://m.media-amazon.com/images/I/71QeOM3ZGLL._UF1000,1000_QL80_.jpg",
+                "city": "Sofia",
+                "venue": "Arena 8888",
+                "category": "events",
+                "uploadedBy": "Bozhidar Zlatev",
+                "_createdOn": 1742846033149,
+                "_id": "149de21e-a780-43c4-9c09-088181ff0337"
+            },
+            "80170509-75cd-451d-9e24-9c565728301a": {
+                "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806",
+                "title": "Lindemann 2025",
+                "genre": "metal",
+                "artist": "Till Lindemann",
+                "date": "2025-12-08",
+                "descriptions": "Till Lindemann, exceptional artist and singer of the industrial metal group Rammstein, will grant audiences an insight into the depths of his world in 2025 - from the end of October until the end of the year, fans can look forward to over 25 raw and completely reconceptualized arena shows on his solo \"Meine Welt\" tour across 17 countries in Europe.  Tickets on sale from Nov 18th at 4pm CET",
+                "price": "138",
+                "imageUrl": "https://d3u845fx6txnqz.cloudfront.net/events/j264-concerts-Till-Lindemann-.jpg",
+                "city": "Sofia",
+                "venue": "Arena 8888",
+                "category": "events",
+                "uploadedBy": "Bozhidar Zlatev",
+                "_createdOn": 1742846161617,
+                "_id": "80170509-75cd-451d-9e24-9c565728301a"
+            },
+            "179c7715-9fe8-4520-8b75-5790d8adad3c": {
+                "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                "subCategory": "",
+                "title": "Тениска Скандау",
+                "genre": "рап",
+                "artist": "Скандау",
+                "date": "2025-03-01",
+                "descriptions": "Бяла тениска Скандау",
+                "price": "25",
+                "color": "white",
+                "imageUrl": "https://www.skandau.com/wp-content/uploads/2021/05/Screenshot-2021-05-10-at-20.37.29-290x370.png",
+                "category": "merch",
+                "uploadedBy": "Admin Adminov",
+                "_createdOn": 1742847270686,
+                "_id": "179c7715-9fe8-4520-8b75-5790d8adad3c"
+            },
+            "c3f0800c-a349-4eec-a8a0-cc8a1d90513c": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "subCategory": "",
+                "title": "50 Cent Chain",
+                "genre": "rap",
+                "artist": "50 Cent",
+                "date": "2025-02-26",
+                "descriptions": "50 Cent chain  ",
+                "price": "110",
+                "color": "gold",
+                "imageUrl": "https://i.ebayimg.com/images/g/1BwAAOSw45tllHIm/s-l1200.jpg",
+                "category": "merch",
+                "uploadedBy": "Pesho Minkov",
+                "_createdOn": 1742847396603,
+                "_id": "c3f0800c-a349-4eec-a8a0-cc8a1d90513c"
+            }
+        },
+        reviews: {
+            "ff8c5265-fa87-4abf-8b83-e0b24ef8d13b": {
+                "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806",
+                "review": "Can''t wait",
+                "rating": "5",
+                "itemId": "80170509-75cd-451d-9e24-9c565728301a",
+                "user": "Bozhidar Zlatev",
+                "_createdOn": 1742846421696,
+                "_id": "ff8c5265-fa87-4abf-8b83-e0b24ef8d13b"
+            },
+            "a230ec3e-6a90-4cb0-9d2e-fbb09dcffa83": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "review": "Къртачка!!",
+                "rating": "5",
+                "itemId": "80170509-75cd-451d-9e24-9c565728301a",
+                "user": "Pesho Minkov",
+                "_createdOn": 1742847563884,
+                "_id": "a230ec3e-6a90-4cb0-9d2e-fbb09dcffa83"
+            }
+        },
         recipes: {
             "3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",

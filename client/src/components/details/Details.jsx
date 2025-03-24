@@ -15,6 +15,12 @@ export default function Details() {
     const [review, setReview] = useState(false);
     const {reviews} = useReviews(itemId)
 
+    let rating = 0 ;
+     reviews.map(key => rating += Number(key.rating))
+    console.log(rating);
+    
+    rating = rating /= reviews.length
+
     if (!item) {
         return <div>Item not found</div>;
     }
@@ -46,6 +52,22 @@ export default function Details() {
                 <div className="flex flex-col justify-between p-6 space-y-4">
                     <h1 className="text-3xl font-semibold">{item.title}</h1>
                     <p className="text-gray-500 text-lg">{item.category}</p>
+
+                        <div className="mt-4 text-gray-700">
+                        <h3 className="font-semibold text-xl">Rating:</h3>
+                    <div className="flex space-x-1">
+                            {[...Array(5)].map((_, index) => (
+                                        <span
+                                            key={index}
+                                            className={`text-2xl  ${
+                                                index < rating ? 'text-yellow-400' : 'text-gray-300'
+                                            }`}
+                                        >
+                                            ★
+                                        </span>
+                                    ))}
+                            </div>
+                    </div>
     
                     <div className="mt-4 text-gray-700">
                         <h3 className="font-semibold text-xl">Description:</h3>

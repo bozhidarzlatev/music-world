@@ -2,7 +2,6 @@ export default function ShowReview ({
     reviews
 })  {
 
-    console.log(`tova`, reviews);
     
 
     return (
@@ -13,11 +12,16 @@ export default function ShowReview ({
                         <div className="flex flex-col">
                             <h3 className="text-xl font-semibold text-gray-800">{rev.user}</h3>
                             <div className="flex space-x-1">
-                                <span className="text-2xl cursor-pointer text-yellow-400">★</span>
-                                <span className="text-2xl cursor-pointer text-yellow-400">★</span>
-                                <span className="text-2xl cursor-pointer text-yellow-400">★</span>
-                                <span className="text-2xl cursor-pointer text-yellow-400">★</span>
-                                <span className="text-2xl cursor-pointer text-gray-300">★</span>
+                            {[...Array(5)].map((_, index) => (
+                                        <span
+                                            key={index}
+                                            className={`text-2xl cursor-pointer ${
+                                                index < rev.rating ? 'text-yellow-400' : 'text-gray-300'
+                                            }`}
+                                        >
+                                            ★
+                                        </span>
+                                    ))}
                             </div>
                         </div>
                     </div>
