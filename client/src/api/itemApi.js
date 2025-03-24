@@ -27,7 +27,7 @@ export const useItems = (categoriId) => {
 
     }, [])
 
-    return {items}
+    return { items }
 
 }
 
@@ -45,12 +45,25 @@ export const useItem = (itemId) => {
 };
 
 export const useEditItem = () => {
-    const {request } = useAuth()
+    const { request } = useAuth()
 
-    const edit = (itemId, itemData) => 
+    const edit = (itemId, itemData) =>
         request.put(`${baseUrl}/${itemId}`, { ...itemData, _id: itemId });
 
     return {
         edit
     }
+}
+
+export const useDeleteItem = () => {
+    const { request } = useAuth();
+
+    const deleteItem = (itemId) =>
+        request.delete(`${baseUrl}/${itemId}`);
+
+    return {
+        deleteItem,
+    }
+
+
 }

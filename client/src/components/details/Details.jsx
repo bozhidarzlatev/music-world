@@ -1,14 +1,23 @@
-import { Link, useParams } from 'react-router';
-import { useItem } from '../../api/itemApi';
+import { Link, useNavigate, useParams } from 'react-router';
+import { useDeleteItem, useItem } from '../../api/itemApi';
 import useAuth from '../../hooks/useAuth';
 
 export default function Details() {
     const { categoriId, itemId } = useParams();
     const { item } = useItem(itemId)
     const { _id: userId } = useAuth()
+    const { deleteItem } = useDeleteItem()
+    const navigate = useNavigate()
 
     if (!item) {
         return <div>Item not found</div>;
+    }
+
+
+    const onDeleteItemHandler = async () => {
+
+        await deleteItem(itemId)
+        navigate(`/categories/${categoriId}`)
     }
 
     const isOwner = userId === item._ownerId;
@@ -28,8 +37,8 @@ export default function Details() {
                     <h1 className="text-3xl font-semibold">{item.title}</h1>
                     <p className="text-gray-500 text-lg">{item.category}</p>
 
-                    Rating 
-                     <div className="flex items-center mt-4">
+                    Rating
+                    <div className="flex items-center mt-4">
                         {Array.from({ length: 5 }, (_, index) => (
                             <span
                                 key={index}
@@ -52,17 +61,19 @@ export default function Details() {
 
                 <div className="flex flex-col space-y-4 p-6">
                     <button className="w-full bg-green-600 text-white py-3 rounded-md transition-transform transform hover:scale-105 hover:bg-green-700 hover:shadow-lg">
-                    Add to Cart
+                        Add to Cart
                     </button>
 
-                    {isOwner && 
+                    {isOwner &&
                         <>
-                    <Link to={`/categories/${categoriId}/${itemId}/edit`}className="w-full bg-gray-300 text-black py-3 rounded-md hover:bg-gray-400 transition-colors">
-                        Edit Item
-                    </Link>
-                    <button className="w-full bg-gray-300 text-black py-3 rounded-md hover:bg-gray-400 transition-colors">
-                        Delete Item
-                    </button>
+                            <Link to={`/categories/${categoriId}/${itemId}/edit`} className="w-full bg-gray-300 text-black py-3 rounded-md hover:bg-gray-400 transition-colors">
+                                Edit Item
+                            </Link>
+                            <button
+                                onClick={onDeleteItemHandler}
+                                className="w-full bg-gray-300 text-black py-3 rounded-md hover:bg-gray-400 transition-colors">
+                                Delete Item
+                            </button>
                         </>
                     }
                 </div>

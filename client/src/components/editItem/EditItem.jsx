@@ -73,9 +73,18 @@ export default function (){
 
     const editItemHanlder = async (formData) => {
         const editData = Object.fromEntries(formData);
-        
-        await edit(itemId, editData);
-        navigate(`/categories/${params.categoriId}/${itemId}/details`)
+
+            const result = await edit(itemId, editData);
+            console.log(result.code === 401 );
+            
+            if (result.code === 401) {
+
+                navigate(`/404`)
+            } else {
+                navigate(`/categories/${params.categoriId}/${itemId}/details`)
+            }    
+            
+     
     }
     
 
