@@ -4,7 +4,8 @@ import { useCreateReview } from "../../../api/reviewApi";
 export default function AddReview({
     closeReview,
     itemId,
-    user
+    user,
+    category
 }) {
 
     const { create } = useCreateReview()
@@ -12,9 +13,8 @@ export default function AddReview({
 
     const onSubmitReview = async (formData) => {
         const reviewData = Object.fromEntries(formData);
-        console.log(reviewData);
-
         await create({ ...reviewData, itemId, user })
+        
         closeReview()
     }
 
