@@ -40,7 +40,7 @@ const products = [
 export default function Catalog() {
   const { categoriId } = useParams();
   const { items } = useItems(categoriId)
-  
+
   return (
     <div className="min-h-screen bg-gray-100 p-8">
       <h1 className="text-3xl font-bold text-center mb-8">{categoriId} Catalog</h1>

@@ -1,18 +1,25 @@
 import { Link, useNavigate, useParams } from 'react-router';
 import { useDeleteItem, useItem } from '../../api/itemApi';
 import useAuth from '../../hooks/useAuth';
+import { useState } from 'react';
+import AddReview from '../review/addReview/AddReview';
 
 export default function Details() {
     const { categoriId, itemId } = useParams();
     const { item } = useItem(itemId)
-    const { _id: userId } = useAuth()
+    const { _id: userId, firstName, lastName } = useAuth()
     const { deleteItem } = useDeleteItem()
     const navigate = useNavigate()
+    const [review, setReview] = useState(false)
 
     if (!item) {
         return <div>Item not found</div>;
     }
 
+    const onAddReviewHandler = () => {
+        setReview(prev => !prev)
+
+    }
 
     const onDeleteItemHandler = async () => {
 
@@ -76,8 +83,22 @@ export default function Details() {
                             </button>
                         </>
                     }
+                    <button
+                        onClick={onAddReviewHandler}
+                        className="w-full bg-purple-800 text-white py-3 rounded-md hover:bg-gray-400 transition-colors">
+                        Add review
+                    </button>
                 </div>
             </div>
+
+            {review && (
+                <AddReview 
+                closeReview={onAddReviewHandler} 
+                itemId={itemId} 
+                user={`${firstName} ${lastName}`}
+                 />
+            )}
+
         </div>
     );
 };
