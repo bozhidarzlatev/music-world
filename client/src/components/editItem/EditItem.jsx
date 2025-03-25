@@ -1,5 +1,7 @@
-import { useNavigate, useParams } from "react-router";
+import { Navigate, useNavigate, useParams } from "react-router";
 import { useEditItem, useItem } from "../../api/itemApi";
+import useAuth from "../../hooks/useAuth";
+import Spinner from "../spinner/Spinner";
 
 const catItem = {
     albums: {
@@ -65,9 +67,9 @@ export default function (){
     const params = useParams()
     const itemsToRender = Object.entries(catItem[params.categoriId])
     const itemId = params.itemId
-
+    const {userId} = useAuth()
     const {item} = useItem(itemId)
-    const {edit} = useEditItem(item)
+    const {edit} = useEditItem()
     
     const navigate = useNavigate()
 
@@ -87,6 +89,17 @@ export default function (){
      
     }
     
+    
+    if (!item || Object.keys(item).length === 0) {
+        return <Spinner />
+    }
+    
+        const isOwner =  userId === item._ownerId;
+
+    
+    if(!isOwner) {
+        return <Navigate to="/categories" />
+    }
 
     return (
         <div>

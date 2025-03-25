@@ -1,9 +1,8 @@
-import { useContext } from "react";
-import { UserContext } from "../contexts/UserContext";
+import { useUserContext } from "../contexts/UserContext";
 import request from "../utils/request";
 
 export default function useAuth() {
-    const authData = useContext(UserContext);
+    const authData = useUserContext();
     
     const requestWrapper = (method, url, data, options = {}) => {
         const authOptions = {
@@ -19,6 +18,8 @@ export default function useAuth() {
 
     return {
         ...authData,
+        isAuthenticated: !!authData.accessToken,
+        userId: authData._id,
         request: {
             get: requestWrapper.bind(null, 'GET'),
             post: requestWrapper.bind(null, 'POST'),

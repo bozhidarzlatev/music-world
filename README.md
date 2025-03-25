@@ -40,3 +40,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - View review func added
     - Basic data seed 
     - usePersistantStata - added localStorage for managing state 
+    - Guards Added

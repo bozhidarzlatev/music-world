@@ -17,13 +17,13 @@ export default function Details() {
 
     let rating = 0 ;
      reviews.map(key => rating += Number(key.rating))
-    console.log(rating);
     
     rating = rating /= reviews.length
 
     if (!item) {
         return <div>Item not found</div>;
     }
+    
 
     const onAddReviewHandler = () => {
         setReview(prev => !prev)
@@ -31,7 +31,10 @@ export default function Details() {
     }
 
     const onDeleteItemHandler = async () => {
-
+        if ( userId !== item._ownerId) {
+            return <Navigate to="/categories" />
+        }
+        
         await deleteItem(itemId)
         navigate(`/categories/${categoriId}`)
     }
@@ -67,6 +70,11 @@ export default function Details() {
                                         </span>
                                     ))}
                             </div>
+                    </div>
+    
+                    <div className="mt-4 text-gray-700">
+                        <h3 className="font-semibold text-xl">owner:</h3>
+                        <p>{item.uploadedBy} </p>
                     </div>
     
                     <div className="mt-4 text-gray-700">
