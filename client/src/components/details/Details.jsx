@@ -4,7 +4,7 @@ import useAuth from '../../hooks/useAuth';
 import { useState } from 'react';
 import AddReview from '../review/addReview/AddReview';
 import ShowReview from '../review/showReview/ShowReview';
-import { useReviews } from '../../api/reviewApi';
+import { useCreateReview, useReviews } from '../../api/reviewApi';
 
 export default function Details() {
     const { categoriId, itemId } = useParams();
@@ -13,7 +13,8 @@ export default function Details() {
     const { deleteItem } = useDeleteItem()
     const navigate = useNavigate()
     const [review, setReview] = useState(false);
-    const {reviews} = useReviews(itemId)
+    const {reviews, setReviews} = useReviews(itemId)
+    const {create} = useCreateReview()
 
     let rating = 0 ;
      reviews.map(key => rating += Number(key.rating))
@@ -37,6 +38,13 @@ export default function Details() {
         
         await deleteItem(itemId)
         navigate(`/categories/${categoriId}`)
+    }
+
+    const reviewCreateHandler = async (newReview) => {
+        const user = `${firstName} ${lastName}`
+        const reviewResult = await create({...newReview, itemId, user })
+        
+        setReviews(prev => [...prev, reviewResult])
     }
 
     const isOwner = userId === item._ownerId;
@@ -119,6 +127,7 @@ export default function Details() {
                     itemId={itemId} 
                     user={`${firstName} ${lastName}`} 
                     category={categoriId}
+                    onCreate={reviewCreateHandler}
                 />
             )}
         </div>

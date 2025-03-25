@@ -13,24 +13,25 @@ export const useReviews = (itemId) => {
     useEffect(() => {
         request.get(`${baseUrl}?where=itemId%3D%22${itemId}%22`)
             .then(setReviews)
-
+        
     }, [itemId])
 
     return {
-        reviews
+        reviews,
+        setReviews
     }
 
 }
 
 export const useCreateReview = () => {
     const { request } = useAuth()
-    const {reviews} = useReviews()
 
     const create = (reviewData) => {
-        request.post(baseUrl, reviewData)
+       return request.post(baseUrl, reviewData)
     }
 
     return {
         create
+        
     }
 }

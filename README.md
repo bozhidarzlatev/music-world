@@ -41,3 +41,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - Basic data seed 
     - usePersistantStata - added localStorage for managing state 
     - Guards Added
+    - Review functionality update

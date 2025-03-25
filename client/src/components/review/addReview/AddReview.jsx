@@ -5,7 +5,8 @@ export default function AddReview({
     closeReview,
     itemId,
     user,
-    category
+    category,
+    onCreate
 }) {
 
     const { create } = useCreateReview()
@@ -13,8 +14,7 @@ export default function AddReview({
 
     const onSubmitReview = async (formData) => {
         const reviewData = Object.fromEntries(formData);
-        await create({ ...reviewData, itemId, user })
-        
+        onCreate(reviewData)
         closeReview()
     }
 

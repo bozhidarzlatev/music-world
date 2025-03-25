@@ -13,7 +13,7 @@ const products = [
     image: "https://images.pexels.com/photos/164743/pexels-photo-164743.jpeg",
   },
   {
-    id: 33,
+    id: 2,
     title: "Acoustic Guitar",
     category: "Instruments",
     price: "$299",
@@ -21,7 +21,7 @@ const products = [
     image: "https://images.pexels.com/photos/164743/pexels-photo-164743.jpeg",
   },
   {
-    id: 2,
+    id: 3,
     title: "Electric Keyboard",
     category: "Instruments",
     price: "$499",
@@ -29,7 +29,7 @@ const products = [
     image: "https://images.pexels.com/photos/164743/pexels-photo-164743.jpeg",
   },
   {
-    id: 3,
+    id: 4,
     title: "Drum Set",
     category: "Instruments",
     price: "$799",
@@ -49,7 +49,7 @@ export default function Catalog() {
         {items.map((item) => 
           <Link
             to={`/categories/${categoriId}/${item._id}/details`}
-            key={item.id}
+            key={item._id}
             className="block"
           >
             <div className="bg-white rounded-lg shadow-md hover:shadow-2xl transition-shadow duration-300 overflow-hidden cursor-pointer">
@@ -62,8 +62,8 @@ export default function Catalog() {
                 <h2 className="text-lg font-semibold">{item.title}</h2>
                 <p className="text-gray-500 text-sm">{item.category}</p>
                 <p className="text-xl font-bold text-green-500">{item.price}</p>
-
-                {/* <div className="flex items-center mt-2">
+{/* 
+                <div className="flex items-center mt-2">
                   {Array.from({ length: 5 }, (_, index) => (
                     <span
                       key={index}
