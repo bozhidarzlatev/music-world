@@ -43,3 +43,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - Guards Added
     - Review functionality update
     - useOptimistic added
+    - Add and Edit views upgrades
