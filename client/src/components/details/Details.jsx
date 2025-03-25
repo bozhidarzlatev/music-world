@@ -1,10 +1,11 @@
 import { Link, useNavigate, useParams } from 'react-router';
 import { useDeleteItem, useItem } from '../../api/itemApi';
 import useAuth from '../../hooks/useAuth';
-import { useState } from 'react';
+import { useOptimistic, useState } from 'react';
 import AddReview from '../review/addReview/AddReview';
 import ShowReview from '../review/showReview/ShowReview';
 import { useCreateReview, useReviews } from '../../api/reviewApi';
+import {v4 as uuid} from 'uuid'
 
 export default function Details() {
     const { categoriId, itemId } = useParams();
@@ -13,8 +14,12 @@ export default function Details() {
     const { deleteItem } = useDeleteItem()
     const navigate = useNavigate()
     const [review, setReview] = useState(false);
-    const {reviews, setReviews} = useReviews(itemId)
     const {create} = useCreateReview()
+    const {reviews, setReviews} = useReviews(itemId)
+    const [optimisticReviews, setOptimisticReviews] = useOptimistic(reviews)
+
+    console.log(optimisticReviews);
+    
 
     let rating = 0 ;
      reviews.map(key => rating += Number(key.rating))
@@ -27,8 +32,11 @@ export default function Details() {
     
 
     const onAddReviewHandler = () => {
-        setReview(prev => !prev)
+        setReview(true)
+    }
 
+    const onCloseRevieHandler = () => {
+        setReview(false)
     }
 
     const onDeleteItemHandler = async () => {
@@ -40,11 +48,23 @@ export default function Details() {
         navigate(`/categories/${categoriId}`)
     }
 
-    const reviewCreateHandler = async (newReview) => {
+    const reviewCreateHandler = async (formData) => {
+        const newReview = Object.fromEntries(formData);
         const user = `${firstName} ${lastName}`
+        const newOptimisticReview = {
+            ...newReview, 
+            user, 
+            itemId, 
+            pending: true,
+            _id: uuid()
+        }
+        
+        setOptimisticReviews((optimisticState) => [...optimisticState, newOptimisticReview])
+            
         const reviewResult = await create({...newReview, itemId, user })
         
         setReviews(prev => [...prev, reviewResult])
+        onCloseRevieHandler()
     }
 
     const isOwner = userId === item._ownerId;
@@ -119,14 +139,11 @@ export default function Details() {
                 </div>
             </div>
     
-            <ShowReview reviews={reviews}/>
+            <ShowReview reviews={optimisticReviews}/>
     
             {review && (
                 <AddReview 
-                    closeReview={onAddReviewHandler} 
-                    itemId={itemId} 
-                    user={`${firstName} ${lastName}`} 
-                    category={categoriId}
+                    closeReview={onCloseRevieHandler} 
                     onCreate={reviewCreateHandler}
                 />
             )}

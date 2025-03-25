@@ -3,26 +3,17 @@ import { useCreateReview } from "../../../api/reviewApi";
 
 export default function AddReview({
     closeReview,
-    itemId,
-    user,
-    category,
     onCreate
 }) {
 
-    const { create } = useCreateReview()
     const [selectedRating, setSelectedRating] = useState(1);
 
-    const onSubmitReview = async (formData) => {
-        const reviewData = Object.fromEntries(formData);
-        onCreate(reviewData)
-        closeReview()
-    }
 
     return (
         <div className="fixed inset-0 flex justify-center items-center z-50 bg-none bg-opacity-10 backdrop-blur-sm">
             <div className="bg-white p-12 rounded-2xl shadow-xl w-full max-w-lg relative">
                 <h2 className="text-3xl font-semibold text-center mb-8">Leave a Review</h2>
-                <form className="space-y-6" action={onSubmitReview}>
+                <form className="space-y-6" action={onCreate}>
                     {/* Review Textarea */}
                     <div className="space-y-4">
                         <textarea

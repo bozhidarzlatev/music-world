@@ -42,3 +42,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - usePersistantStata - added localStorage for managing state 
     - Guards Added
     - Review functionality update
+    - useOptimistic added
