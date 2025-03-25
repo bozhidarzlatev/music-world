@@ -8,26 +8,18 @@ import './App.css'
 import Login from './components/authentification/login/Login'
 import Register from './components/authentification/register/Register'
 import Catalog from './components/catalog/Catalog'
-import { useState } from 'react'
-import { UserContext } from './contexts/UserContext'
 import Logout from './components/authentification/logout/Logout'
 import CreateItem from './components/createItem/CreateItem'
 import Details from './components/details/Details'
 import EditItem from './components/editItem/EditItem'
+import UserProvider from './providers/UserProvider'
 
 
 function App() {
-  const [userData, setUserData] = useState({})
-
-  const userDateHandler = (data) => {
-    
-    setUserData(data);
-  };
-
 
   return (
     <>
-      <UserContext.Provider value={{...userData, userDateHandler}}>
+      <UserProvider>
 
         <div id="container">
           <Header />
@@ -51,7 +43,7 @@ function App() {
 
           <Footer />
         </div>
-      </UserContext.Provider>
+        </UserProvider>
 
     </>
   )

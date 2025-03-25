@@ -1,11 +1,10 @@
-import { useActionState, useContext } from "react";
+import { useActionState } from "react";
 import { useRegister } from "../../../api/authApi";
-import { UserContext } from "../../../contexts/UserContext";
 import { useNavigate } from "react-router";
 
 export default function Register() {
   const { register } = useRegister();
-  const { userDateHandler } = useContext(UserContext)
+  const { userDateHandler } = useUserContext()
   const navigate = useNavigate()
 
 
