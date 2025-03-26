@@ -79,11 +79,9 @@ export default function () {
     const { edit } = useEditItem()
 
     const navigate = useNavigate()
-    console.log(item);
 
     const editItemHanlder = async (formData) => {
         const editData = Object.fromEntries(formData);
-        console.log(editData);
         
         const result = await edit(itemId, editData);
 

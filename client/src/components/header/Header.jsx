@@ -11,10 +11,7 @@ export default function Header() {
     const [cartCount, setCartCount] = useState(0);
 
     useEffect(() => {
-        console.log('Cart data received in Header:', cart); // Log cart data in Header
-        if (cart) {
-            setCartCount(cart.length); // Set cart count dynamically based on cart items
-        }
+            setCartCount(cart.length)
     }, [cart]);
  
 

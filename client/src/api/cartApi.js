@@ -30,12 +30,13 @@ export const useCartData = (userId) => {
     const [cart, setCart] = useState([])
     const [cartId, setCartId] = useState('')
     const { request } = useAuth()
-    
+
+
     useEffect(() => {
         request.get(`${baseUrl}?where=_ownerId%3D%22${userId}%22`)
             .then(response => {
                 if (response && response[0]) {
-                    setCart(response[0].items); // Ensure cart is fetched correctly
+                    setCart(response[0].items);
                     setCartId(response[0]._id);
                 }
             })
