@@ -1,6 +1,6 @@
 import { useContext } from "react"
 import { useNavigate, useParams } from "react-router"
-import { UserContext } from "../../contexts/UserContext"
+import { UserContext, useUserContext } from "../../contexts/UserContext"
 import { useCreateItem } from "../../api/itemApi"
 
 const item = {
@@ -73,7 +73,7 @@ const item = {
 export default function CreateItem() {
     const params = useParams()
     const itemsToRender = Object.entries(item[params.addCategoryId])
-    const { firstName, lastName, _id } = useContext(UserContext);
+    const { firstName, lastName, _id } = useUserContext();
     const { create } = useCreateItem()
     const navigate = useNavigate()
 

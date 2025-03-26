@@ -1,13 +1,22 @@
-import { useContext, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import styles from "./Header.module.css"
 import { Link } from "react-router"
-import { UserContext } from "../../contexts/UserContext"
+import { UserContext, useUserContext } from "../../contexts/UserContext"
 import { PlusCircle, LogOut, Grid, LogIn, UserPlus } from "lucide-react";
+import { useCartData } from "../../api/cartApi";
 
 export default function Header() {
-    const { firstName, avatar } = useContext(UserContext);
+    const { firstName, avatar , _id} = useUserContext(UserContext);
+    const {cart} = useCartData(_id)
+    const [cartCount, setCartCount] = useState(0);
 
-
+    useEffect(() => {
+        console.log('Cart data received in Header:', cart); // Log cart data in Header
+        if (cart) {
+            setCartCount(cart.length); // Set cart count dynamically based on cart items
+        }
+    }, [cart]);
+ 
 
     return (
         <header>
@@ -20,6 +29,7 @@ export default function Header() {
                 </Link>
                 <p>Music World</p>
             </div>
+                <p>Cart: {cartCount}</p>
             <nav>
                 <Link to="/categories" className="text-white-700 hover:text-blue-900 flex items-center space-x-2 relative group">
                     <Grid className="w-15 h-15" />

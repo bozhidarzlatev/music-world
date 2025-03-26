@@ -1448,6 +1448,14 @@
                 "_id": "a230ec3e-6a90-4cb0-9d2e-fbb09dcffa83"
             }
         },
+        carts: {
+            "e6a4d9d6-fbba-46a6-9ff6-425a372d9d12": {
+                "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806",
+                "items": [`pop`, 'smoke'],
+                "_createdOn": 1742992149028,
+                "_id": "e6a4d9d6-fbba-46a6-9ff6-425a372d9d12"
+            }
+        },
         recipes: {
             "3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
                 _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",

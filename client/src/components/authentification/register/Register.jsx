@@ -1,10 +1,13 @@
-import { useActionState } from "react";
+import { useActionState, useState } from "react";
 import { useRegister } from "../../../api/authApi";
 import { useNavigate } from "react-router";
+import { useUserContext } from "../../../contexts/UserContext";
+import { useCreateCart } from "../../../api/cartApi";
 
 export default function Register() {
   const { register } = useRegister();
-  const { userDateHandler } = useUserContext()
+  const { userDateHandler, accessToken } = useUserContext();
+  const { create } = useCreateCart()
   const navigate = useNavigate()
 
 
@@ -21,7 +24,6 @@ export default function Register() {
     }
 
     const userData =  await register(regData)
-    console.log(userData);
     const regUserData = {
       firstName: userData.firstName,
       lastName: userData.lastName,
@@ -30,10 +32,14 @@ export default function Register() {
       avatar: userData.avatar,
       accessToken: userData.accessToken
     }
-    userDateHandler(regUserData)
-    navigate('/')
 
+    userDateHandler(regUserData)
+    const createCart = create(userData.accessToken)
+    navigate('/')
+    
   }
+
+
 
   const [_, regAction, isPending] = useActionState(registerHandler, {  firstName: '', lastName: '', email: '', password: '' , rePassword: '', avatar: '' });
 

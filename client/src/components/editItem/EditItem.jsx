@@ -83,7 +83,8 @@ export default function () {
 
     const editItemHanlder = async (formData) => {
         const editData = Object.fromEntries(formData);
-
+        console.log(editData);
+        
         const result = await edit(itemId, editData);
 
         if (result.code === 401) {
