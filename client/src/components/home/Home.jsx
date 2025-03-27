@@ -1,7 +1,39 @@
+import { useLatestUploads, useTopRatingUploads } from "../../api/itemApi"
+import CatalogCard from "../catalog/CatalogCard"
 import styles from "./Home.module.css"
-import { Link } from "react-router"
+import { data, Link } from "react-router"
 
 export default function Home() {
+    const { latestItems } = useLatestUploads()
+    const { topRatingtItems } = useTopRatingUploads()
+
+    let topRating = {};
+    topRatingtItems.forEach(item => {
+        if (!topRating.hasOwnProperty(item.itemId)) {
+            topRating[item.itemId] = { ...item.data, ratings: [item.rating] }
+
+        } else {
+            topRating[item.itemId].ratings = [...topRating[item.itemId].ratings, item.rating];
+        }
+
+
+    });
+
+    const items = Object.values(topRating);
+    items.forEach(element => {
+        let finalRating = 0;
+        element.ratings.map(rat => finalRating += Number(rat));
+        element.rating = finalRating / element.ratings.length
+    });
+
+    const finalItemsa = items.sort((a, b)=> Number(b.rating)-Number(a.rating)).slice(0, 4);
+    console.log(finalItemsa);
+    
+
+
+
+
+
     return (
         <section className={styles["main-section"]}>
             <div className={styles.welcome}>
@@ -24,37 +56,26 @@ export default function Home() {
             </div>
             <hr />
             <div className={styles["featured-products"]}>
-                <div className={styles["products"]}>
+                <p>Lates items:</p>
+                <div key="latest-items" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
-                    <Link className={styles["top-rated"]} to={`/categories/category/id/details`}>
-                        <div className={styles.img}>
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI-LcNlicYGdnG4wZYXQYiMRm7J6GD9tfd4Q&s" />
-                        </div>
-                        <p>Rating</p>
-                        <p>Product 1</p>
-                        <p>Category</p>
-                        <p>Price</p>
-                    </Link>
+                    {latestItems.map(item =>
 
-
+                        <CatalogCard categoriId={item.category} item={item} />
+                    )}
 
                 </div>
+                <br />
+                <br />
                 <hr />
-                <div className={styles["products"]}>
-                    <Link className={styles["recently-added"]} to={`/categories/category/id/details`}>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI-LcNlicYGdnG4wZYXQYiMRm7J6GD9tfd4Q&s" />
-                        <p>Rating</p>
-                        <p>Product 1</p>
-                        <p>Category</p>
-                        <p>Price</p>
-                    </Link>
-                    <Link className={styles["recently-added"]} to={`/categories/category/id/details`}>
-                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI-LcNlicYGdnG4wZYXQYiMRm7J6GD9tfd4Q&s" />
-                        <p>Rating</p>
-                        <p>Product 1</p>
-                        <p>Category</p>
-                        <p>Price</p>
-                    </Link>
+                <p>Top rated items</p>
+                <div key="top-items" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+
+                    {finalItemsa.map(item =>
+
+                        <CatalogCard categoriId={item.category} item={item} />
+                    )}
+
                 </div>
             </div>
         </section>

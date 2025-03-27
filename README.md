@@ -45,3 +45,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - useOptimistic added
     - Add and Edit views upgrades
     - Add to cart func
+    - Added latest items and top Reviews at home view

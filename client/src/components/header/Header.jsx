@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react"
+import {  useEffect, useState } from "react"
 import styles from "./Header.module.css"
 import { Link } from "react-router"
 import { UserContext, useUserContext } from "../../contexts/UserContext"
