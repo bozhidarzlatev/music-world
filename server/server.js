@@ -1451,7 +1451,7 @@
         carts: {
             "e6a4d9d6-fbba-46a6-9ff6-425a372d9d12": {
                 "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806",
-                "items": [`pop`, 'smoke'],
+                "items": ["149de21e-a780-43c4-9c09-088181ff0337", "80170509-75cd-451d-9e24-9c565728301a",  "c3f0800c-a349-4eec-a8a0-cc8a1d90513c"],
                 "_createdOn": 1742992149028,
                 "_id": "e6a4d9d6-fbba-46a6-9ff6-425a372d9d12"
             }

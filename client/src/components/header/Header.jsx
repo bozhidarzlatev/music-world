@@ -2,7 +2,7 @@ import {  useEffect, useState } from "react"
 import styles from "./Header.module.css"
 import { Link } from "react-router"
 import { UserContext, useUserContext } from "../../contexts/UserContext"
-import { PlusCircle, LogOut, Grid, LogIn, UserPlus } from "lucide-react";
+import { PlusCircle, LogOut, Grid, LogIn, UserPlus, ShoppingCart } from "lucide-react";
 import { useCartData } from "../../api/cartApi";
 
 export default function Header() {
@@ -44,6 +44,13 @@ export default function Header() {
                             <PlusCircle className="w-15 h-15" />
                             <span className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200">
                                 Add New
+                            </span>
+                        </Link>
+                        
+                        <Link to="/cart" className="text-yellow-600 hover:text-white flex items-center justify-center relative group">
+                            <ShoppingCart className="w-15 h-15" />
+                            <span className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200">
+                                Cart
                             </span>
                         </Link>
 

@@ -1,9 +1,11 @@
 import { useEffect, useState } from "react";
 import request from "../utils/request";
 import useAuth from "../hooks/useAuth";
+import { useItem, useItems } from "./itemApi";
 
 
 const baseUrl = 'http://localhost:3030/data/carts';
+const itemUrl = 'http://localhost:3030/data/items';
 
 export const useCreateCart = () => {
     const create = async (accessToken) => {
@@ -54,9 +56,49 @@ export const useCartData = (userId) => {
             })
     }
 
+    const emptyCart = ( ) => {
+        const dataToPush = [
+              ]
+              console.log(`sada`);
+              
+        request.put(`${baseUrl}/${cartId}`, { items: dataToPush })
+            .then(() => {
+                setCart(dataToPush); 
+            })
+    }
+
     return {
-        cart, updateCart
+        cart, updateCart, emptyCart
     }
 }
 
+export const useUserCart = () => {
+    const {request ,userId} = useAuth();
+    const [userCart, setUserCart] = useState([]);
 
+    useEffect(() => {
+
+        const searchParams = new URLSearchParams({
+            where: `_ownerId="${userId}"`,
+            select: `items`
+        })
+        
+        request.get(`${baseUrl}?${searchParams.toString()}`)
+            .then(response => 
+                 response[0].items.map(cartItems => 
+                    request.get(`${itemUrl}/${cartItems}`)
+                        .then( responseItem => {
+                            setUserCart(prev=> [...prev, responseItem]);
+                            
+                        })
+                    
+                ))
+                
+          
+
+    }, [])
+    
+    return {
+        userCart
+    }
+}

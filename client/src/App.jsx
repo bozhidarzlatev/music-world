@@ -15,6 +15,7 @@ import EditItem from './components/editItem/EditItem'
 import UserProvider from './providers/UserProvider'
 import AuthGuard from './components/guards/AuthGuard'
 import GuestGuard from './components/guards/GuestGuard'
+import Cart from './components/cart/Cart'
 
 
 function App() {
@@ -39,6 +40,7 @@ function App() {
                 <Route path="/create" element={<Categories route="create" action="Create" />} />
                 <Route path="/create/:addCategoryId" element={<CreateItem />} />
                 <Route path="/logout" element={<Logout />} />
+                <Route path="/cart" element={<Cart />} />
               </Route>
 
               <Route element={<GuestGuard />}>

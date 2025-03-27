@@ -6,7 +6,7 @@ import AddReview from '../review/addReview/AddReview';
 import ShowReview from '../review/showReview/ShowReview';
 import { useCreateReview, useReviews } from '../../api/reviewApi';
 import { v4 as uuid } from 'uuid'
-import {  useCartData } from '../../api/cartApi';
+import { useCartData } from '../../api/cartApi';
 
 export default function Details() {
     const { categoriId, itemId } = useParams();
@@ -17,7 +17,7 @@ export default function Details() {
     const [review, setReview] = useState(false);
     const { create } = useCreateReview()
     const { reviews, setReviews } = useReviews(itemId)
-    const  {cart, updateCart}  = useCartData(userId)
+    const { cart, updateCart } = useCartData(userId)
 
     const [optimisticReviews, setOptimisticReviews] = useOptimistic(reviews)
 
@@ -71,15 +71,15 @@ export default function Details() {
     const isOwner = userId === item._ownerId;
 
     const onAddToCartHandler = () => {
-        
+
         const cartDataItems = cart
         const dataToPush = [
             ...cartDataItems,
             item._id
         ]
 
-        
-        updateCart(item._id )
+
+        updateCart(item._id)
     }
 
     return (
@@ -131,12 +131,15 @@ export default function Details() {
 
                     {isOwner && (
                         <>
-                            <Link to={`/categories/${categoriId}/${itemId}/edit`} className="w-full bg-gray-300 text-black py-3 rounded-md hover:bg-gray-400 transition-colors">
+                            <Link
+                                to={`/categories/${categoriId}/${itemId}/edit`}
+                                className="w-full bg-gray-300 text-black py-3 rounded-md hover:bg-blue-400 transition-colors flex items-center justify-center"
+                            >
                                 Edit Item
                             </Link>
                             <button
                                 onClick={onDeleteItemHandler}
-                                className="w-full bg-gray-300 text-black py-3 rounded-md hover:bg-gray-400 transition-colors"
+                                className="w-full bg-gray-300 text-black py-3 rounded-md hover:bg-red-400 transition-colors"
                             >
                                 Delete Item
                             </button>
@@ -144,7 +147,7 @@ export default function Details() {
                     )}
                     <button
                         onClick={onAddReviewHandler}
-                        className="w-full bg-purple-800 text-white py-3 rounded-md hover:bg-gray-400 transition-colors"
+                        className="w-full bg-purple-800 text-white py-3 rounded-md hover:bg-yellow-400 hover:text-black transition-colors"
                     >
                         Add review
                     </button>
