@@ -16,6 +16,7 @@ import UserProvider from './providers/UserProvider'
 import AuthGuard from './components/guards/AuthGuard'
 import GuestGuard from './components/guards/GuestGuard'
 import Cart from './components/cart/Cart'
+import Orders from './components/orders/Orders'
 
 
 function App() {
@@ -41,6 +42,7 @@ function App() {
                 <Route path="/create/:addCategoryId" element={<CreateItem />} />
                 <Route path="/logout" element={<Logout />} />
                 <Route path="/cart" element={<Cart />} />
+                <Route path="/orders" element={<Orders />} />
               </Route>
 
               <Route element={<GuestGuard />}>
