@@ -3,13 +3,13 @@
     margin-top: 1em;
     margin-bottom: 1em;
     padding: 5em;
+    padding-top: 2em;
     background-color: rgb(243, 235, 235);
     width: 1200px;
     max-width: 90dvw;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: column;
-    gap: 2em;
 }
 
 h1 {
@@ -29,9 +29,10 @@ h1 {
 
 .buttons {
     display: flex;
-    justify-content: space-evenly;
-    margin-top: 2em;
+    justify-content: center;
     flex-wrap: wrap;
+    gap: 2em;
+    margin-bottom: 2em;
 }
 
 .login,

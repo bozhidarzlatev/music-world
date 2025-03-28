@@ -16,7 +16,7 @@ const comments = [
 export default function Home() {
     const { latestItems } = useLatestUploads()
     const { topRatingtItems } = useTopRatingUploads();
-    const {topReviews} = useTopReviews();
+    const { topReviews } = useTopReviews();
 
     let topRating = {};
     topRatingtItems.forEach(item => {
@@ -46,13 +46,12 @@ export default function Home() {
         <section className={styles["main-section"]}>
             <div className={styles.welcome}>
                 <h1>Music World</h1>
-                <p>Best place for all music lover</p>
+                <p>Best place for all music lovers</p>
+                <div className={styles.browse}>
+                    <Link to="/categories">Browse all categories</Link>
+                </div>
             </div>
             <div className={styles.buttons}>
-                <div className={styles.browse}>
-                    <span htmlFor="">Browse all categories</span>
-                    <Link to="/categories">Browse</Link>
-                </div>
                 <div className={styles.login}>
                     <span htmlFor="">Don't have accound?</span>
                     <Link to="/register">Register</Link>
@@ -62,8 +61,8 @@ export default function Home() {
                     <Link to="/login">Login</Link>
                 </div>
             </div>
-            <hr />
             <div className={styles["featured-products"]}>
+            <hr />
                 <p>Lates items:</p>
                 <div key="latest-items" className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
 
@@ -90,7 +89,7 @@ export default function Home() {
 
             <div className="overflow-hidden w-full bg-none-100 py-4">
                 <hr />
-                
+
                 <p>Our satisfied clients:</p>
 
                 <div className="overflow-hidden w-full bg-none-100 py-4">
