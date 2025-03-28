@@ -19,7 +19,7 @@ export default function Orders() {
 
       <div className="space-y-4">
         {orders.map((order) => {
-          const orderTotal = calculateOrderTotal(order.orderData); // Calculate the total for each order
+          const orderTotal = calculateOrderTotal(order.orderData); 
           
           return (
             <div
@@ -27,7 +27,6 @@ export default function Orders() {
               className="flex flex-col items-start justify-between p-4 bg-gray-50 rounded-lg shadow-md hover:shadow-xl transition-shadow"
               onClick={() => toggleExpand(order._id)}
             >
-              {/* Order Summary Row */}
               <div className="flex justify-between w-full items-center">
                 <p className="text-lg font-medium">Order ID: {order._id}</p>
                 <p className="text-sm text-gray-500">Date: {new Date(order._createdOn).toLocaleDateString()}</p>
@@ -35,7 +34,6 @@ export default function Orders() {
                 <p className="text-xl font-bold text-green-600">{orderTotal} lv</p> {/* Total Price */}
               </div>
 
-              {/* Expandable Order Items */}
               {expandedOrder === order._id && (
                 <div className="mt-4 w-full space-y-2">
                   {order.orderData.map((item, index) => (

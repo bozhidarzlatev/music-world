@@ -31,7 +31,7 @@ export default function Cart() {
                                 <div className="flex-1 flex justify-between items-center">
                                     <div>
                                         <h3 className="text-lg font-medium">{item.title}</h3>
-                                        <p className="text-gray-500 text-sm">{item.description}</p>
+                                        <p className="text-gray-500 text-sm">{item.category}</p>
                                     </div>
                                     <p className="text-xl font-semibold text-green-600">{Number(item.price).toFixed(2)} lv</p>
                                 </div>
