@@ -4,6 +4,7 @@ export default function CatalogCard({
     categoriId, item
 }) {
 
+
     return (
         <Link
             to={`/categories/${categoriId}/${item._id}/details`}
@@ -19,23 +20,40 @@ export default function CatalogCard({
                 <div className="p-4">
                     <h2 className="text-lg font-semibold">{item.title}</h2>
                     <h2 className="text-gray-500 text-sm">{item.category}</h2>
+                    { item.artist &&
+                    <h2 className="text-lg font-semibold text-gray-500">{item.artist}</h2>
+                    }
+                    { item.genre &&
+                    <h2 className="text-sm font-semibold text-gray-500">{item.genre}</h2>
+                    }
+                    { item.merch &&
+                    <h2 className="text-sm font-semibold text-gray-500">{item.genre}</h2>
+                    }
+                        
                     <p className="text-xl font-bold text-green-500">{Number(item.price).toFixed(2)} lv</p>
 
                     {item.rating &&
                         <>
                             <div className="flex items-center mt-2">
-                            {[...Array(5)].map((_, index) => (
-                                    <span
-                                    key={index}
-                                    className={`text-2xl  ${index < item.rating ? 'text-yellow-400' : 'text-gray-300'
-                                        }`}
-                                >
-                                        ★
-                                    </span>
-                                ))}
-                                <span className="text-sm text-gray-600 ml-2">{item.rating}</span>
+                                {[...Array(5)].map((_, index) => {
+                                    const fullStars = Math.floor(item.rating); // Whole number part of the rating
+                                    const decimal = item.rating - fullStars; // Decimal part
+
+                                    if (index < fullStars) {
+                                        return <span key={index} className="text-yellow-500 text-2xl">★</span>; // Full star
+                                    } else if (index === fullStars && decimal >= 0.01 && decimal <= 0.49) {
+                                        return <span key={index} className="text-yellow-200 text-2xl">★</span>; // Half star
+                                
+                                    } else if (index === fullStars && decimal >= 0.51 && decimal <= 0.99) {
+                                        return <span key={index} className="text-yellow-400 text-2xl">★</span>; // Half star
+                                    } else {
+                                        return <span key={index} className="text-gray-300 text-2xl">★</span>; // Empty star
+                                    }
+                                })}
+                                <span className="text-sm text-gray-600 ml-2">{Number(item.rating).toFixed(1)}</span>
                             </div>
- 
+
+
                         </>
                     }
 
@@ -43,7 +61,9 @@ export default function CatalogCard({
                         View
                     </button>
                 </div>
+                
             </div>
+ 
         </Link>
     )
 }

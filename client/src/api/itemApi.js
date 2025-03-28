@@ -19,16 +19,29 @@ export const useCreateItem = () => {
     }
 }
 
-export const useItems = (categoriId) => {
+export const useItems = (categoriId, currentPage) => {
     const [items, setItems] = useState([]);
+    const [totalItems, setTotalItems] = useState(0)
+  
+    currentPage -= 1
+    const searchParams = new URLSearchParams({
+        where: `category="${categoriId}"`,
+
+    })
 
     useEffect(() => {
-        request.get(`${baseUrl}?where=category%3D%22${categoriId}%22`)
+
+        request.get(`${baseUrl}?${searchParams.toString()}&offset=${currentPage  * 12}&pageSize=${12}`)
             .then(setItems)
 
+    }, [currentPage])
+
+    useEffect(() => {
+        request.get(`${baseUrl}?${searchParams.toString()}`)
+            .then(response => setTotalItems(Number(response.length)))
     }, [])
 
-    return { items }
+    return { items, totalItems }
 
 }
 

@@ -577,6 +577,7 @@
             }
 
             if (query.count) {
+                
                 return responseData.length;
             }
 
