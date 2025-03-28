@@ -50,3 +50,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - view cart func added
     - View all order func added
     - Add Profile component
+    - Review guards added

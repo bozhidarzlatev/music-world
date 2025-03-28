@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import useAuth from "../hooks/useAuth";
+import { urls } from "./urls";
 
 
-const baseUrl = 'http://localhost:3030/data/reviews';
+const baseUrl = urls.reviewsUrl;
 
 
 
@@ -25,13 +26,65 @@ export const useReviews = (itemId) => {
 
 export const useCreateReview = () => {
     const { request } = useAuth()
-
+    
     const create = (reviewData) => {
-       return request.post(baseUrl, reviewData)
+        return request.post(baseUrl, reviewData)
     }
-
+    
     return {
         create
         
     }
+}
+
+export const useCanReview= (itemId) => {
+    const { request, userId } = useAuth()
+    const [hasReview, setHasReview] = useState(false)
+    const [hasBought, setHasBought] = useState(false)
+
+    
+    useEffect(()=> {
+        const searchParams = new URLSearchParams({
+            where: `itemId="${itemId}"`,
+        });
+
+        const hasReviewed = async () => {
+            try {
+                const response = await request.get(`${baseUrl}?${searchParams.toString()}`)
+                const result = response.filter(a => a._ownerId === userId).length > 0 ? true : false;
+                setHasReview(result);
+            } catch (error) {
+                console.error("Failed to fetch orders:", error);
+            }
+        };
+
+
+        const hasBought = async () => {
+            const searchParams = new URLSearchParams({
+                where: `_ownerId="${userId}"`,
+            });
+            try {
+                const response = await request.get(`${urls.ordersUrl}?${searchParams.toString()}`)
+                response.some( order => {
+                    order.orderData.some( item => {
+                        item._id === itemId ? setHasBought(true) : null 
+
+                    })
+                    
+                })
+                
+                
+            } catch (error) {
+                console.error("Failed to fetch orders:", error);
+            }
+        };
+        
+        hasReviewed()
+        hasBought()
+    }, [itemId, request])
+
+    return {
+        hasReview, hasBought
+    }
+
 }

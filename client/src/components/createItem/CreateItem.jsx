@@ -1,78 +1,13 @@
-import { useContext } from "react"
 import { useNavigate, useParams } from "react-router"
-import { UserContext, useUserContext } from "../../contexts/UserContext"
+import {  useUserContext } from "../../contexts/UserContext"
 import { useCreateItem } from "../../api/itemApi"
+import { items } from "../structure/forms"
 
-const item = {
-    albums: {
-        id: 1,
-        subCategory: { render: true, type: 'option', name: 'Type', options: ['CD', 'Vinyl'] },
-        subCategory2: { render: false, type: 'option', name: 'subCat2' },
-        title: { render: true, type: 'text', name: 'Title' },
-        genre: { render: true, type: 'text', name: 'Genre' },
-        artist: { render: true, type: 'text', name: 'Artist' },
-        date: { render: true, type: 'date', name: 'Date' },
-        descriptions: { render: true, type: 'text', name: 'Descriptions' },
-        price: { render: true, type: 'number', name: 'Price' },
-        color: { render: false, type: 'text', name: 'Color' },
-        imageUrl: { render: true, type: 'text', name: 'Image' },
-        city: { render: false, type: 'city', name: 'City' },
-        venue: { render: false, type: 'venue', name: 'Venue' },
-    },
-    instruments: {
-        id: 2,
-        subCategory: { render: true, type: 'option', name: 'Type', options: ['String', 'Wind', 'Percussion', 'Keyboard', 'Acoustic', 'Traditional and Folk', 'Hybrid'] },
-        subCategory2: { render: false, type: 'option', name: 'subCat2' },
-        title: { render: true, type: 'text', name: 'Title' },
-        genre: { render: false, type: 'text', name: 'Genre' },
-        artist: { render: false, type: 'text', name: 'Artist' },
-        date: { render: true, type: 'date', name: 'Date' },
-        descriptions: { render: true, type: 'text', name: 'Descriptions' },
-        price: { render: true, type: 'number', name: 'Price' },
-        options: { render: false, items: [] },
-        color: { render: false, type: 'text', name: 'Color' },
-        imageUrl: { render: true, type: 'text', name: 'Image' },
-        city: { render: false, type: 'city', name: 'City' },
-        venue: { render: false, type: 'venue', name: 'Venue' },
-    },
-    events: {
-        id: 3,
-        subCategory: { render: false, type: 'option', name: 'Type' },
-        subCategory2: { render: false, type: 'option', name: 'subCat2' },
-        title: { render: true, type: 'text', name: 'Title' },
-        genre: { render: true, type: 'text', name: 'Genre' },
-        artist: { render: true, type: 'text', name: 'Artist' },
-        date: { render: true, type: 'date', name: 'Date' },
-        descriptions: { render: true, type: 'text', name: 'Descriptions' },
-        price: { render: true, type: 'number', name: 'Price' },
-        options: { render: false, items: [] },
-        color: { render: false, type: 'text', name: 'Color' },
-        imageUrl: { render: true, type: 'text', name: 'Image' },
-        city: { render: true, type: 'city', name: 'City' },
-        venue: { render: true, type: 'venue', name: 'Venue' },
-    },
-    merch: {
-        id: 4,
-        subCategory: { render: true, type: 'option', name: 'Type' },
-        subCategory2: { render: false, type: 'option', name: 'subCat2' },
-        title: { render: true, type: 'text', name: 'Title' },
-        genre: { render: true, type: 'text', name: 'Genre' },
-        artist: { render: true, type: 'text', name: 'Artist' },
-        date: { render: true, type: 'date', name: 'Date' },
-        descriptions: { render: true, type: 'text', name: 'Descriptions' },
-        price: { render: true, type: 'number', name: 'Price' },
-        options: { render: false, items: [] },
-        color: { render: true, type: 'text', name: 'Color' },
-        imageUrl: { render: true, type: 'text', name: 'Image' },
-        city: { render: false, type: 'city', name: 'City' },
-        venue: { render: false, type: 'venue', name: 'Venue' },
 
-    },
-}
 
 export default function CreateItem() {
     const params = useParams()
-    const itemsToRender = Object.entries(item[params.addCategoryId])
+    const itemsToRender = Object.entries(items[params.addCategoryId])
     const { firstName, lastName, _id } = useUserContext();
     const { create } = useCreateItem()
     const navigate = useNavigate()

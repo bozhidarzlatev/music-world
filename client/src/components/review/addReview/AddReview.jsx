@@ -10,8 +10,8 @@ export default function AddReview({
 
 
     return (
-        <div className="fixed inset-0 flex justify-center items-center z-50 bg-none bg-opacity-10 backdrop-blur-sm">
-            <div className="bg-white p-12 rounded-2xl shadow-xl w-full max-w-lg relative">
+        <div className="fixed inset-0 flex justify-center items-center z-50 bg-none bg-opacity-10 backdrop-blur-sm" onClick={closeReview}>
+            <div className="bg-white p-12 rounded-2xl shadow-xl w-full max-w-lg relative" onClick={(e) => e.stopPropagation()}>
                 <h2 className="text-3xl font-semibold text-center mb-8">Leave a Review</h2>
                 <form className="space-y-6" action={onCreate}>
                     {/* Review Textarea */}

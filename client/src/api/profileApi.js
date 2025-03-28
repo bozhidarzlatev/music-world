@@ -16,7 +16,7 @@ export const useProfile = () => {
 
         const fetchItemsCount = async () => {
             try {
-                const response = await request.get(`${urls.itemsUrl}?${searchParams}`);
+                const response = await request.get(`${urls.itemsUrl}?${searchParams.toString()}`);
                 
                 setProfileCounts(prev => prev = {...prev, items: response.length});
             } catch (error) {
@@ -26,7 +26,7 @@ export const useProfile = () => {
 
         const fetchReviewCount = async () => {
             try {
-                const response = await request.get(`${urls.reviewsUrl}?${searchParams}`);
+                const response = await request.get(`${urls.reviewsUrl}?${searchParams.toString()}`);
                 
                 setProfileCounts(prev => prev = {...prev, reviews: response.length});
             } catch (error) {
@@ -36,7 +36,7 @@ export const useProfile = () => {
 
         const fetchOrdersCount = async () => {
             try {
-                const response = await request.get(`${urls.ordersUrl}?${searchParams}`);
+                const response = await request.get(`${urls.ordersUrl}?${searchParams.toString()}`);
                 
                 setProfileCounts(prev => prev = {...prev, orders: response.length});
             } catch (error) {

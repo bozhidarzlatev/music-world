@@ -42,7 +42,7 @@ export const useCartData = (userId) => {
                 }
             })
             .catch(err => console.error('Error fetching cart:', err));
-    }, [userId])
+    }, [userId ])
 
     const updateCart = (item) => {
         const dataToPush = [
@@ -59,11 +59,11 @@ export const useCartData = (userId) => {
     const emptyCart = ( ) => {
         const dataToPush = [
               ]
-              console.log(`sada`);
               
         request.put(`${baseUrl}/${cartId}`, { items: dataToPush })
             .then(() => {
                 setCart(dataToPush); 
+                
             })
     }
 
