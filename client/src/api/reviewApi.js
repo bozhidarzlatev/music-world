@@ -88,3 +88,22 @@ export const useCanReview= (itemId) => {
     }
 
 }
+
+export const useTopReviews = () => {
+    const [topReviews, setTopReviews] = useState([])
+    const {request} = useAuth()
+
+    useEffect(() =>{
+        const searchParams = new URLSearchParams({
+            where: `rating>="4"`,
+        });
+
+        request.get(`${urls.reviewsUrl}?${searchParams}`)
+            .then(setTopReviews)
+                
+    }, [])
+
+    return {
+        topReviews
+    }
+} 
