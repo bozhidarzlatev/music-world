@@ -1,4 +1,4 @@
-import {  useEffect, useState } from "react"
+import { useEffect, useState } from "react"
 import styles from "./Header.module.css"
 import { Link } from "react-router"
 import { UserContext, useUserContext } from "../../contexts/UserContext"
@@ -6,14 +6,14 @@ import { PlusCircle, LogOut, Grid, LogIn, UserPlus, ShoppingCart } from "lucide-
 import { useCartData } from "../../api/cartApi";
 
 export default function Header() {
-    const { firstName, avatar , _id} = useUserContext(UserContext);
-    const {cart} = useCartData(_id)
+    const { firstName, avatar, _id } = useUserContext(UserContext);
+    const { cart } = useCartData(_id)
     const [cartCount, setCartCount] = useState(0);
 
     useEffect(() => {
-            setCartCount(cart.length)
+        setCartCount(cart.length)
     }, [cart]);
- 
+
 
     return (
         <header>
@@ -26,7 +26,7 @@ export default function Header() {
                 </Link>
                 <p>Music World</p>
             </div>
-                <p>Cart: {cartCount}</p>
+            <p>Cart: {cartCount}</p>
             <nav>
                 <Link to="/categories" className="text-white-700 hover:text-blue-900 flex items-center space-x-2 relative group">
                     <Grid className="w-15 h-15" />
@@ -46,16 +46,15 @@ export default function Header() {
                                 Add New
                             </span>
                         </Link>
-                        
+
                         <Link to="/cart" className="text-yellow-600 hover:text-white flex items-center justify-center relative group">
                             <ShoppingCart className="w-15 h-15" />
                             <span className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200">
                                 Cart
                             </span>
                         </Link>
-
-                        <Link to="/profile" className="text-white-700 hover:text-blue-900 flex items-center space-x-2 relative group">
-                            <img src={avatar} alt="" className="w-15 h-15 rounded-full" />
+                        <Link to="/profile" className="text-white-700 hover:text-blue-900 flex items-center justify-center relative group">
+                            <img src={avatar} alt="" className="w-16 h-16 rounded-full object-cover" />
                             <span className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200">
                                 {`Welcome, ${firstName}`}
                             </span>

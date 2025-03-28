@@ -14,14 +14,8 @@ export default function Register() {
   const registerHandler = async (_, formData) => {
     const regData = Object.fromEntries(formData)
 
-    //TODO - better handling
     const rePassword = formData.get('rePassword');
 
-    if (regData.password !== rePassword) {
-      alert('Password missmatch');
-
-      return;
-    }
 
     const userData =  await register(regData)
     const regUserData = {
@@ -59,8 +53,10 @@ export default function Register() {
               name="firstName"
               placeholder="Enter your full name"
               className="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
+              
             />
           </div>
+
 
           <div>
             <label htmlFor="lastName" className="block font-medium text-gray-700">Last Name</label>

@@ -39,7 +39,17 @@ export default function Orders() {
                   {order.orderData.map((item, index) => (
                     <div key={index} className="flex justify-between bg-gray-100 p-2 rounded-md">
                       <p className="text-sm font-medium">{item.category}</p>
-                      <p className="text-sm font-medium">{item.title}</p>
+                    {item.artist 
+                    ?<p className="text-gray-500 text-sm">{item.artist}</p>
+                    :<p className="text-gray-500 text-sm">{item.manufacturer}</p>
+                  }
+                  <p className="text-sm font-medium">{item.title}</p>
+
+                      {item.subCategory 
+                      ? <p className="text-gray-500 text-sm">{item.subCategory}</p>
+                      :<p className="text-gray-500 text-sm">{item.genre}</p>
+                    }
+
                       <p className="text-sm">{Number(item.price).toFixed(2)} lv</p>
                     </div>
                   ))}
