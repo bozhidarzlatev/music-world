@@ -87,7 +87,7 @@ export default function Details() {
     
     
     return (
-        <div className="min-h-screen bg-gray-200 p-8">
+        <div className="min-h-screen bg-gray-200 p-8 ">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-gray-50 p-6 rounded-lg shadow-md">
                 <div className="relative w-full">
                     <img

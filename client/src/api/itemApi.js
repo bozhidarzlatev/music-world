@@ -22,7 +22,8 @@ export const useCreateItem = () => {
 export const useItems = (categoriId, currentPage) => {
     const [items, setItems] = useState([]);
     const [totalItems, setTotalItems] = useState(0)
-  
+    const [loading, setLoading] = useState(true)
+
     currentPage -= 1
     const searchParams = new URLSearchParams({
         where: `category="${categoriId}"`,
@@ -30,18 +31,29 @@ export const useItems = (categoriId, currentPage) => {
     })
 
     useEffect(() => {
+        const fetchItems = async () => {
+            try {
+            const responceAllitems = await request.get(`${baseUrl}?${searchParams.toString()}&offset=${currentPage * 12}&pageSize=${12}`);
+            setItems(responceAllitems)
+            
+            const responceCount = await request.get(`${baseUrl}?${searchParams.toString()}`);
+            setTotalItems(Number(responceCount.length));
 
-        request.get(`${baseUrl}?${searchParams.toString()}&offset=${currentPage  * 12}&pageSize=${12}`)
-            .then(setItems)
+               
+            if (!!responceCount , !!responceAllitems ) {
+                   setLoading(false)
+               }
 
+            } catch (error) {
+                    console.log(error);
+                    
+            }
+        }
+
+        fetchItems()
     }, [currentPage])
 
-    useEffect(() => {
-        request.get(`${baseUrl}?${searchParams.toString()}`)
-            .then(response => setTotalItems(Number(response.length)))
-    }, [])
-
-    return { items, totalItems }
+    return { items, totalItems, loading }
 
 }
 
@@ -84,9 +96,9 @@ export const useDeleteItem = () => {
 
 export const useLatestUploads = () => {
     const [latestItems, setLatestItems] = useState([])
-    const {request} = useAuth()
+    const { request } = useAuth()
 
-    useEffect(() =>{
+    useEffect(() => {
         const searchParams = new URLSearchParams({
             sortBy: '_createdOn desc',
             pageSize: 4,
@@ -104,9 +116,9 @@ export const useLatestUploads = () => {
 };
 export const useTopRatingUploads = () => {
     const [topRatingtItems, setTopRatingItems] = useState([])
-    const {request} = useAuth()
+    const { request } = useAuth()
 
-    useEffect(() =>{
+    useEffect(() => {
         const searchParams = new URLSearchParams({
 
             load: `data=itemId:items`

@@ -28,3 +28,23 @@ ul, ol {
 button, input, textarea, select {
   font: inherit;
 } 
+
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+/* Flexbox layout for the whole page */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+

@@ -14,7 +14,8 @@ export default function Orders() {
   };
 
   return (
-    <div className="max-w-6xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+    <div className='min-h-dvh'>
+    <div className="max-w-6xl  mx-auto p-6 bg-white shadow-lg rounded-lg">
       <h2 className="text-2xl font-semibold mb-6">Orders List</h2>
 
       <div className="space-y-4">
@@ -59,6 +60,7 @@ export default function Orders() {
           );
         })}
       </div>
+    </div>
     </div>
   );
 }

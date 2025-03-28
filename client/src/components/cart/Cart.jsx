@@ -17,7 +17,9 @@ export default function Cart() {
     }
 
     return (
-        <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
+        <div className="min-h-dvh ">
+        
+        <div className="max-w-4xl  mx-auto p-6 bg-white shadow-lg rounded-lg">
             <h2 className="text-2xl font-semibold mb-4">Shopping Cart</h2>
             {userCart.length > 0 ? (
                 <>
@@ -58,6 +60,7 @@ export default function Cart() {
             )}
 
 
+        </div>
         </div>
     );
 }

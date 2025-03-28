@@ -25,7 +25,7 @@ export default function CreateItem() {
 
     return (
         <div>
-            <div className="min-h-screen m-10 flex items-center justify-center  px-6">
+            <div className="min-h-screen m-10 flex items-center justify-center   px-6">
                 <div className="bg-white p-10 rounded-2xl shadow-2xl w-full max-w-lg">
                     <h2 className="text-3xl font-bold text-center text-gray-800 mb-6">Create new {params.addCategoryId}</h2>
                     <form className="space-y-5" action={createItemHanler}>

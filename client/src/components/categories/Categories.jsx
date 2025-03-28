@@ -34,32 +34,34 @@ export default function Categories ({route, action}) {
 
 
   return (
-    <div className="h-screen flex flex-col justify-center items-center bg-gray-100 space-y-8">
-      <h1 className="text-4xl font-bold text-center">{title}</h1>
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
-        {categories.map((category) => (
-          <div
-            key={category.id}
-            className="flex flex-col items-center space-y-4 justify-center"
+<div className="min-h-screen flex flex-col justify-center items-center bg-gray-100 space-y-8 p-4">
+  <h1 className="text-4xl font-bold text-center">{title}</h1>
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+    {categories.map((category) => (
+      <div
+        key={category.id}
+        className="flex flex-col items-center space-y-4 justify-center"
+      >
+        <div className="relative w-40 h-40 aspect-w-1 aspect-h-1 rounded-full overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
+          <img
+            src={category.catImg}
+            alt={category.name}
+            className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
+          />
+          <Link
+            to={`/${route}/${category.name.toLowerCase()}`}
+            className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-30 text-black font-black text-3xl opacity-0 hover:opacity-80 transition-opacity duration-300"
           >
-            <div className="relative w-40 h-40 aspect-w-1 aspect-h-1 rounded-full overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-              <img
-                src={category.catImg}
-                alt={category.name}
-                className="w-full h-full object-cover transform transition-transform duration-300 hover:scale-110"
-              />
-              <Link
-                to={`/${route}/${category.name.toLowerCase()}`}
-                className="absolute inset-0 flex justify-center items-center bg-white bg-opacity-30 text-black font-black text-3xl opacity-0 hover:opacity-80 transition-opacity duration-300"
-              >
-                {action}
-              </Link>
-            </div>
-            <h2 className="text-xl font-semibold text-center">{category.name}</h2>
-          </div>
-        ))}
+            {action}
+          </Link>
+        </div>
+        <h2 className="text-xl font-semibold text-center">{category.name}</h2>
       </div>
-    </div>
+    ))}
+  </div>
+</div>
+
+
   );
   
 
