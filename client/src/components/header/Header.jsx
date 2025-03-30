@@ -26,7 +26,6 @@ export default function Header() {
                 </Link>
                 <p>Music World</p>
             </div>
-            <p>Cart: {cartCount}</p>
             <nav>
                 <Link to="/categories" className="text-white-700 hover:text-blue-900 flex items-center space-x-2 relative group">
                     <Grid className="w-15 h-15" />
@@ -48,7 +47,14 @@ export default function Header() {
                         </Link>
 
                         <Link to="/cart" className="text-yellow-600 hover:text-white flex items-center justify-center relative group">
-                            <ShoppingCart className="w-15 h-15" />
+                            <div className="relative w-15 h-15">
+                                <ShoppingCart className="w-15 h-15" />
+                                {cartCount > 0 && (
+                                    <span className="absolute top-[-5px] right-[-5px] bg-red-600 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
+                                        {cartCount}
+                                    </span>
+                                )}
+                            </div>
                             <span className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200">
                                 Cart
                             </span>

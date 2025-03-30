@@ -54,3 +54,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - Pagination added
     - Home page improvements
     - Login and Register form validations added
+    - Cart state fixes

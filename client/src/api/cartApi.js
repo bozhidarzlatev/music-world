@@ -42,7 +42,7 @@ export const useCartData = (userId) => {
                 }
             })
             .catch(err => console.error('Error fetching cart:', err));
-    }, [userId ])
+    }, [userId , request])
 
     const updateCart = (item) => {
         const dataToPush = [
