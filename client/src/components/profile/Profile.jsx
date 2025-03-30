@@ -30,21 +30,21 @@ export default function Profile(){
                     
                     <Link 
                         to="/orders"
-                        className="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-700 transition-colors text-center"
+                        className="w-full bg-blue-500 text-white py-3 rounded-md hover:bg-blue-700 transition-transform transform hover:scale-105 transition-colors text-center"
                     >
                         My Orders - {profileCounts.orders}
                     </Link>
                     
                     <Link 
                         to="/comments"
-                        className="w-full bg-purple-600 text-white py-3 rounded-md hover:bg-purple-800 transition-colors text-center"
+                        className="w-full bg-purple-600 text-white py-3 rounded-md hover:bg-purple-800 transition-transform transform hover:scale-105  transition-colors text-center"
                     >
                         My Reviews - {profileCounts.reviews}
                     </Link>
                     
                     <Link 
                         to="/my-items"
-                        className="w-full bg-gray-400 text-black py-3 rounded-md hover:bg-gray-500 transition-colors text-center"
+                        className="w-full bg-gray-400 text-white py-3 rounded-md hover:bg-gray-500 transition-transform transform hover:scale-105  transition-colors text-center"
                     >
                         My Items - {profileCounts.items}
                     </Link>

@@ -34,7 +34,6 @@ html, body {
   margin: 0;
 }
 
-/* Flexbox layout for the whole page */
 .flex {
   display: flex;
 }

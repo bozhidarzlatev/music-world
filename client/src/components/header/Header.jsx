@@ -24,7 +24,7 @@ export default function Header() {
                         Home
                     </span>
                 </Link>
-                <p>Music World</p>
+                <p className={styles.title}>Music World</p>
             </div>
             <nav>
                 <Link to="/categories" className="text-white-700 hover:text-blue-900 flex items-center space-x-2 relative group">
@@ -65,7 +65,7 @@ export default function Header() {
                             </span>
                         </Link>
                         <Link to="/profile" className="text-white-700 hover:text-blue-900 flex items-center justify-center relative group">
-                            <img src={avatar} alt="" className="w-16 h-16 rounded-full object-cover" />
+                            <img src={avatar} alt={avatar} className="w-16 h-16 rounded-full object-cover" />
                             <span className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200">
                                 {`Welcome, ${firstName}`}
                             </span>
