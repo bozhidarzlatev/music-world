@@ -46,7 +46,12 @@ export default function Header() {
                             </span>
                         </Link>
 
-                        <Link to="/cart" className="text-yellow-600 hover:text-white flex items-center justify-center relative group">
+                        <Link to="/cart" className={`hover:text-white flex items-center justify-center relative group
+                            ${cartCount > 0 
+                            ? "text-green-600" 
+                            :"text-red-600"
+                            }
+                             `}>
                             <div className="relative w-15 h-15">
                                 <ShoppingCart className="w-15 h-15" />
                                 {cartCount > 0 && (
