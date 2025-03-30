@@ -15,6 +15,9 @@ export default function Cart() {
         navigate(`/orders`)
         
     }
+    console.log(userCart);
+    
+    const totalSum = userCart.reduce((total, item) => total + Number(item.price), 0)
 
     return (
         <div className="min-h-dvh ">
@@ -51,7 +54,7 @@ export default function Cart() {
                 </div>
                             <div className="mt-6">
                 <button onClick={onPlaceOrderHandler} className="w-full bg-blue-600 text-white py-3 rounded-md hover:bg-blue-700 transition">
-                    Place Order
+                    Place Order - {totalSum.toFixed(2)} lv.
                 </button>
             </div>
             </>
