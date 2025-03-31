@@ -33,6 +33,8 @@ export const useCartData = (userId) => {
     const { request } = useAuth()
 
 
+
+    
     useEffect(() => {
         request.get(`${baseUrl}?where=_ownerId%3D%22${userId}%22`)
             .then(response => {
@@ -42,7 +44,7 @@ export const useCartData = (userId) => {
                 }
             })
             .catch(err => console.error('Error fetching cart:', err));
-    }, [userId , request])
+    }, [userId ])
 
     const updateCart = (item) => {
         const dataToPush = [

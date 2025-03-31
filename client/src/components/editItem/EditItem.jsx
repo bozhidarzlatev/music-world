@@ -18,7 +18,7 @@ export default function () {
     const editItemHanlder = async (formData) => {
         const editData = Object.fromEntries(formData);
         
-        const result = await edit(itemId, editData);
+        const result = await edit(itemId, {...editData, category: params.categoriId});
 
         if (result.code === 401) {
 
