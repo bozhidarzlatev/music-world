@@ -3,6 +3,7 @@ import { useRegister } from "../../../api/authApi";
 import { useNavigate } from "react-router";
 import { useUserContext } from "../../../contexts/UserContext";
 import { useCreateCart } from "../../../api/cartApi";
+import { useToastContext } from "../../../contexts/ToastContext";
 
 export default function Register() {
   const { register } = useRegister();
@@ -20,6 +21,8 @@ export default function Register() {
 
   const [touched, setTouched] = useState({});
   const [errors, setErrors] = useState({});
+  const {addToast, showToast} = useToastContext()
+
 
   const validate = (name, value) => {
     let error = "";
@@ -71,20 +74,39 @@ export default function Register() {
 
     const rePassword = formData.get('rePassword');
 
+    try {
+      const userData = await register(regData)
+      
 
-    const userData = await register(regData)
-    const regUserData = {
-      firstName: userData.firstName,
-      lastName: userData.lastName,
-      email: userData.email,
-      _id: userData._id,
-      avatar: userData.avatar,
-      accessToken: userData.accessToken
+      if (userData.code === 409) {
+        addToast({ code: userData.code, message: userData.message });
+        showToast()
+        navigate('/register')
+        throw new Error(userData.message);
+      }
+
+      addToast({ code: 200, message: 'Login successfully!' });
+      showToast()
+
+      const regUserData = {
+        firstName: userData.firstName,
+        lastName: userData.lastName,
+        email: userData.email,
+        _id: userData._id,
+        avatar: userData.avatar,
+        accessToken: userData.accessToken
+      }
+
+      userDateHandler(regUserData)
+      const createCart = create(userData.accessToken)
+      navigate('/')
+
+    } catch (error) {
+      console.log(error);
+
     }
 
-    userDateHandler(regUserData)
-    const createCart = create(userData.accessToken)
-    navigate('/')
+
 
   }
 
@@ -112,15 +134,15 @@ export default function Register() {
               onBlur={handleBlur}
               placeholder="Enter your first name"
               className={`mt-2 w-full p-3 border-2 
-                ${touched.firstName 
-                  ? (errors.firstName || !formData.firstName) 
-                    ? "border-red-500"   
-                    : "border-green-500" 
-                  : "border-gray-300"   
+                ${touched.firstName
+                  ? (errors.firstName || !formData.firstName)
+                    ? "border-red-500"
+                    : "border-green-500"
+                  : "border-gray-300"
                 }  
                 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none`}
             />
-          {(touched.firstName && errors.firstName) || (touched.firstName && !formData.firstName)
+            {(touched.firstName && errors.firstName) || (touched.firstName && !formData.firstName)
               ? <p className="text-red-500">{errors.firstName || "Please fill first name"}</p>
               : null
             }
@@ -138,15 +160,15 @@ export default function Register() {
               onBlur={handleBlur}
               placeholder="Enter your last name"
               className={`mt-2 w-full p-3 border-2 
-                ${touched.lastName 
-                  ? (errors.lastName || !formData.lastName) 
-                    ? "border-red-500"   
-                    : "border-green-500" 
-                  : "border-gray-300"   
+                ${touched.lastName
+                  ? (errors.lastName || !formData.lastName)
+                    ? "border-red-500"
+                    : "border-green-500"
+                  : "border-gray-300"
                 }  
                 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none`}
             />
-          {(touched.lastName && errors.lastName) || (touched.lastName && !formData.lastName)
+            {(touched.lastName && errors.lastName) || (touched.lastName && !formData.lastName)
               ? <p className="text-red-500">{errors.lastName || "Please fill last name"}</p>
               : null
             }
@@ -163,15 +185,15 @@ export default function Register() {
               onBlur={handleBlur}
               placeholder="Enter your email"
               className={`mt-2 w-full p-3 border-2 
-                ${touched.email 
-                  ? (errors.email || !formData.email) 
-                    ? "border-red-500"   
-                    : "border-green-500" 
-                  : "border-gray-300"   
+                ${touched.email
+                  ? (errors.email || !formData.email)
+                    ? "border-red-500"
+                    : "border-green-500"
+                  : "border-gray-300"
                 }  
                 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none`}
             />
-          {(touched.email && errors.email) || (touched.email && !formData.email)
+            {(touched.email && errors.email) || (touched.email && !formData.email)
               ? <p className="text-red-500">{errors.email || "Please fill email"}</p>
               : null
             }
@@ -188,18 +210,18 @@ export default function Register() {
               onBlur={handleBlur}
               placeholder="Enter your password"
               className={`mt-2 w-full p-3 border-2 
-                ${touched.password 
-                  ? (errors.password || !formData.password) 
-                    ? "border-red-500"   
-                    : "border-green-500" 
-                  : "border-gray-300"   
+                ${touched.password
+                  ? (errors.password || !formData.password)
+                    ? "border-red-500"
+                    : "border-green-500"
+                  : "border-gray-300"
                 }  
-                rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none`}            />
+                rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none`} />
             {(touched.password && errors.password) || (touched.password && !formData.password)
               ? <p className="text-red-500">{errors.password || "Please fill password"}</p>
               : null
-            }           
-             {touched.rePassword && errors.rePassword && <p className="text-red-500">{errors.rePassword}</p>}
+            }
+            {touched.rePassword && errors.rePassword && <p className="text-red-500">{errors.rePassword}</p>}
           </div>
 
 
@@ -214,13 +236,13 @@ export default function Register() {
               onBlur={handleBlur}
               placeholder="Re-enter your password"
               className={`mt-2 w-full p-3 border-2 
-                ${touched.rePassword 
-                  ? (errors.rePassword || !formData.rePassword) 
-                    ? "border-red-500"   
-                    : "border-green-500" 
-                  : "border-gray-300"   
+                ${touched.rePassword
+                  ? (errors.rePassword || !formData.rePassword)
+                    ? "border-red-500"
+                    : "border-green-500"
+                  : "border-gray-300"
                 }  
-                rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none`}            />
+                rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none`} />
             {touched.rePassword && errors.rePassword && <p className="text-red-500">{errors.rePassword}</p>}
           </div>
 
@@ -235,13 +257,13 @@ export default function Register() {
               onBlur={handleBlur}
               placeholder="Place image url"
               className={`mt-2 w-full p-3 border-2 
-                ${touched.avatar 
-                  ? (errors.avatar || !formData.avatar) 
-                    ? "border-red-500"  
+                ${touched.avatar
+                  ? (errors.avatar || !formData.avatar)
+                    ? "border-red-500"
                     : "border-green-500"
-                  : "border-gray-300"   
+                  : "border-gray-300"
                 }  
-                rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none`}            />
+                rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none`} />
             {touched.avatar && errors.avatar && <p className="text-red-500">{errors.avatar}</p>}
             {touched.avatar && !formData.avatar && <p className="text-red-500">Please fill the field</p>}
 

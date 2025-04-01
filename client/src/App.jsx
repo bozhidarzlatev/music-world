@@ -21,6 +21,7 @@ import Profile from './components/profile/Profile'
 import Search from './components/search/Search'
 import { CartProvider } from './providers/CartProvider'
 import NotFound from './components/notfount/NotFound'
+import { ToastProvider } from './providers/ToastProvide'
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
     <>
       <UserProvider>
         <CartProvider>
+          <ToastProvider>
         <div id="container">
           <Header />
 
@@ -63,6 +65,7 @@ function App() {
 
           <Footer />
         </div>
+        </ToastProvider>
         </CartProvider>
       </UserProvider>
 

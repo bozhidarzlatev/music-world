@@ -5,21 +5,37 @@ import { UserContext, useUserContext } from "../../contexts/UserContext"
 import { PlusCircle, LogOut, Grid, LogIn, UserPlus, ShoppingCart, Search } from "lucide-react";
 import { useCartData } from "../../api/cartApi";
 import { useCartContext } from "../../contexts/CartContext";
+import Toast from "../toast/Toast";
+import { useToastContext } from "../../contexts/ToastContext";
 
 export default function Header() {
     const { firstName, avatar, _id } = useUserContext(UserContext);
-    const {cart} = useCartData(_id)
-    const {cartItemsCount, addToCart} = useCartContext()
+    const {cart} = useCartData(_id);
+    const {cartItemsCount, addToCart} = useCartContext();
+    const {toast, hideToast,viewToast} = useToastContext();
+   
 
     useEffect(() => {
         addToCart(cart.length); 
 
     }, [cart])
 
+    useEffect(() => {
+
+        setTimeout(() =>{
+            hideToast()
+            
+        }, 3000)
+
+
+    }, [toast])
     
 
     return (
         <header>
+            {viewToast && 
+            <Toast message={toast} />
+            }
             <div className={styles.main}>
                 <Link to="/" className="text-white-700 hover:text-blue-900 flex items-center space-x-2 relative group">
                     <img src="/logo.svg" alt="Music World Logo" />

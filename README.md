@@ -62,3 +62,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - Search pagination
     - Header style fixes
     - 404 Page added
+    - Toasts added

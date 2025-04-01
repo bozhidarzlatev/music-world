@@ -10,8 +10,9 @@ const baseReviewUrl = 'http://localhost:3030/data/reviews';
 export const useCreateItem = () => {
     const { request } = useAuth()
 
-    const create = (itemData) => {
-        request.post(baseUrl, itemData)
+    const create = async (itemData) => {
+       const responce = await request.post(baseUrl, itemData)
+       return responce
     }
 
     return {

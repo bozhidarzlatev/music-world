@@ -2,24 +2,39 @@ import { useNavigate, useParams } from "react-router"
 import {  useUserContext } from "../../contexts/UserContext"
 import { useCreateItem } from "../../api/itemApi"
 import { items } from "../structure/forms"
+import { useToastContext } from "../../contexts/ToastContext"
 
 
 
 export default function CreateItem() {
     const params = useParams()
     const itemsToRender = Object.entries(items[params.addCategoryId])
-    const { firstName, lastName, _id } = useUserContext();
+    const { firstName, lastName } = useUserContext();
     const { create } = useCreateItem()
     const navigate = useNavigate()
+    const {addToast , showToast} = useToastContext()
+
 
     const createItemHanler = async (formData) => {
 
         const itemData = Object.fromEntries(formData)
         const createItemData = { ...itemData, category: params.addCategoryId, uploadedBy: `${firstName} ${lastName}` }
 
-        await create(createItemData)
-
-        navigate(`/categories/${params.addCategoryId}`)
+        try {
+            const createData =  await create(createItemData)
+            
+            if (!!createData._id !== true) {
+                addToast({ code: 403, message: createData.message });
+                showToast()
+                throw new Error(createData.message);
+            }
+            addToast({ code: 200, message: 'Item added successfully!' });
+            showToast()
+            navigate(`/categories/${params.addCategoryId}`)
+        } catch (error) {
+            console.log(error);
+            
+        }
 
     }
 

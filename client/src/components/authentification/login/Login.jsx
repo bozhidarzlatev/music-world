@@ -2,6 +2,7 @@ import { useActionState, useState } from "react";
 import { useLogin } from "../../../api/authApi";
 import { useNavigate } from "react-router";
 import { useUserContext } from "../../../contexts/UserContext";
+import { useToastContext } from "../../../contexts/ToastContext";
 
 export default function Login() {
   const { login } = useLogin()
@@ -13,6 +14,7 @@ export default function Login() {
   })
   const [touched, setTouched] = useState({})
   const [errors, setErrors] = useState({})
+  const { addToast, showToast } = useToastContext()
 
 
   const validate = (name, value) => {
@@ -46,27 +48,46 @@ export default function Login() {
 
   const loginHandler = async (_, formData) => {
     const userData = Object.fromEntries(formData)
-    const authData = await login(userData.email, userData.password)
 
 
-    const logUserData = {
-      firstName: authData.firstName,
-      lastName: authData.lastName,
-      email: authData.email,
-      _id: authData._id,
-      avatar: authData.avatar,
-      accessToken: authData.accessToken
+    try {
+      const authData = await login(userData.email, userData.password)
+      addToast({ code: 200, message: 'Login successfully!' });
+      showToast()
+      if (authData.code === 403) {
+        addToast({ code: authData.code, message: authData.message });
+        showToast()
+        throw new Error(authData.message);
+      }
+
+      const logUserData = {
+        firstName: authData.firstName,
+        lastName: authData.lastName,
+        email: authData.email,
+        _id: authData._id,
+        avatar: authData.avatar,
+        accessToken: authData.accessToken
+      }
+
+      userDateHandler(logUserData)
+      navigate('/')
+
+    } catch (error) {
+      console.log(error);
+
     }
 
-    userDateHandler(logUserData)
-    navigate('/')
-  }
 
+
+
+
+  }
 
   const [_, loginAction, isPending] = useActionState(loginHandler, { email: '', password: '' })
 
   return (
     <div className="h-screen flex justify-center items-center bg-gray-100 px-6">
+
       <div className="bg-white p-12 rounded-2xl shadow-xl w-full max-w-lg">
         <h2 className="text-3xl font-semibold text-center mb-8">Login</h2>
         <form className="space-y-6" action={loginAction}>
@@ -94,15 +115,19 @@ export default function Login() {
               placeholder="Password"
               className="w-full px-5 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
-          {(touched.password && errors.password) || (touched.password && !formData.password)
+            {(touched.password && errors.password) || (touched.password && !formData.password)
               ? <p className="text-red-500">{errors.password || "Please fill password"}</p>
               : null
             }
           </div>
           <button
             type="submit"
-            className="w-full bg-blue-500 text-white py-3 rounded-lg hover:bg-blue-600 transition duration-300 text-lg font-medium"
-            disabled={isPending}
+            className={`w-full py-3 font-semibold rounded-lg transition duration-300 
+              ${!isFormValid || isPending
+                ? "bg-gray-400 text-gray-700 cursor-not-allowed"
+                : "bg-blue-600 text-white hover:bg-blue-700"
+              }  `}
+            disabled={!isFormValid || isPending}
           >
             Login
           </button>
