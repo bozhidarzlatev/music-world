@@ -1,17 +1,17 @@
 import { Link, useParams } from 'react-router';
 import { useItems } from "../../api/itemApi";
 import { useRef, useState } from 'react';
-import { PlusCircle } from 'lucide-react';
 import Spinner from '../spinner/Spinner';
 import CatalogCard from '../catalog/CatalogCard';
+import { useSearch } from '../../api/searchApi';
 
 
 export default function Catalog() {
-    const { categoriId } = useParams();
     const [currentPage, setCurrentPage] = useState(1)
-    const { items, totalItems, loading } = useItems(categoriId, currentPage)
+    const {search, searchItems} = useSearch()
+
     const pageSize = 12;
-    const totalPages = Math.ceil(totalItems / pageSize)
+    const totalPages = Math.ceil(searchItems.length / pageSize)
     const timeoutRef = useRef(null)
     
     const handlePageChange = (pageNumber) => {
@@ -27,14 +27,10 @@ export default function Catalog() {
     };
 
 
-    if (loading) {
-        return <Spinner />
-    }
-
-
-
-
-
+    // if (loading) {
+    //     return <Spinner />
+    // }
+    
 
     const onSearch = (e) => {
         const searchData = e.target.value; 
@@ -42,19 +38,14 @@ export default function Catalog() {
         clearTimeout(timeoutRef.current);
 
         timeoutRef.current = setTimeout(() => {
-          console.log(searchData);  
+            search(searchData);  
         }, 500); 
       };
-
-
-
 
     
 
     return (
         <div className="min-h-screen bg-gray-100 p-8">
-
-
 
 
             <h1 className="text-3xl font-bold text-center mb-8">Search items</h1>
@@ -68,8 +59,8 @@ export default function Catalog() {
 
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-                {items.map((item) =>
-                    <CatalogCard categoriId={categoriId} item={item} />
+                {searchItems.map((item) =>
+                    <CatalogCard categoriId={item.category} item={item} />
                 )}
             </div>
             <div className="flex justify-center mt-6">
