@@ -1,5 +1,3 @@
-import { Link, useParams } from 'react-router';
-import { useItems } from "../../api/itemApi";
 import { useRef, useState } from 'react';
 import Spinner from '../spinner/Spinner';
 import CatalogCard from '../catalog/CatalogCard';
@@ -8,11 +6,13 @@ import { useSearch } from '../../api/searchApi';
 
 export default function Catalog() {
     const [currentPage, setCurrentPage] = useState(1)
-    const {search, searchItems} = useSearch()
+    const {search, searchItems, totalItems} = useSearch(currentPage)
 
     const pageSize = 12;
-    const totalPages = Math.ceil(searchItems.length / pageSize)
+    const totalPages = Math.ceil(totalItems / pageSize)
+
     const timeoutRef = useRef(null)
+    console.log(currentPage);
     
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
@@ -39,7 +39,7 @@ export default function Catalog() {
 
         timeoutRef.current = setTimeout(() => {
             search(searchData);  
-        }, 500); 
+        }, 300); 
       };
 
     
@@ -79,7 +79,7 @@ export default function Catalog() {
                     >
                         {index + 1}
                     </button>
-                ))}
+                ))} 
                 <button
                     onClick={handleNextPage}
                     disabled={currentPage === totalPages}

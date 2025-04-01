@@ -59,3 +59,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - Cart state fixes
     - Search component added
     - Search functionality added
+    - Search pagination
