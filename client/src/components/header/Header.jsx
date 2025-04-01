@@ -4,16 +4,19 @@ import { Link } from "react-router"
 import { UserContext, useUserContext } from "../../contexts/UserContext"
 import { PlusCircle, LogOut, Grid, LogIn, UserPlus, ShoppingCart } from "lucide-react";
 import { useCartData } from "../../api/cartApi";
+import { useCartCount } from "../../contexts/CartContext";
 
 export default function Header() {
     const { firstName, avatar, _id } = useUserContext(UserContext);
-    const { cart } = useCartData(_id)
-    const [cartCount, setCartCount] = useState(0);
+    const {cart} = useCartData(_id)
+    const {cartItemsCount, addToCart} = useCartCount()
 
     useEffect(() => {
-        setCartCount(cart.length)
-    }, [cart]);
+        addToCart(cart.length); 
 
+    }, [cart])
+
+    
 
     return (
         <header>
@@ -47,16 +50,16 @@ export default function Header() {
                         </Link>
 
                         <Link to="/cart" className={`hover:text-white flex items-center justify-center relative group
-                            ${cartCount > 0 
+                            ${cartItemsCount > 0 
                             ? "text-green-600" 
                             :"text-red-600"
                             }
                              `}>
                             <div className="relative w-15 h-15">
                                 <ShoppingCart className="w-15 h-15" />
-                                {cartCount > 0 && (
+                                {cartItemsCount > 0 && (
                                     <span className="absolute top-[-5px] right-[-5px] bg-red-600 text-white text-xs font-bold rounded-full w-6 h-6 flex items-center justify-center">
-                                        {cartCount}
+                                        {cartItemsCount}
                                     </span>
                                 )}
                             </div>

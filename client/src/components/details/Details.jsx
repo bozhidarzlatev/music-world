@@ -7,6 +7,7 @@ import ShowReview from '../review/showReview/ShowReview';
 import { useCanReview, useCreateReview, useReviews } from '../../api/reviewApi';
 import { v4 as uuid } from 'uuid'
 import { useCartData } from '../../api/cartApi';
+import { useCartCount } from '../../contexts/CartContext';
 
 export default function Details() {
     const { categoriId, itemId } = useParams();
@@ -18,10 +19,10 @@ export default function Details() {
     const { create } = useCreateReview()
     const { reviews, setReviews } = useReviews(itemId)
     const { cart, updateCart } = useCartData(userId)
-    const {hasReview, hasBought} = useCanReview(itemId)
+    const { hasReview, hasBought } = useCanReview(itemId)
+    const { addToCart } = useCartCount()
 
     const [optimisticReviews, setOptimisticReviews] = useOptimistic(reviews)
-
 
     let rating = 0;
     reviews.map(key => rating += Number(key.rating))
@@ -79,13 +80,14 @@ export default function Details() {
             item._id
         ]
 
-
+        
         updateCart(item._id)
+        addToCart(dataToPush.length)
     }
 
 
-    
-    
+
+
     return (
         <div className="min-h-screen bg-gray-200 p-8 ">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 bg-gray-50 p-6 rounded-lg shadow-md">
@@ -109,7 +111,7 @@ export default function Details() {
                         </div>
                     }
                     {item.artist &&
-                            <h3 className="font-semibold text-xl">{item.artist}</h3>
+                        <h3 className="font-semibold text-xl">{item.artist}</h3>
                     }
 
                     {item.date && <p className="text-gray-500 text-lg">{item.date}</p>}
@@ -120,22 +122,22 @@ export default function Details() {
 
                     <div className="mt-4 text-gray-700">
                         <h3 className="font-semibold text-xl">Rating:</h3>
-                        { rating === 0
-                        ? <p>Not rated yet </p>
-                        :
-                  
-                        <div className="flex space-x-1">
-                            {[...Array(5)].map((_, index) => (
-                                <span
-                                    key={index}
-                                    className={`text-2xl  ${index < rating ? 'text-yellow-400' : 'text-gray-300'
-                                        }`}
-                                >
-                                    ★
-                                </span>
-                            ))}
-                        </div>
-                          }
+                        {rating === 0
+                            ? <p>Not rated yet </p>
+                            :
+
+                            <div className="flex space-x-1">
+                                {[...Array(5)].map((_, index) => (
+                                    <span
+                                        key={index}
+                                        className={`text-2xl  ${index < rating ? 'text-yellow-400' : 'text-gray-300'
+                                            }`}
+                                    >
+                                        ★
+                                    </span>
+                                ))}
+                            </div>
+                        }
                     </div>
 
 
@@ -177,14 +179,14 @@ export default function Details() {
                     )}
 
                     {!isOwner && hasBought && !hasReview
-                    ?
-                    <button
-                    onClick={onAddReviewHandler}
-                    className="w-full bg-purple-800 text-white py-3 rounded-md hover:bg-yellow-400 hover:text-black transition-colors"
-                    >
-                        Add review
-                    </button>
-                    : null
+                        ?
+                        <button
+                            onClick={onAddReviewHandler}
+                            className="w-full bg-purple-800 text-white py-3 rounded-md hover:bg-yellow-400 hover:text-black transition-colors"
+                        >
+                            Add review
+                        </button>
+                        : null
                     }
                 </div>
             </div>

@@ -18,6 +18,7 @@ import GuestGuard from './components/guards/GuestGuard'
 import Cart from './components/cart/Cart'
 import Orders from './components/orders/Orders'
 import Profile from './components/profile/Profile'
+import { CartyProvider } from './providers/CartProvider'
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
   return (
     <>
       <UserProvider>
+        <CartyProvider>
         <div id="container">
           <Header />
 
@@ -57,6 +59,7 @@ function App() {
 
           <Footer />
         </div>
+        </CartyProvider>
       </UserProvider>
 
     </>
