@@ -5,14 +5,14 @@ import { useSearch } from '../../api/searchApi';
 
 
 export default function Catalog() {
-    const [currentPage, setCurrentPage] = useState(1)
-    const {search, searchItems, totalItems} = useSearch(currentPage)
+    const [currentPage, setCurrentPage] = useState(1);
+    const {search, searchItems, totalItems, found} = useSearch(currentPage);
+    const [isSearched, setIsSearched] = useState(``)
 
     const pageSize = 12;
     const totalPages = Math.ceil(totalItems / pageSize)
 
     const timeoutRef = useRef(null)
-    console.log(currentPage);
     
     const handlePageChange = (pageNumber) => {
         setCurrentPage(pageNumber);
@@ -34,6 +34,7 @@ export default function Catalog() {
 
     const onSearch = (e) => {
         const searchData = e.target.value; 
+        setIsSearched(searchData)
         
         clearTimeout(timeoutRef.current);
 
@@ -42,13 +43,14 @@ export default function Catalog() {
         }, 300); 
       };
 
+      
     
 
     return (
         <div className="min-h-screen bg-gray-100 p-8">
 
 
-            <h1 className="text-3xl font-bold text-center mb-8">Search items: {searchItems.length !== totalItems ? `${searchItems.length} mathes`:` ${totalItems} total items`} </h1>
+            <h1 className="text-3xl font-bold text-center mb-8">Search items: {isSearched !== '' ? `${found} mathes`:` ${totalItems} total items`} </h1>
             <div className="flex justify-center mb-6">
                 <input
                     type="text"
