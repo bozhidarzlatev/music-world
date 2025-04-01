@@ -41,7 +41,6 @@ export default function Catalog() {
         <>
           <h1 className="text-3xl font-bold text-center mb-8">No {categoriId} yet</h1>
 
-          {/* Circular Button */}
           <Link to={`/create/${categoriId}`} className="text-black-600 hover:text-green-600 flex items-center justify-center relative group">
                             <PlusCircle className="w-15 h-15" />
                             <span className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200">

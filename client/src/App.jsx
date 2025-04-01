@@ -18,6 +18,7 @@ import GuestGuard from './components/guards/GuestGuard'
 import Cart from './components/cart/Cart'
 import Orders from './components/orders/Orders'
 import Profile from './components/profile/Profile'
+import Search from './components/search/Search'
 import { CartProvider } from './providers/CartProvider'
 
 
@@ -37,6 +38,7 @@ function App() {
               <Route path="/categories" element={<Categories route="categories" action="Explore" />} />
               <Route path="/categories/:categoriId" element={<Catalog />} />
               <Route path="/categories/:categoriId/:itemId/details" element={<Details />} />
+              <Route path="/search" element={<Search />} />
               <Route element={<AuthGuard />}>
 
                 <Route path="/categories/:categoriId/:itemId/edit" element={<EditItem />} />
