@@ -20,6 +20,7 @@ import Orders from './components/orders/Orders'
 import Profile from './components/profile/Profile'
 import Search from './components/search/Search'
 import { CartProvider } from './providers/CartProvider'
+import NotFound from './components/notfount/NotFound'
 
 
 function App() {
@@ -48,6 +49,7 @@ function App() {
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/orders" element={<Orders />} />
                 <Route path="/profile" element={<Profile />} />
+                <Route path="*" element={<NotFound />} />
               </Route>
 
               <Route element={<GuestGuard />}>
