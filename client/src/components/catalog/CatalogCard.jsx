@@ -23,11 +23,17 @@ export default function CatalogCard({
                     { item.artist &&
                     <h2 className="text-lg font-semibold text-gray-500">{item.artist}</h2>
                     }
-                    { item.genre &&
+                    { !item.subCategory &&
                     <h2 className="text-sm font-semibold text-gray-500">{item.genre}</h2>
                     }
                     { item.merch &&
                     <h2 className="text-sm font-semibold text-gray-500">{item.genre}</h2>
+                    }
+                    { item.manufacturer &&
+                    <h2 className="text-lg font-semibold text-gray-500">{item.manufacturer}</h2>
+                    }
+                    { item.subCategory &&
+                    <h2 className="text-sm font-semibold text-gray-500">{item.subCategory }</h2>
                     }
                         
                     <p className="text-xl font-bold text-green-500">{Number(item.price).toFixed(2)} lv</p>
