@@ -26,12 +26,10 @@ export default function Catalog() {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
-  console.log(loading);
   
   if (loading ) {
     return <Spinner />
   }
-  console.log(loading);
 
   return (
     <div className="min-h-screen bg-gray-100 p-8">

@@ -2,14 +2,14 @@ import { useEffect, useState } from "react"
 import styles from "./Header.module.css"
 import { Link } from "react-router"
 import { UserContext, useUserContext } from "../../contexts/UserContext"
-import { PlusCircle, LogOut, Grid, LogIn, UserPlus, ShoppingCart } from "lucide-react";
+import { PlusCircle, LogOut, Grid, LogIn, UserPlus, ShoppingCart, Search } from "lucide-react";
 import { useCartData } from "../../api/cartApi";
-import { useCartCount } from "../../contexts/CartContext";
+import { useCartContext } from "../../contexts/CartContext";
 
 export default function Header() {
     const { firstName, avatar, _id } = useUserContext(UserContext);
     const {cart} = useCartData(_id)
-    const {cartItemsCount, addToCart} = useCartCount()
+    const {cartItemsCount, addToCart} = useCartContext()
 
     useEffect(() => {
         addToCart(cart.length); 
@@ -34,6 +34,12 @@ export default function Header() {
                     <Grid className="w-15 h-15" />
                     <span className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200">
                         Browse All
+                    </span>
+                </Link>
+                <Link to="/search" className="text-white-700 hover:text-blue-900 flex items-center space-x-2 relative group">
+                    <Search className="w-15 h-15" />
+                    <span className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200">
+                        Search items
                     </span>
                 </Link>
 

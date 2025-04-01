@@ -2,20 +2,28 @@ import { Link, useNavigate } from "react-router";
 import { useUserCart } from "../../api/cartApi";
 import { useCreateOrder } from "../../api/orderApi";
 import useAuth from "../../hooks/useAuth";
+import { useCartContext } from "../../contexts/CartContext";
 
 export default function Cart() {
     const { userCart } = useUserCart()
     const { createOrder } = useCreateOrder()
     const {userId} = useAuth()
     const navigate = useNavigate()
+    const {addToCart} = useCartContext()
 
     const onPlaceOrderHandler = async () => {
-
-        const responce = await createOrder(userCart, userId)
-        navigate(`/orders`)
+        const cart = []
+        try {
+            const responce = await createOrder(userCart, userId)
+            addToCart(0)    
+            navigate(`/orders`)
+        } catch (error) {
+            console.log(error);
+            
+        }
+        
         
     }
-    console.log(userCart);
     
     const totalSum = userCart.reduce((total, item) => total + Number(item.price), 0)
 

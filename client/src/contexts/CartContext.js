@@ -1,10 +1,10 @@
-import React, { createContext, useContext, useState } from 'react';
+import { createContext, useContext } from 'react';
 
 
 export const CartContext = createContext();
 
 
-export function useCartCount () {
+export function useCartContext () {
     const data = useContext(CartContext)
     return data
 }

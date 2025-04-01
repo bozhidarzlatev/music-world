@@ -7,7 +7,7 @@ import ShowReview from '../review/showReview/ShowReview';
 import { useCanReview, useCreateReview, useReviews } from '../../api/reviewApi';
 import { v4 as uuid } from 'uuid'
 import { useCartData } from '../../api/cartApi';
-import { useCartCount } from '../../contexts/CartContext';
+import { useCartContext } from '../../contexts/CartContext';
 
 export default function Details() {
     const { categoriId, itemId } = useParams();
@@ -20,7 +20,7 @@ export default function Details() {
     const { reviews, setReviews } = useReviews(itemId)
     const { cart, updateCart } = useCartData(userId)
     const { hasReview, hasBought } = useCanReview(itemId)
-    const { addToCart } = useCartCount()
+    const { addToCart } = useCartContext()
 
     const [optimisticReviews, setOptimisticReviews] = useOptimistic(reviews)
 
@@ -73,14 +73,13 @@ export default function Details() {
     const isOwner = userId === item._ownerId;
 
     const onAddToCartHandler = () => {
-
         const cartDataItems = cart
         const dataToPush = [
             ...cartDataItems,
             item._id
         ]
-
-        
+            console.log(addToCart);
+            
         updateCart(item._id)
         addToCart(dataToPush.length)
     }

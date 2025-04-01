@@ -1,8 +1,5 @@
 import { useEffect, useState } from "react";
-import request from "../utils/request";
 import useAuth from "../hooks/useAuth";
-import { useItem, useItems } from "./itemApi";
-import { useCartCount } from "../contexts/CartContext";
 
 
 const baseUrl = 'http://localhost:3030/data/carts';
@@ -32,7 +29,6 @@ export const useCartData = (userId) => {
     const [cart, setCart] = useState([])
     const [cartId, setCartId] = useState('')
     const { request } = useAuth()
-    const {addToCart} = useCartCount()
     
     useEffect(() => {
         request.get(`${baseUrl}?where=_ownerId%3D%22${userId}%22`)
