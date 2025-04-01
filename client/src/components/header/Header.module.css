@@ -8,7 +8,7 @@ header > div > p {
     color: transparent; 
 }
 
-header , .main, nav, .user, .guest {
+header , .main, nav, .user, .guest , .items {
     display: flex;
     flex-direction: row;
     gap: 2em;

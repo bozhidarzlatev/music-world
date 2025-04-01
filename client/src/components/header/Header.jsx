@@ -30,6 +30,7 @@ export default function Header() {
                 <p className={styles.title}>Music World</p>
             </div>
             <nav>
+            <div className={styles.items}>
                 <Link to="/categories" className="text-white-700 hover:text-blue-900 flex items-center space-x-2 relative group">
                     <Grid className="w-15 h-15" />
                     <span className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200">
@@ -42,7 +43,7 @@ export default function Header() {
                         Search items
                     </span>
                 </Link>
-
+                </div>
 
 
 

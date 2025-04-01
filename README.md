@@ -60,3 +60,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - Search component added
     - Search functionality added
     - Search pagination
+    - Header style fixes
