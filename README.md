@@ -66,3 +66,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - Toasts added to add, edit and delete items
     - Bug Fixes
     - ReviewCarousel comp added
+    - Search fix

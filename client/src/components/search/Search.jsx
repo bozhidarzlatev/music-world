@@ -6,12 +6,18 @@ import { useSearch } from '../../api/searchApi';
 
 export default function Catalog() {
     const [currentPage, setCurrentPage] = useState(1);
-    const {search, searchItems, totalItems, found} = useSearch(currentPage);
+    const {search, searchItems, totalItems, found, isInSearched} = useSearch(currentPage);
     const [isSearched, setIsSearched] = useState(``)
 
     const pageSize = 12;
-    const totalPages = Math.ceil(totalItems / pageSize)
-
+    const items = isInSearched ? found : totalItems
+    const totalPages = Math.ceil( items / pageSize)
+    console.log(`===`);
+    console.log(found);
+    console.log(found !== '');
+    console.log(!found)
+    console.log(totalPages);
+    
     const timeoutRef = useRef(null)
     
     const handlePageChange = (pageNumber) => {

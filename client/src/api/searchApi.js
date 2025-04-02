@@ -11,7 +11,8 @@ export const useSearch = (currentPage) => {
     const [searchItems, setSearchItems] = useState([]);
     const [searchParams, setsearchParams] = useState('');
     const [totalItems, setTotalItems] = useState(0);
-    const [found, setFound] = useState(0)
+    const [found, setFound] = useState(0);
+    const [isInSearched, setIsInSearched] = useState(false)
 
     currentPage -= 1
 
@@ -25,17 +26,15 @@ export const useSearch = (currentPage) => {
             try {
 
                 if (searchParams === '') {
+                    setIsInSearched(false)
                     setSearchItems(response);
 
                 } else {
+                    setIsInSearched(true)
                     const regex = new RegExp(searchParams, 'i');
-
-                    const filteredItems = response.filter(item =>
-                        regex.test(item.title)
-                    );
-                    const totalFound = responceCount.filter(item =>
-                        regex.test(item.title)
-                    );
+                    const start = currentPage * 12 
+                    const end = (currentPage + 1 )* 12
+                    const filteredItems = responceCount.filter(item => regex.test(item.title)).slice(start , end);
                     
                     setFound(filteredItems.length);
                     setSearchItems(filteredItems);
@@ -43,7 +42,6 @@ export const useSearch = (currentPage) => {
 
             } catch (error) {
                 console.log(error);
-
             }
 
 
@@ -57,7 +55,7 @@ export const useSearch = (currentPage) => {
     }
 
     return {
-        search, searchItems, totalItems, found
+        search, searchItems, totalItems, found, isInSearched
     }
 
 }
