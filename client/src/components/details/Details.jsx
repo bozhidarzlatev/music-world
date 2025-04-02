@@ -171,9 +171,11 @@ export default function Details() {
                         <h3 className="font-semibold text-xl">Price:</h3>
                         <p className="text-xl font-bold text-green-500">{Number(item.price).toFixed(2)} lv</p>
                     </div>
+                    {userId && 
                     <button onClick={onAddToCartHandler} className="w-full bg-green-600 text-white py-3 rounded-md transition-transform transform hover:scale-105 hover:bg-green-700 hover:shadow-lg">
                         Add to Cart
                     </button>
+                    }
 
                     {isOwner && (
                         <>
