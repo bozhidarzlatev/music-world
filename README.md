@@ -68,3 +68,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - ReviewCarousel comp added
     - Search fix
     - Profile data - user items and user reviews added
+    - Final touches

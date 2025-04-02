@@ -1470,7 +1470,115 @@
         "user": "Pesho Minkov",
         "_createdOn": 1742847563884,
         "_id": "a230ec3e-6a90-4cb0-9d2e-fbb09dcffa83"
-    }
+    },
+    "66892ccc-323b-4abb-aaf3-a6dc3ac6f8fe": {
+        "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc303",
+        "review": "Rubish",
+        "rating": "3",
+        "itemId": "c3f0800c-a349-4eec-a8a0-cc8a1d90513c",
+        "user": "Boyko Borisov",
+        "_createdOn": 1743607729577,
+        "_id": "66892ccc-323b-4abb-aaf3-a6dc3ac6f8fe"
+    },
+    "01889573-a87d-45bb-b964-27723b06f88e": {
+        "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16d0d",
+        "review": "Great album! One of my favorites!",
+        "rating": "4",
+        "itemId": "bb4ab202-a637-4b47-9a5a-066e78c2fb7c",
+        "user": "Maria Atanasova",
+        "_createdOn": 1743614891065,
+        "_id": "01889573-a87d-45bb-b964-27723b06f88e"
+    },
+   "d3e7fa7a-d02e-40d5-8ba5-4f7eb7fe37cc": {
+        "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16111",
+        "review": "Слушам албума всеки ден!",
+        "rating": "5",
+        "itemId": "1cfc3490-14f0-4e37-b540-68fe267c4197",
+        "user": "Chudomir Vuproskov",
+        "_createdOn": 1743614942527,
+        "_id": "d3e7fa7a-d02e-40d5-8ba5-4f7eb7fe37cc"
+    },
+    "33754f43-7943-4a54-9321-8c2932792d60": {
+        "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16999",
+        "review": "Great guitar for beginners",
+        "rating": "4",
+        "itemId": "868091a4-62ff-411e-bbfb-513f167c7382",
+        "user": "Ernesto Dominges",
+        "_createdOn": 1743614981941,
+        "_id": "33754f43-7943-4a54-9321-8c2932792d60"
+    },
+    "5e2ea9b3-e55c-478b-acbe-5506510f1cfb": {
+        "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16111",
+        "review": "Великан, нямам търпение!",
+        "rating": "4",
+        "itemId": "80170509-75cd-451d-9e24-9c565728301a",
+        "user": "Chudomir Vuproskov",
+        "_createdOn": 1743615012110,
+        "_id": "5e2ea9b3-e55c-478b-acbe-5506510f1cfb"
+    },
+    "f7520bae-7848-47e6-95e3-13f16easad12b": {
+        "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc3q8",
+        "review": "Взех я на приятеля ми, остава да му взема и мустак!",
+        "rating": "5",
+        "itemId": "b74c5caa-564e-4926-8a32-96f4e37d2eb6",
+        "user": "Krisi Stoqnova",
+        "_createdOn": 1743615088311,
+        "_id": "f7520bae-7848-47e6-95e3-13f16easad12b"
+    },
+    "a29e7223-ae65-4d03-a302-f59051911b00": {
+        "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16aaa",
+        "review": "Късам риза!",
+        "rating": "4",
+        "itemId": "b9678b92-0bf8-4b54-9510-aa70071eb64c",
+        "user": "stella Artois ",
+        "_createdOn": 1743615042378,
+        "_id": "a29e7223-ae65-4d03-a302-f59051911b00"
+    },
+    "7db5a052-319a-4f49-a3e2-5bec207cf561": {
+        "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16100",
+        "review": "Smoke weed every day",
+        "rating": "5",
+        "itemId": "afdcb5ed-8704-4397-bff3-d9161f605775",
+        "user": "100 Kila",
+        "_createdOn": 1743615069994,
+        "_id": "7db5a052-319a-4f49-a3e2-5bec207cf561"
+    },
+    "f7520bae-7848-47e6-95e3-13f16ea80e7b": {
+        "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc303",
+        "review": "Чудесна тениска, бях с нея на бала!",
+        "rating": "5",
+        "itemId": "b74c5caa-564e-4926-8a32-96f4e37d2eb6",
+        "user": "Boyko Borisov",
+        "_createdOn": 1743615098311,
+        "_id": "f7520bae-7848-47e6-95e3-13f16ea80e7b"
+    },
+    "d3e7fa7a-d02e-40d5-8ba5-4f7eb7fe312c": {
+        "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16221",
+        "review": "Супер лигав албум... ",
+        "rating": "2",
+        "itemId": "1cfc3490-14f0-4e37-b540-68fe267c4197",
+        "user": "Metal Fen",
+        "_createdOn": 1743614942427,
+        "_id": "d3e7fa7a-d02e-40d5-8ba5-4f7eb7fe312c"
+    },
+    "00690824-cf13-4f9b-b913-24d86cd8d372": {
+        "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16she",
+        "review": "Good fit and materials",
+        "rating": "4",
+        "itemId": "7c7617d3-e0ab-41c7-b342-d85d3a4e8bea",
+        "user": "Charlie Sheen",
+        "_createdOn": 1743615127472,
+        "_id": "00690824-cf13-4f9b-b913-24d86cd8d372"
+    },
+    "f7520bae-7848-47e6-95e3-13f16ea8012b": {
+        "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc388",
+        "review": "Не препоръчвам, жените не ме оставят, откакто си я взех!",
+        "rating": "4",
+        "itemId": "b74c5caa-564e-4926-8a32-96f4e37d2eb6",
+        "user": "Toni Montana",
+        "_createdOn": 1743615098311,
+        "_id": "f7520bae-7848-47e6-95e3-13f16ea8012b"
+    },
 },
     carts: {
     "e6a4d9d6-fbba-46a6-9ff6-425a372d9d12": {

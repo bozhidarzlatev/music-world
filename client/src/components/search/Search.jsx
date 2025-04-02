@@ -12,11 +12,6 @@ export default function Catalog() {
     const pageSize = 12;
     const items = isInSearched ? found : totalItems
     const totalPages = Math.ceil( items / pageSize)
-    console.log(`===`);
-    console.log(found);
-    console.log(found !== '');
-    console.log(!found)
-    console.log(totalPages);
     
     const timeoutRef = useRef(null)
     
@@ -33,10 +28,7 @@ export default function Catalog() {
     };
 
 
-    // if (loading) {
-    //     return <Spinner />
-    // }
-    
+
 
     const onSearch = (e) => {
         const searchData = e.target.value; 

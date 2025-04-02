@@ -11,7 +11,6 @@ export default function Home() {
     const { latestItems } = useLatestUploads()
     const { topRatingtItems } = useTopRatingUploads();
     const { topReviews } = useTopReviews();
-console.log(topReviews);
 
     let topRating = {};
     topRatingtItems.forEach(item => {

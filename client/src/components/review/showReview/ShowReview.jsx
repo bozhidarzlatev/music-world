@@ -3,9 +3,7 @@ import CatalogCard from "../../catalog/CatalogCard";
 export default function ShowReview({
   reviews
 }) {
-  // reviews.map(review => review._createdOn date= new Date(review._createdOn).toLocaleDateString())
-  // console.log(reviews);
-
+  
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
       {reviews.map(({ _id, rating, user, review, pending, _createdOn, data }) => {
@@ -19,6 +17,7 @@ export default function ShowReview({
                   }`}
                 key={_id}
               >
+
                 <div className="flex items-center space-x-4">
                   <div className="flex flex-col">
                     <h3
@@ -29,16 +28,27 @@ export default function ShowReview({
                     </h3>
 
                     <div className="flex justify-around items-center">
-                      <div className="flex space-x-1">
-                        {[...Array(5)].map((_, index) => (
-                          <span
-                            key={index}
-                            className="text-2xl text-yellow-400"
-                          >
-                            ★
-                          </span>
-                        ))}
-                      </div>
+                    <div className="flex space-x-1">
+  {[...Array(5)].map((_, index) => (
+    <span
+      key={index}
+      className={`text-2xl ${
+        pending
+          ? "text-gray-400"
+          : index < rating
+          ? rating >= 4.01 && rating <= 4.50
+            ? "text-yellow-300" // Shade for 4.01 to 4.50
+            : rating > 4.50 && rating < 5
+            ? "text-yellow-500" // Shade for 4.51 to 4.99
+            : "text-yellow-400" // Default yellow shade for 5-star rating
+          : "text-gray-300"
+      }`}
+    >
+      ★
+    </span>
+  ))}
+</div>
+
                       <span className="text-gray-500 text-sm ml-20">{date}</span>
                     </div>
 
@@ -48,7 +58,9 @@ export default function ShowReview({
                 <p className={`mt-4 ${pending ? "text-gray-400" : "text-gray-600"}`}>
                   {review}
                 </p>
+
               </div>
+
             </div>
           </>
         );

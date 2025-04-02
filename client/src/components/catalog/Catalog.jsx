@@ -26,17 +26,16 @@ export default function Catalog() {
     if (currentPage > 1) setCurrentPage(currentPage - 1);
   };
 
-  
-  if (loading ) {
+
+  if (loading) {
     return <Spinner />
   }
 
-  console.log(JSON.stringify(items));
-  
+
 
   return (
     <div className="min-h-screen bg-gray-100 p-8">
-      
+
 
 
       {totalItems === 0
@@ -45,19 +44,20 @@ export default function Catalog() {
           <h1 className="text-3xl font-bold text-center mb-8">No {categoriId} yet</h1>
 
           <Link to={`/create/${categoriId}`} className="text-black-600 hover:text-green-600 flex items-center justify-center relative group">
-                            <PlusCircle className="w-15 h-15" />
-                            <span className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200">
-                                Add New
-                            </span>
-                        </Link>
+            <PlusCircle className="w-15 h-15" />
+            <span className="absolute bottom-[-40px] left-1/2 -translate-x-1/2 bg-gray-800 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition duration-200">
+              Add New
+            </span>
+          </Link>
         </>
         :
         <>
-          <h1 className="text-3xl font-bold text-center mb-8">{categoriId.slice(0,1).toUpperCase()}{categoriId.slice(1)} Catalog - {totalItems} items</h1>
+          <h1 className="text-3xl font-bold text-center mb-8">{categoriId.slice(0, 1).toUpperCase()}{categoriId.slice(1)} Catalog - {totalItems} items</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {items.map((item) =>
               <CatalogCard categoriId={categoriId} item={item} />
             )}
+
           </div>
           <div className="flex justify-center mt-6">
             <button

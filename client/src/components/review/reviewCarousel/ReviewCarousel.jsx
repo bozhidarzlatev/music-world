@@ -3,7 +3,6 @@ import { motion } from "framer-motion";
 export default function ReviewCarousel({ topReviews }) {
 
     topReviews.map(review => review._createdOn = new Date(review._createdOn).toLocaleDateString())
-    console.log(topReviews);
 
     return (
         <div className="overflow-hidden w-full bg-none-100 py-4">
@@ -34,7 +33,7 @@ export default function ReviewCarousel({ topReviews }) {
                                             ★
                                         </span>
                                     ))}
-                            <span className="text-gray-500 text-sm ml-20">{review._createdOn}</span>
+                            <span className="text-gray-500 text-sm ml-15">{review._createdOn}</span>
                                 </div>
                                 
                             </div>

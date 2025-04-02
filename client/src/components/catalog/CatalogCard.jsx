@@ -46,7 +46,7 @@ export default function CatalogCard({
                                     const decimal = item.rating - fullStars; // Decimal part
 
                                     if (index < fullStars) {
-                                        return <span key={index} className="text-yellow-500 text-2xl">★</span>; // Full star
+                                        return <span key={index} className="text-yellow-600 text-2xl">★</span>; // Full star
                                     } else if (index === fullStars && decimal >= 0.01 && decimal <= 0.49) {
                                         return <span key={index} className="text-yellow-200 text-2xl">★</span>; // Half star
                                 

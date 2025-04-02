@@ -80,7 +80,6 @@ export default function Details() {
         setOptimisticReviews((optimisticState) => [...optimisticState, newOptimisticReview])
 
         const reviewResult = await create({ ...newReview, itemId, user })
-        console.log(reviewResult);
         
         setReviews(prev => [...prev, reviewResult])
         addToast({ code: 200, message: 'Review added!' });
@@ -96,10 +95,12 @@ export default function Details() {
             ...cartDataItems,
             item._id
         ]
-        console.log(addToCart);
 
         updateCart(item._id)
         addToCart(dataToPush.length)
+        addToast({ code: 200, message: `Item added to cart` });
+        showToast()
+
     }
 
 
@@ -143,17 +144,24 @@ export default function Details() {
                             ? <p>Not rated yet </p>
                             :
 
-                            <div className="flex space-x-1">
-                                {[...Array(5)].map((_, index) => (
-                                    <span
-                                        key={index}
-                                        className={`text-2xl  ${index < rating ? 'text-yellow-400' : 'text-gray-300'
-                                            }`}
-                                    >
-                                        ★
-                                    </span>
-                                ))}
-                            </div>
+                            <div className="flex items-center mt-2">
+                            {[...Array(5)].map((_, index) => {
+                                const fullStars = Math.floor(rating); // Whole number part of the rating
+                                const decimal = rating - fullStars; // Decimal part
+
+                                if (index < fullStars) {
+                                    return <span key={index} className="text-yellow-600 text-2xl">★</span>; // Full star
+                                } else if (index === fullStars && decimal >= 0.01 && decimal <= 0.49) {
+                                    return <span key={index} className="text-yellow-200 text-2xl">★</span>; // Half star
+                            
+                                } else if (index === fullStars && decimal >= 0.51 && decimal <= 0.99) {
+                                    return <span key={index} className="text-yellow-400 text-2xl">★</span>; // Half star
+                                } else {
+                                    return <span key={index} className="text-gray-300 text-2xl">★</span>; // Empty star
+                                }
+                            })}
+                            <span className="text-sm text-gray-600 ml-2">{Number(rating).toFixed(1)}</span>
+                        </div>
                         }
                     </div>
 
