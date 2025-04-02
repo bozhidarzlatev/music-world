@@ -11,7 +11,7 @@ export default function CatalogCard({
             key={item._id}
             className="block"
         >
-            <div className="bg-white rounded-lg shadow-md hover:shadow-2xl transition-shadow duration-300 overflow-hidden cursor-pointer">
+            <div   className="bg-white rounded-lg shadow-md hover:shadow-2xl transition-shadow duration-300 overflow-hidden cursor-pointer">
                 <img
                     src={item.imageUrl}
                     alt={item.title}

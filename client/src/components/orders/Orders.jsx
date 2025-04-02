@@ -13,11 +13,16 @@ export default function Orders() {
     setExpandedOrder(expandedOrder === orderId ? null : orderId);
   };
 
+
   return (
     <div className='min-h-dvh'>
     <div className="max-w-6xl  mx-auto p-6 bg-white shadow-lg rounded-lg">
       <h2 className="text-2xl font-semibold mb-6">Orders List</h2>
 
+      {orders.length === 0  
+      ? <p className="text-gray-500 text-center">Your don't have any orders yet!</p>
+      :
+  
       <div className="space-y-4">
         {orders.map((order) => {
           const orderTotal = calculateOrderTotal(order.orderData); 
@@ -60,6 +65,7 @@ export default function Orders() {
           );
         })}
       </div>
+          }
     </div>
     </div>
   );
