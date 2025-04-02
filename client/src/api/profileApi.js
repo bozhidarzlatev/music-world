@@ -5,7 +5,8 @@ import { urls } from "./urls"
 
 export const useProfile = () => {
     const { avatar, firstName, lastName, email, _id, request } = useAuth()
-    const [ profileCounts, setProfileCounts ] = useState({})
+    const [ profileCounts, setProfileCounts ] = useState({});
+    const [userItems, setUserITems] = useState([])
 
     const profile = { avatar, firstName, lastName, email, _id }
 
@@ -17,7 +18,7 @@ export const useProfile = () => {
         const fetchItemsCount = async () => {
             try {
                 const response = await request.get(`${urls.itemsUrl}?${searchParams.toString()}`);
-                
+                setUserITems(response)
                 setProfileCounts(prev => prev = {...prev, items: response.length});
             } catch (error) {
                 console.error("Failed to fetch items:", error);
@@ -50,7 +51,7 @@ export const useProfile = () => {
     }, [_id])
 
     return {
-        profile, profileCounts
+        profile, profileCounts, userItems
     }
 
 }

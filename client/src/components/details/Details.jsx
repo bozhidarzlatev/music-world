@@ -80,8 +80,11 @@ export default function Details() {
         setOptimisticReviews((optimisticState) => [...optimisticState, newOptimisticReview])
 
         const reviewResult = await create({ ...newReview, itemId, user })
-
+        console.log(reviewResult);
+        
         setReviews(prev => [...prev, reviewResult])
+        addToast({ code: 200, message: 'Review added!' });
+        showToast()
         onCloseRevieHandler()
     }
 

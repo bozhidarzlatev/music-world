@@ -22,6 +22,9 @@ import Search from './components/search/Search'
 import { CartProvider } from './providers/CartProvider'
 import NotFound from './components/notfount/NotFound'
 import { ToastProvider } from './providers/ToastProvide'
+import UserReviews from './components/review/userReviews/UserReviews'
+import UserITems from './components/profile/userItems/UserItems'
+import UserItems from './components/profile/userItems/UserItems'
 
 
 function App() {
@@ -51,6 +54,8 @@ function App() {
                 <Route path="/cart" element={<Cart />} />
                 <Route path="/orders" element={<Orders />} />
                 <Route path="/profile" element={<Profile />} />
+                <Route path="/reviews" element={<UserReviews />} />
+                <Route path="/useritems" element={<UserItems />} />
                 <Route path="*" element={<NotFound />} />
               </Route>
 

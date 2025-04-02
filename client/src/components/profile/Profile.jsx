@@ -36,14 +36,14 @@ export default function Profile(){
                     </Link>
                     
                     <Link 
-                        to="/comments"
+                        to="/reviews"
                         className="w-full bg-purple-600 text-white py-3 rounded-md hover:bg-purple-800 transition-transform transform hover:scale-105  transition-colors text-center"
                     >
                         My Reviews - {profileCounts.reviews}
                     </Link>
                     
                     <Link 
-                        to="/my-items"
+                        to="/useritems"
                         className="w-full bg-gray-400 text-white py-3 rounded-md hover:bg-gray-500 transition-transform transform hover:scale-105  transition-colors text-center"
                     >
                         My Items - {profileCounts.items}

@@ -14,7 +14,6 @@ export default function AddReview({
             <div className="bg-white p-12 rounded-2xl shadow-xl w-full max-w-lg relative" onClick={(e) => e.stopPropagation()}>
                 <h2 className="text-3xl font-semibold text-center mb-8">Leave a Review</h2>
                 <form className="space-y-6" action={onCreate}>
-                    {/* Review Textarea */}
                     <div className="space-y-4">
                         <textarea
                             name="review"
@@ -24,7 +23,6 @@ export default function AddReview({
                         ></textarea>
                     </div>
 
-                    {/* Rating (5 Stars) */}
                     <div className="flex justify-center space-x-2">
                         {[1, 2, 3, 4, 5].map((value) => (
                             <label key={value} className="flex items-center">
@@ -56,7 +54,6 @@ export default function AddReview({
                     </button>
                 </form>
 
-                {/* Close Button for Modal */}
                 <button
                     onClick={closeReview}
                     className="absolute top-4 right-4 text-gray-500 hover:text-gray-800"

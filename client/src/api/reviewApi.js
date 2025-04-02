@@ -107,3 +107,30 @@ export const useTopReviews = () => {
         topReviews
     }
 } 
+
+export const useUserReview = () => {
+    const {userId, request} = useAuth();
+    const [reviews, setReviews] = useState([]);
+
+    useEffect(() => {
+        const searchParams = new URLSearchParams({
+            where: `_ownerId="${userId}"`,
+        });
+
+        const fetchReviews = async () => {
+            try {
+                const response = await request.get(`${baseUrl}?${searchParams.toString()}&load=data%3DitemId%3Aitems`);
+                
+                setReviews(response);
+            } catch (error) {
+                console.error("Failed to fetch reviews:", error);
+            }
+        };
+
+        fetchReviews()
+    }, [userId])
+
+    return {
+        reviews
+    }
+}

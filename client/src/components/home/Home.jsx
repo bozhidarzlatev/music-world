@@ -2,10 +2,8 @@ import { Link } from "react-router";
 import { useLatestUploads, useTopRatingUploads } from "../../api/itemApi"
 import CatalogCard from "../catalog/CatalogCard"
 import styles from "./Home.module.css"
-
-import { motion } from "framer-motion";
 import { useTopReviews } from "../../api/reviewApi";
-import ReviewCarousel from "../reviewCarousel/ReviewCarousel";
+import ReviewCarousel from "../review/reviewCarousel/ReviewCarousel";
 
 
 
