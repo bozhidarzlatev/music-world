@@ -110,3 +110,4 @@ Enjoy!
     - Profile data - user items and user reviews added
     - Final touches
     - Final commit with app description
+    - StrictMode removed -> it makes problem when cart is open. It doubles the items in it. As it 22:50 i have no power and will to investigate ;)

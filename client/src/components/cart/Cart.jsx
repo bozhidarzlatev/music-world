@@ -12,7 +12,6 @@ export default function Cart() {
     const {addToCart} = useCartContext()
 
     const onPlaceOrderHandler = async () => {
-        const cart = []
         try {
             const responce = await createOrder(userCart, userId)
             addToCart(0)    
@@ -22,8 +21,9 @@ export default function Cart() {
             
         }
         
-        
     }
+
+    
     
     const totalSum = userCart.reduce((total, item) => total + Number(item.price), 0)
 
