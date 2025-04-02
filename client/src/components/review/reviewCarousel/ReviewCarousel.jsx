@@ -1,8 +1,11 @@
 import { motion } from "framer-motion";
 
 export default function ReviewCarousel({ topReviews }) {
+    const copiedArray = JSON.parse(JSON.stringify(topReviews));
+    
+    copiedArray.map( review => review._createdOn = new Date(review._createdOn).toLocaleDateString())
+    // topReviews.map( review => review._createdOn = new Date(review._createdOn).toLocaleDateString()) - When trying to transorm topReviews._createdOn to Date it returns "Invalid Date", but with hard copy - no proble - Don't know why... 
 
-    topReviews.map(review => review._createdOn = new Date(review._createdOn).toLocaleDateString())
 
     return (
         <div className="overflow-hidden w-full bg-none-100 py-4">
@@ -12,7 +15,7 @@ export default function ReviewCarousel({ topReviews }) {
                 animate={{ x: "-100%" }}
                 transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
             >
-                {topReviews.concat().map((review, index) => (
+                {copiedArray.concat().map((review, index) => (
                     <div key={review._id} className="min-w-[300px] p-6 rounded-lg shadow-lg bg-white">
 
                         <div className="flex items-center space-x-4">

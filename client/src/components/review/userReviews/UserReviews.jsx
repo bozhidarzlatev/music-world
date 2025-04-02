@@ -3,7 +3,6 @@ import ShowReview from "../showReview/ShowReview";
 
 export default function UserReviews() {
     const { reviews } = useUserReview()
-    console.log(reviews);
     
     return (
         <div className="min-h-screen bg-gray-200 p-8 ">

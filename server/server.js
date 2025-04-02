@@ -1410,7 +1410,7 @@
                 "category": "merch",
                 "uploadedBy": "Admin Adminov",
                 "_createdOn": 1742847270686,
-                "manufacturer":"Skandau",
+                "manufacturer": "Skandau",
                 "_id": "179c7715-9fe8-4520-8b75-5790d8adad3c"
             },
             "c3f0800c-a349-4eec-a8a0-cc8a1d90513c": {
@@ -1427,7 +1427,7 @@
                 "category": "merch",
                 "uploadedBy": "Pesho Minkov",
                 "_createdOn": 1742847396603,
-                "manufacturer":"Lanec BG",
+                "manufacturer": "Lanec BG",
                 "_id": "c3f0800c-a349-4eec-a8a0-cc8a1d90513c"
             },
             "bb4ab202-a637-4b47-9a5a-066e78c2fb7c": { "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806", "subCategory": "CD", "title": "21", "genre": "pop", "artist": "Adele", "date": "2011-01-01", "descriptions": "Adele", "price": "20", "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Adele_-_21.png/220px-Adele_-_21.png", "category": "albums", "uploadedBy": "Bozhidar Zlatev", "_createdOn": 1743580186695, "_id": "bb4ab202-a637-4b47-9a5a-066e78c2fb7c" },
@@ -1435,511 +1435,511 @@
             "1cfc3490-14f0-4e37-b540-68fe267c4197": { "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806", "subCategory": "Vinyl", "title": "Like A Prayer", "genre": "pop", "artist": "Madona", "date": "2010-01-01", "descriptions": "The Silver Collection\"", "price": "35", "imageUrl": "https://shopuk.madonna.com/cdn/shop/files/Madonna_LikePrayer_1LP_Silver_ProductShot_e9494074-f9f0-40e5-8bee-da558b311704_590x.jpg?v=1722852703", "category": "albums", "uploadedBy": "Bozhidar Zlatev", "_createdOn": 1743580352171, "_id": "1cfc3490-14f0-4e37-b540-68fe267c4197" },
             "868091a4-62ff-411e-bbfb-513f167c7382": { "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806", "subCategory": "String", "title": "Guitar Epiphone SG Standard Heritage Cherry", "date": "2025-01-07", "descriptions": "Електрическа китара", "price": "950", "imageUrl": "https://muzikercdn.com/uploads/products/19388/1938893/main_33689998.jpg", "manufacturer": "Epiphone", "category": "instruments", "uploadedBy": "Bozhidar Zlatev", "_createdOn": 1743579991721, "_id": "868091a4-62ff-411e-bbfb-513f167c7382" },
             "6fe2c8e2-2dc0-42e8-9e72-569048c002d7": { "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806", "subCategory": "Percussion", "title": "Комплект електронни барабани", "date": "2024-08-06", "descriptions": "Alesis Nitro Max Kit", "price": "843", "imageUrl": "https://muzikercdn.com/uploads/products/15537/1553756/main_9cb4e278.jpg", "manufacturer": "Alesis", "category": "instruments", "uploadedBy": "Bozhidar Zlatev", "_createdOn": 1743580066382, "_id": "6fe2c8e2-2dc0-42e8-9e72-569048c002d7" },
-            "b9678b92-0bf8-4b54-9510-aa70071eb64c": {"_ownerId":"1839c2b8-2aee-4f09-b28b-fe893ccfc806","title":"Веско Маринов и оркестър 2025","genre":"страда","artist":"Веселин Маринов","date":"2025-11-24","descriptions":"23и 24.ноември 2025, НДК , зала 1","price":"90","imageUrl":"https://imgrabo.com/pics/businesses/febb94a59b7fed741dcaa52bdc3e4108.jpeg","city":"Sofia","venue":"NDK","category":"events","uploadedBy":"Bozhidar Zlatev","_createdOn":1743579640400,"_id":"b9678b92-0bf8-4b54-9510-aa70071eb64c"},
-            "3da6638a-8ba7-4d3e-9056-25d9cf3699c8": {"_ownerId":"1839c2b8-2aee-4f09-b28b-fe893ccfc806","title":"Limp Bizkit Leeds 2025","genre":"Metal","artist":"Limp Bizkit","date":"2025-08-24","descriptions":"Leeds Festival 2025","price":"250","imageUrl":"https://s1.ticketm.net/dam/a/64c/eb497eb3-ff71-4ed5-a798-a14d1b16764c_RETINA_PORTRAIT_3_2.jpg","city":"Leeds","venue":"Bramham Park","category":"events","uploadedBy":"Bozhidar Zlatev","_createdOn":1743579866190,"_id":"3da6638a-8ba7-4d3e-9056-25d9cf3699c8"},
-            "179c7715-9fe8-4520-8b75-5790d8adad3c": {"_ownerId":"60f0cf0b-34b0-4abd-9769-8c42f830dffc","subCategory":"","title":"Тениска Скандау","genre":"рап","artist":"Скандау","date":"2025-03-01","descriptions":"Бяла тениска Скандау","price":"25","color":"white","imageUrl":"https://www.skandau.com/wp-content/uploads/2021/05/Screenshot-2021-05-10-at-20.37.29-290x370.png","category":"merch","uploadedBy":"Admin Adminov","_createdOn":1742847270686,"_id":"179c7715-9fe8-4520-8b75-5790d8adad3c"},
-            "c3f0800c-a349-4eec-a8a0-cc8a1d90513c": {"_ownerId":"35c62d76-8152-4626-8712-eeb96381bea8","subCategory":"","title":"50 Cent Chain","genre":"rap","artist":"50 Cent","date":"2025-02-26","descriptions":"50 Cent chain  ","price":"110","color":"gold","imageUrl":"https://i.ebayimg.com/images/g/1BwAAOSw45tllHIm/s-l1200.jpg","category":"merch","uploadedBy":"Pesho Minkov","_createdOn":1742847396603,"_id":"c3f0800c-a349-4eec-a8a0-cc8a1d90513c"},
-            "afdcb5ed-8704-4397-bff3-d9161f605775": {"_ownerId":"1839c2b8-2aee-4f09-b28b-fe893ccfc806","subCategory":"Drinkware","title":"Snoop Dogg Mug","genre":"rap","artist":"Snoop Dogg","date":"2024-08-08","descriptions":"Fo shizzle","price":"25","color":"mint","imageUrl":"data:image/jpeg;base64,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","manufacturer":"Chashko BG","category":"merch","uploadedBy":"Bozhidar Zlatev","_createdOn":1743577978407,"_id":"afdcb5ed-8704-4397-bff3-d9161f605775"},
-            "akiob5ed-8704-4397-bff3-d9161f605775": {"_ownerId":"1839c2b8-2aee-4f09-b28b-fe893ccfc806","subCategory":"Drinkware","title":"Justin Bieber Water Bottle","genre":"pop","artist":"Justin Bieber","date":"2024-07-07","descriptions":"Yummy","price":"15","color":"white","imageUrl":"https://thebanyantee.com/cdn/shop/products/Justin-Sipper-yummy.jpg?v=1689255101","manufacturer":"Chashko BG","category":"merch","uploadedBy":"Bozhidar Zlatev","_createdOn":1743577978407,"_id":"akiob5ed-8704-4397-bff3-d9161f605775"},
-            "88638ed5-bf75-4a5f-93e2-38bc08f1eb62": {"_ownerId":"1839c2b8-2aee-4f09-b28b-fe893ccfc806","subCategory":"Accessories","title":"Nirvana Keychain","genre":"rock","artist":"Nirvana","date":"2024-09-05","descriptions":"Nirvana genuine keychain ","price":"17","color":"black","imageUrl":"https://cdn.europosters.eu/image/750/keyring/nirvana-smiley-logo-i83889.jpg","manufacturer":"Kuku Ruku OOD","category":"merch","uploadedBy":"Bozhidar Zlatev","_createdOn":1743578101143,"_id":"88638ed5-bf75-4a5f-93e2-38bc08f1eb62"},
-            "b74c5caa-564e-4926-8a32-96f4e37d2eb6": {"subCategory":"Apparel","title":"Тениска Мустака на България","genre":"Chalga","artist":"Milko Kalaidzhiev","date":"2025-03-01","descriptions":"Я елате пиУенца при батко","price":"50","color":"black","imageUrl":"https://clubz.bg/media/053/milko-kalaidziev-kmet-btv.l.webp","manufacturer":"Adivnas","category":"merch","_id":"b74c5caa-564e-4926-8a32-96f4e37d2eb6","_createdOn":1743578259340,"_ownerId":"1839c2b8-2aee-4f09-b28b-fe893ccfc806","_updatedOn":1743578275394},
-            "114f4bd5-cd99-49ef-bf2f-2b51526b61ec": {"_ownerId":"1839c2b8-2aee-4f09-b28b-fe893ccfc806","subCategory":"Apparel","title":"Eminem Sweatsgirt","genre":"rap","artist":"Eminem","date":"2025-04-01","descriptions":"will the real slim shade please stand up","price":"40","color":"black","imageUrl":"https://www.mpcteehouse.com/wp-content/uploads/2021/02/Eminem-The-Slim-Shady-Please-Stand-Up-80s-Hoodie.jpeg","manufacturer":"Nike","category":"merch","uploadedBy":"Bozhidar Zlatev","_createdOn":1743578436973,"_id":"114f4bd5-cd99-49ef-bf2f-2b51526b61ec"},
-            "10f93ede-51e9-46d2-9031-f54fec07bc1b": {"_ownerId":"1839c2b8-2aee-4f09-b28b-fe893ccfc806","subCategory":"Collectibles","title":"The Weeknd broken nose band","genre":"rap","artist":"The Weeknd","date":"2025-01-01","descriptions":"Nose band for the real Weeknd fans","price":"35","color":"white","imageUrl":"https://i.ytimg.com/vi/6Nm9RZqBaBM/maxresdefault.jpg","manufacturer":"Dr. E!","category":"merch","uploadedBy":"Bozhidar Zlatev","_createdOn":1743578618718,"_id":"10f93ede-51e9-46d2-9031-f54fec07bc1b"},
-            "bfcb9716-e15c-4ead-a230-4ad2f85d20ad": {"_ownerId":"1839c2b8-2aee-4f09-b28b-fe893ccfc806","subCategory":"Apparel","title":"Michael Jackson T-shirt","genre":"pop","artist":"Michael Jackson","date":"2024-07-25","descriptions":"he-heeee","price":"40","color":"white","imageUrl":"https://cdn.shopify.com/s/files/1/0090/2447/1140/files/437372F_large.jpg?v=1699659034","manufacturer":"New Yorker","category":"merch","uploadedBy":"Bozhidar Zlatev","_createdOn":1743578746385,"_id":"bfcb9716-e15c-4ead-a230-4ad2f85d20ad"},
-            "7c7617d3-e0ab-41c7-b342-d85d3a4e8bea": {"_ownerId":"1839c2b8-2aee-4f09-b28b-fe893ccfc806","subCategory":"Apparel","title":"Molec Hat","genre":"pop","artist":"Molec","date":"2025-01-15","descriptions":"Molec hat","price":"25","color":"Grey","imageUrl":"https://www.molec-official.com/cdn/shop/files/HAT_3_0ad1dbe0-f37e-4869-91c5-e163aa2a657b.jpg?v=1723302790&width=2000","manufacturer":"Molec LTC","category":"merch","uploadedBy":"Bozhidar Zlatev","_createdOn":1743578955860,"_id":"7c7617d3-e0ab-41c7-b342-d85d3a4e8bea"},
-            "daee554e-48d0-45f7-8feb-9706cf1fd322": {"_ownerId":"1839c2b8-2aee-4f09-b28b-fe893ccfc806","subCategory":"Accessories","title":"WAP Umbrella","genre":"rap","artist":"Cardi B","date":"2024-11-14","descriptions":"Cardi B WAP umbrella","price":"39","color":"black","imageUrl":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJdB8CZe-LCOLec7w_QXS8TIArWZM2Hh9AyA&s","manufacturer":"Potrebnosti Za Vseki OOD","category":"merch","uploadedBy":"Bozhidar Zlatev","_createdOn":1743579104996,"_id":"daee554e-48d0-45f7-8feb-9706cf1fd322"},
-            "01c0e197-35cc-4763-a709-885783df8343": {"_ownerId":"1839c2b8-2aee-4f09-b28b-fe893ccfc806","subCategory":"Apparel","title":"Godsmack Neckless","genre":"metal","artist":"Godsmack ","date":"2024-06-19","descriptions":"Don't stand alone ","price":"53","color":"black","imageUrl":"https://i.etsystatic.com/10196895/r/il/ac83aa/6306920616/il_570xN.6306920616_8qrl.jpg","manufacturer":"Lanec BG","category":"merch","uploadedBy":"Bozhidar Zlatev","_createdOn":1743579204974,"_id":"01c0e197-35cc-4763-a709-885783df8343"},
-            "8ab784f4-8fea-424f-9de7-6139d4427b8c": {"_ownerId":"1839c2b8-2aee-4f09-b28b-fe893ccfc806","subCategory":"Collectibles","title":"Книга Лили Иванова","genre":"естрада","artist":"Lili Ivanova","date":"2024-06-04","descriptions":"Лил, автор Георги Тошев","price":"30","color":"none","imageUrl":"https://www.ciela.com/media/catalog/product/cache/9a7ceae8a5abbd0253425b80f9ef99a5/l/i/lili-ciela.jpg","manufacturer":"Ciela ","category":"merch","uploadedBy":"Bozhidar Zlatev","_createdOn":1743579393209,"_id":"8ab784f4-8fea-424f-9de7-6139d4427b8c"}
+            "b9678b92-0bf8-4b54-9510-aa70071eb64c": { "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806", "title": "Веско Маринов и оркестър 2025", "genre": "страда", "artist": "Веселин Маринов", "date": "2025-11-24", "descriptions": "23и 24.ноември 2025, НДК , зала 1", "price": "90", "imageUrl": "https://imgrabo.com/pics/businesses/febb94a59b7fed741dcaa52bdc3e4108.jpeg", "city": "Sofia", "venue": "NDK", "category": "events", "uploadedBy": "Bozhidar Zlatev", "_createdOn": 1743579640400, "_id": "b9678b92-0bf8-4b54-9510-aa70071eb64c" },
+            "3da6638a-8ba7-4d3e-9056-25d9cf3699c8": { "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806", "title": "Limp Bizkit Leeds 2025", "genre": "Metal", "artist": "Limp Bizkit", "date": "2025-08-24", "descriptions": "Leeds Festival 2025", "price": "250", "imageUrl": "https://s1.ticketm.net/dam/a/64c/eb497eb3-ff71-4ed5-a798-a14d1b16764c_RETINA_PORTRAIT_3_2.jpg", "city": "Leeds", "venue": "Bramham Park", "category": "events", "uploadedBy": "Bozhidar Zlatev", "_createdOn": 1743579866190, "_id": "3da6638a-8ba7-4d3e-9056-25d9cf3699c8" },
+            "179c7715-9fe8-4520-8b75-5790d8adad3c": { "_ownerId": "60f0cf0b-34b0-4abd-9769-8c42f830dffc", "subCategory": "", "title": "Тениска Скандау", "genre": "рап", "artist": "Скандау", "date": "2025-03-01", "descriptions": "Бяла тениска Скандау", "price": "25", "color": "white", "imageUrl": "https://www.skandau.com/wp-content/uploads/2021/05/Screenshot-2021-05-10-at-20.37.29-290x370.png", "category": "merch", "uploadedBy": "Admin Adminov", "_createdOn": 1742847270686, "_id": "179c7715-9fe8-4520-8b75-5790d8adad3c" },
+            "c3f0800c-a349-4eec-a8a0-cc8a1d90513c": { "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8", "subCategory": "", "title": "50 Cent Chain", "genre": "rap", "artist": "50 Cent", "date": "2025-02-26", "descriptions": "50 Cent chain  ", "price": "110", "color": "gold", "imageUrl": "https://i.ebayimg.com/images/g/1BwAAOSw45tllHIm/s-l1200.jpg", "category": "merch", "uploadedBy": "Pesho Minkov", "_createdOn": 1742847396603, "_id": "c3f0800c-a349-4eec-a8a0-cc8a1d90513c" },
+            "afdcb5ed-8704-4397-bff3-d9161f605775": { "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806", "subCategory": "Drinkware", "title": "Snoop Dogg Mug", "genre": "rap", "artist": "Snoop Dogg", "date": "2024-08-08", "descriptions": "Fo shizzle", "price": "25", "color": "mint", "imageUrl": "data:image/jpeg;base64,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", "manufacturer": "Chashko BG", "category": "merch", "uploadedBy": "Bozhidar Zlatev", "_createdOn": 1743577978407, "_id": "afdcb5ed-8704-4397-bff3-d9161f605775" },
+            "akiob5ed-8704-4397-bff3-d9161f605775": { "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806", "subCategory": "Drinkware", "title": "Justin Bieber Water Bottle", "genre": "pop", "artist": "Justin Bieber", "date": "2024-07-07", "descriptions": "Yummy", "price": "15", "color": "white", "imageUrl": "https://thebanyantee.com/cdn/shop/products/Justin-Sipper-yummy.jpg?v=1689255101", "manufacturer": "Chashko BG", "category": "merch", "uploadedBy": "Bozhidar Zlatev", "_createdOn": 1743577978407, "_id": "akiob5ed-8704-4397-bff3-d9161f605775" },
+            "88638ed5-bf75-4a5f-93e2-38bc08f1eb62": { "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806", "subCategory": "Accessories", "title": "Nirvana Keychain", "genre": "rock", "artist": "Nirvana", "date": "2024-09-05", "descriptions": "Nirvana genuine keychain ", "price": "17", "color": "black", "imageUrl": "https://cdn.europosters.eu/image/750/keyring/nirvana-smiley-logo-i83889.jpg", "manufacturer": "Kuku Ruku OOD", "category": "merch", "uploadedBy": "Bozhidar Zlatev", "_createdOn": 1743578101143, "_id": "88638ed5-bf75-4a5f-93e2-38bc08f1eb62" },
+            "b74c5caa-564e-4926-8a32-96f4e37d2eb6": { "subCategory": "Apparel", "title": "Тениска Мустака на България", "genre": "Chalga", "artist": "Milko Kalaidzhiev", "date": "2025-03-01", "descriptions": "Я елате пиУенца при батко", "price": "50", "color": "black", "imageUrl": "https://clubz.bg/media/053/milko-kalaidziev-kmet-btv.l.webp", "manufacturer": "Adivnas", "category": "merch", "_id": "b74c5caa-564e-4926-8a32-96f4e37d2eb6", "_createdOn": 1743578259340, "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806", "_updatedOn": 1743578275394 },
+            "114f4bd5-cd99-49ef-bf2f-2b51526b61ec": { "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806", "subCategory": "Apparel", "title": "Eminem Sweatsgirt", "genre": "rap", "artist": "Eminem", "date": "2025-04-01", "descriptions": "will the real slim shade please stand up", "price": "40", "color": "black", "imageUrl": "https://www.mpcteehouse.com/wp-content/uploads/2021/02/Eminem-The-Slim-Shady-Please-Stand-Up-80s-Hoodie.jpeg", "manufacturer": "Nike", "category": "merch", "uploadedBy": "Bozhidar Zlatev", "_createdOn": 1743578436973, "_id": "114f4bd5-cd99-49ef-bf2f-2b51526b61ec" },
+            "10f93ede-51e9-46d2-9031-f54fec07bc1b": { "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806", "subCategory": "Collectibles", "title": "The Weeknd broken nose band", "genre": "rap", "artist": "The Weeknd", "date": "2025-01-01", "descriptions": "Nose band for the real Weeknd fans", "price": "35", "color": "white", "imageUrl": "https://i.ytimg.com/vi/6Nm9RZqBaBM/maxresdefault.jpg", "manufacturer": "Dr. E!", "category": "merch", "uploadedBy": "Bozhidar Zlatev", "_createdOn": 1743578618718, "_id": "10f93ede-51e9-46d2-9031-f54fec07bc1b" },
+            "bfcb9716-e15c-4ead-a230-4ad2f85d20ad": { "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806", "subCategory": "Apparel", "title": "Michael Jackson T-shirt", "genre": "pop", "artist": "Michael Jackson", "date": "2024-07-25", "descriptions": "he-heeee", "price": "40", "color": "white", "imageUrl": "https://cdn.shopify.com/s/files/1/0090/2447/1140/files/437372F_large.jpg?v=1699659034", "manufacturer": "New Yorker", "category": "merch", "uploadedBy": "Bozhidar Zlatev", "_createdOn": 1743578746385, "_id": "bfcb9716-e15c-4ead-a230-4ad2f85d20ad" },
+            "7c7617d3-e0ab-41c7-b342-d85d3a4e8bea": { "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806", "subCategory": "Apparel", "title": "Molec Hat", "genre": "pop", "artist": "Molec", "date": "2025-01-15", "descriptions": "Molec hat", "price": "25", "color": "Grey", "imageUrl": "https://www.molec-official.com/cdn/shop/files/HAT_3_0ad1dbe0-f37e-4869-91c5-e163aa2a657b.jpg?v=1723302790&width=2000", "manufacturer": "Molec LTC", "category": "merch", "uploadedBy": "Bozhidar Zlatev", "_createdOn": 1743578955860, "_id": "7c7617d3-e0ab-41c7-b342-d85d3a4e8bea" },
+            "daee554e-48d0-45f7-8feb-9706cf1fd322": { "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806", "subCategory": "Accessories", "title": "WAP Umbrella", "genre": "rap", "artist": "Cardi B", "date": "2024-11-14", "descriptions": "Cardi B WAP umbrella", "price": "39", "color": "black", "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJdB8CZe-LCOLec7w_QXS8TIArWZM2Hh9AyA&s", "manufacturer": "Potrebnosti Za Vseki OOD", "category": "merch", "uploadedBy": "Bozhidar Zlatev", "_createdOn": 1743579104996, "_id": "daee554e-48d0-45f7-8feb-9706cf1fd322" },
+            "01c0e197-35cc-4763-a709-885783df8343": { "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806", "subCategory": "Apparel", "title": "Godsmack Neckless", "genre": "metal", "artist": "Godsmack ", "date": "2024-06-19", "descriptions": "Don't stand alone ", "price": "53", "color": "black", "imageUrl": "https://i.etsystatic.com/10196895/r/il/ac83aa/6306920616/il_570xN.6306920616_8qrl.jpg", "manufacturer": "Lanec BG", "category": "merch", "uploadedBy": "Bozhidar Zlatev", "_createdOn": 1743579204974, "_id": "01c0e197-35cc-4763-a709-885783df8343" },
+            "8ab784f4-8fea-424f-9de7-6139d4427b8c": { "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806", "subCategory": "Collectibles", "title": "Книга Лили Иванова", "genre": "естрада", "artist": "Lili Ivanova", "date": "2024-06-04", "descriptions": "Лил, автор Георги Тошев", "price": "30", "color": "none", "imageUrl": "https://www.ciela.com/media/catalog/product/cache/9a7ceae8a5abbd0253425b80f9ef99a5/l/i/lili-ciela.jpg", "manufacturer": "Ciela ", "category": "merch", "uploadedBy": "Bozhidar Zlatev", "_createdOn": 1743579393209, "_id": "8ab784f4-8fea-424f-9de7-6139d4427b8c" }
 
-},
-    reviews: {
-    "ff8c5265-fa87-4abf-8b83-e0b24ef8d13b": {
-        "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806",
-        "review": "Can''t wait",
-        "rating": "5",
-        "itemId": "80170509-75cd-451d-9e24-9c565728301a",
-        "user": "Bozhidar Zlatev",
-        "_createdOn": 1742846421696,
-        "_id": "ff8c5265-fa87-4abf-8b83-e0b24ef8d13b"
-    },
-    "a230ec3e-6a90-4cb0-9d2e-fbb09dcffa83": {
-        "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
-        "review": "Къртачка!!",
-        "rating": "5",
-        "itemId": "80170509-75cd-451d-9e24-9c565728301a",
-        "user": "Pesho Minkov",
-        "_createdOn": 1742847563884,
-        "_id": "a230ec3e-6a90-4cb0-9d2e-fbb09dcffa83"
-    },
-    "66892ccc-323b-4abb-aaf3-a6dc3ac6f8fe": {
-        "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc303",
-        "review": "Rubish",
-        "rating": "3",
-        "itemId": "c3f0800c-a349-4eec-a8a0-cc8a1d90513c",
-        "user": "Boyko Borisov",
-        "_createdOn": 1743607729577,
-        "_id": "66892ccc-323b-4abb-aaf3-a6dc3ac6f8fe"
-    },
-    "01889573-a87d-45bb-b964-27723b06f88e": {
-        "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16d0d",
-        "review": "Great album! One of my favorites!",
-        "rating": "4",
-        "itemId": "bb4ab202-a637-4b47-9a5a-066e78c2fb7c",
-        "user": "Maria Atanasova",
-        "_createdOn": 1743614891065,
-        "_id": "01889573-a87d-45bb-b964-27723b06f88e"
-    },
-   "d3e7fa7a-d02e-40d5-8ba5-4f7eb7fe37cc": {
-        "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16111",
-        "review": "Слушам албума всеки ден!",
-        "rating": "5",
-        "itemId": "1cfc3490-14f0-4e37-b540-68fe267c4197",
-        "user": "Chudomir Vuproskov",
-        "_createdOn": 1743614942527,
-        "_id": "d3e7fa7a-d02e-40d5-8ba5-4f7eb7fe37cc"
-    },
-    "33754f43-7943-4a54-9321-8c2932792d60": {
-        "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16999",
-        "review": "Great guitar for beginners",
-        "rating": "4",
-        "itemId": "868091a4-62ff-411e-bbfb-513f167c7382",
-        "user": "Ernesto Dominges",
-        "_createdOn": 1743614981941,
-        "_id": "33754f43-7943-4a54-9321-8c2932792d60"
-    },
-    "5e2ea9b3-e55c-478b-acbe-5506510f1cfb": {
-        "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16111",
-        "review": "Великан, нямам търпение!",
-        "rating": "4",
-        "itemId": "80170509-75cd-451d-9e24-9c565728301a",
-        "user": "Chudomir Vuproskov",
-        "_createdOn": 1743615012110,
-        "_id": "5e2ea9b3-e55c-478b-acbe-5506510f1cfb"
-    },
-    "f7520bae-7848-47e6-95e3-13f16easad12b": {
-        "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc3q8",
-        "review": "Взех я на приятеля ми, остава да му взема и мустак!",
-        "rating": "5",
-        "itemId": "b74c5caa-564e-4926-8a32-96f4e37d2eb6",
-        "user": "Krisi Stoqnova",
-        "_createdOn": 1743615088311,
-        "_id": "f7520bae-7848-47e6-95e3-13f16easad12b"
-    },
-    "a29e7223-ae65-4d03-a302-f59051911b00": {
-        "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16aaa",
-        "review": "Късам риза!",
-        "rating": "4",
-        "itemId": "b9678b92-0bf8-4b54-9510-aa70071eb64c",
-        "user": "stella Artois ",
-        "_createdOn": 1743615042378,
-        "_id": "a29e7223-ae65-4d03-a302-f59051911b00"
-    },
-    "7db5a052-319a-4f49-a3e2-5bec207cf561": {
-        "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16100",
-        "review": "Smoke weed every day",
-        "rating": "5",
-        "itemId": "afdcb5ed-8704-4397-bff3-d9161f605775",
-        "user": "100 Kila",
-        "_createdOn": 1743615069994,
-        "_id": "7db5a052-319a-4f49-a3e2-5bec207cf561"
-    },
-    "f7520bae-7848-47e6-95e3-13f16ea80e7b": {
-        "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc303",
-        "review": "Чудесна тениска, бях с нея на бала!",
-        "rating": "5",
-        "itemId": "b74c5caa-564e-4926-8a32-96f4e37d2eb6",
-        "user": "Boyko Borisov",
-        "_createdOn": 1743615098311,
-        "_id": "f7520bae-7848-47e6-95e3-13f16ea80e7b"
-    },
-    "d3e7fa7a-d02e-40d5-8ba5-4f7eb7fe312c": {
-        "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16221",
-        "review": "Супер лигав албум... ",
-        "rating": "2",
-        "itemId": "1cfc3490-14f0-4e37-b540-68fe267c4197",
-        "user": "Metal Fen",
-        "_createdOn": 1743614942427,
-        "_id": "d3e7fa7a-d02e-40d5-8ba5-4f7eb7fe312c"
-    },
-    "00690824-cf13-4f9b-b913-24d86cd8d372": {
-        "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16she",
-        "review": "Good fit and materials",
-        "rating": "4",
-        "itemId": "7c7617d3-e0ab-41c7-b342-d85d3a4e8bea",
-        "user": "Charlie Sheen",
-        "_createdOn": 1743615127472,
-        "_id": "00690824-cf13-4f9b-b913-24d86cd8d372"
-    },
-    "f7520bae-7848-47e6-95e3-13f16ea8012b": {
-        "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc388",
-        "review": "Не препоръчвам, жените не ме оставят, откакто си я взех!",
-        "rating": "4",
-        "itemId": "b74c5caa-564e-4926-8a32-96f4e37d2eb6",
-        "user": "Toni Montana",
-        "_createdOn": 1743615098311,
-        "_id": "f7520bae-7848-47e6-95e3-13f16ea8012b"
-    },
-},
-    carts: {
-    "e6a4d9d6-fbba-46a6-9ff6-425a372d9d12": {
-        "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806",
-        "items": ["149de21e-a780-43c4-9c09-088181ff0337", "80170509-75cd-451d-9e24-9c565728301a", "c3f0800c-a349-4eec-a8a0-cc8a1d90513c"],
-        "_createdOn": 1742992149028,
-        "_id": "e6a4d9d6-fbba-46a6-9ff6-425a372d9d12"
-    }
-},
-    recipes: {
-    "3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
-        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-        name: "Easy Lasagna",
-        img: "assets/lasagna.jpg",
-        ingredients: [
-            "1 tbsp Ingredient 1",
-            "2 cups Ingredient 2",
-            "500 g  Ingredient 3",
-            "25 g Ingredient 4"
-        ],
-        steps: [
-            "Prepare ingredients",
-            "Mix ingredients",
-            "Cook until done"
-        ],
-        _createdOn: 1613551279012
-    },
-    "8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
-        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-        name: "Grilled Duck Fillet",
-        img: "assets/roast.jpg",
-        ingredients: [
-            "500 g  Ingredient 1",
-            "3 tbsp Ingredient 2",
-            "2 cups Ingredient 3"
-        ],
-        steps: [
-            "Prepare ingredients",
-            "Mix ingredients",
-            "Cook until done"
-        ],
-        _createdOn: 1613551344360
-    },
-    "985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
-        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-        name: "Roast Trout",
-        img: "assets/fish.jpg",
-        ingredients: [
-            "4 cups Ingredient 1",
-            "1 tbsp Ingredient 2",
-            "1 tbsp Ingredient 3",
-            "750 g  Ingredient 4",
-            "25 g Ingredient 5"
-        ],
-        steps: [
-            "Prepare ingredients",
-            "Mix ingredients",
-            "Cook until done"
-        ],
-        _createdOn: 1613551388703
-    }
-},
-    comments: {
-    "0a272c58-b7ea-4e09-a000-7ec988248f66": {
-        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-        content: "Great recipe!",
-        recipeId: "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
-        _createdOn: 1614260681375,
-        _id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
-    }
-},
-    records: {
-    i01: {
-        name: "John1",
-        val: 1,
-        _createdOn: 1613551388703
-    },
-    i02: {
-        name: "John2",
-        val: 1,
-        _createdOn: 1613551388713
-    },
-    i03: {
-        name: "John3",
-        val: 2,
-        _createdOn: 1613551388723
-    },
-    i04: {
-        name: "John4",
-        val: 2,
-        _createdOn: 1613551388733
-    },
-    i05: {
-        name: "John5",
-        val: 2,
-        _createdOn: 1613551388743
-    },
-    i06: {
-        name: "John6",
-        val: 3,
-        _createdOn: 1613551388753
-    },
-    i07: {
-        name: "John7",
-        val: 3,
-        _createdOn: 1613551388763
-    },
-    i08: {
-        name: "John8",
-        val: 2,
-        _createdOn: 1613551388773
-    },
-    i09: {
-        name: "John9",
-        val: 3,
-        _createdOn: 1613551388783
-    },
-    i10: {
-        name: "John10",
-        val: 1,
-        _createdOn: 1613551388793
-    }
-},
-    catches: {
-    "07f260f4-466c-4607-9a33-f7273b24f1b4": {
-        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-        angler: "Paulo Admorim",
-        weight: 636,
-        species: "Atlantic Blue Marlin",
-        location: "Vitoria, Brazil",
-        bait: "trolled pink",
-        captureTime: 80,
-        _createdOn: 1614760714812,
-        _id: "07f260f4-466c-4607-9a33-f7273b24f1b4"
-    },
-    "bdabf5e9-23be-40a1-9f14-9117b6702a9d": {
-        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-        angler: "John Does",
-        weight: 554,
-        species: "Atlantic Blue Marlin",
-        location: "Buenos Aires, Argentina",
-        bait: "trolled pink",
-        captureTime: 120,
-        _createdOn: 1614760782277,
-        _id: "bdabf5e9-23be-40a1-9f14-9117b6702a9d"
-    }
-},
-    furniture: {
-},
-    orders: {
-},
-    movies: {
-    "1240549d-f0e0-497e-ab99-eb8f703713d7": {
-        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-        title: "Black Widow",
-        description: "Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Comes on the screens 2020.",
-        img: "https://miro.medium.com/max/735/1*akkAa2CcbKqHsvqVusF3-w.jpeg",
-        _createdOn: 1614935055353,
-        _id: "1240549d-f0e0-497e-ab99-eb8f703713d7"
-    },
-    "143e5265-333e-4150-80e4-16b61de31aa0": {
-        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-        title: "Wonder Woman 1984",
-        description: "Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient artifact that grants wishes goes missing.",
-        img: "https://pbs.twimg.com/media/ETINgKwWAAAyA4r.jpg",
-        _createdOn: 1614935181470,
-        _id: "143e5265-333e-4150-80e4-16b61de31aa0"
-    },
-    "a9bae6d8-793e-46c4-a9db-deb9e3484909": {
-        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-        title: "Top Gun 2",
-        description: "After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.",
-        img: "https://i.pinimg.com/originals/f2/a4/58/f2a458048757bc6914d559c9e4dc962a.jpg",
-        _createdOn: 1614935268135,
-        _id: "a9bae6d8-793e-46c4-a9db-deb9e3484909"
-    }
-},
-    likes: {
-},
-    ideas: {
-    "833e0e57-71dc-42c0-b387-0ce0caf5225e": {
-        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-        title: "Best Pilates Workout To Do At Home",
-        description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima possimus eveniet ullam aspernatur corporis tempore quia nesciunt nostrum mollitia consequatur. At ducimus amet aliquid magnam nulla sed totam blanditiis ullam atque facilis corrupti quidem nisi iusto saepe, consectetur culpa possimus quos? Repellendus, dicta pariatur! Delectus, placeat debitis error dignissimos nesciunt magni possimus quo nulla, fuga corporis maxime minus nihil doloremque aliquam quia recusandae harum. Molestias dolorum recusandae commodi velit cum sapiente placeat alias rerum illum repudiandae? Suscipit tempore dolore autem, neque debitis quisquam molestias officia hic nesciunt? Obcaecati optio fugit blanditiis, explicabo odio at dicta asperiores distinctio expedita dolor est aperiam earum! Molestias sequi aliquid molestiae, voluptatum doloremque saepe dignissimos quidem quas harum quo. Eum nemo voluptatem hic corrupti officiis eaque et temporibus error totam numquam sequi nostrum assumenda eius voluptatibus quia sed vel, rerum, excepturi maxime? Pariatur, provident hic? Soluta corrupti aspernatur exercitationem vitae accusantium ut ullam dolor quod!",
-        img: "./images/best-pilates-youtube-workouts-2__medium_4x3.jpg",
-        _createdOn: 1615033373504,
-        _id: "833e0e57-71dc-42c0-b387-0ce0caf5225e"
-    },
-    "247efaa7-8a3e-48a7-813f-b5bfdad0f46c": {
-        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-        title: "4 Eady DIY Idea To Try!",
-        description: "Similique rem culpa nemo hic recusandae perspiciatis quidem, quia expedita, sapiente est itaque optio enim placeat voluptates sit, fugit dignissimos tenetur temporibus exercitationem in quis magni sunt vel. Corporis officiis ut sapiente exercitationem consectetur debitis suscipit laborum quo enim iusto, labore, quod quam libero aliquid accusantium! Voluptatum quos porro fugit soluta tempore praesentium ratione dolorum impedit sunt dolores quod labore laudantium beatae architecto perspiciatis natus cupiditate, iure quia aliquid, iusto modi esse!",
-        img: "./images/brightideacropped.jpg",
-        _createdOn: 1615033452480,
-        _id: "247efaa7-8a3e-48a7-813f-b5bfdad0f46c"
-    },
-    "b8608c22-dd57-4b24-948e-b358f536b958": {
-        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-        title: "Dinner Recipe",
-        description: "Consectetur labore et corporis nihil, officiis tempora, hic ex commodi sit aspernatur ad minima? Voluptas nesciunt, blanditiis ex nulla incidunt facere tempora laborum ut aliquid beatae obcaecati quidem reprehenderit consequatur quis iure natus quia totam vel. Amet explicabo quidem repellat unde tempore et totam minima mollitia, adipisci vel autem, enim voluptatem quasi exercitationem dolor cum repudiandae dolores nostrum sit ullam atque dicta, tempora iusto eaque! Rerum debitis voluptate impedit corrupti quibusdam consequatur minima, earum asperiores soluta. A provident reiciendis voluptates et numquam totam eveniet! Dolorum corporis libero dicta laborum illum accusamus ullam?",
-        img: "./images/dinner.jpg",
-        _createdOn: 1615033491967,
-        _id: "b8608c22-dd57-4b24-948e-b358f536b958"
-    }
-},
-    catalog: {
-    "53d4dbf5-7f41-47ba-b485-43eccb91cb95": {
-        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-        make: "Table",
-        model: "Swedish",
-        year: 2015,
-        description: "Medium table",
-        price: 235,
-        img: "./images/table.png",
-        material: "Hardwood",
-        _createdOn: 1615545143015,
-        _id: "53d4dbf5-7f41-47ba-b485-43eccb91cb95"
-    },
-    "f5929b5c-bca4-4026-8e6e-c09e73908f77": {
-        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-        make: "Sofa",
-        model: "ES-549-M",
-        year: 2018,
-        description: "Three-person sofa, blue",
-        price: 1200,
-        img: "./images/sofa.jpg",
-        material: "Frame - steel, plastic; Upholstery - fabric",
-        _createdOn: 1615545572296,
-        _id: "f5929b5c-bca4-4026-8e6e-c09e73908f77"
-    },
-    "c7f51805-242b-45ed-ae3e-80b68605141b": {
-        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-        make: "Chair",
-        model: "Bright Dining Collection",
-        year: 2017,
-        description: "Dining chair",
-        price: 180,
-        img: "./images/chair.jpg",
-        material: "Wood laminate; leather",
-        _createdOn: 1615546332126,
-        _id: "c7f51805-242b-45ed-ae3e-80b68605141b"
-    }
-},
-    teams: {
-    "34a1cab1-81f1-47e5-aec3-ab6c9810efe1": {
-        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-        name: "Storm Troopers",
-        logoUrl: "/assets/atat.png",
-        description: "These ARE the droids we're looking for",
-        _createdOn: 1615737591748,
-        _id: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1"
-    },
-    "dc888b1a-400f-47f3-9619-07607966feb8": {
-        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-        name: "Team Rocket",
-        logoUrl: "/assets/rocket.png",
-        description: "Gotta catch 'em all!",
-        _createdOn: 1615737655083,
-        _id: "dc888b1a-400f-47f3-9619-07607966feb8"
-    },
-    "733fa9a1-26b6-490d-b299-21f120b2f53a": {
-        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-        name: "Minions",
-        logoUrl: "/assets/hydrant.png",
-        description: "Friendly neighbourhood jelly beans, helping evil-doers succeed.",
-        _createdOn: 1615737688036,
-        _id: "733fa9a1-26b6-490d-b299-21f120b2f53a"
-    }
-},
-    members: {
-    "cc9b0a0f-655d-45d7-9857-0a61c6bb2c4d": {
-        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-        teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
-        status: "member",
-        _createdOn: 1616236790262,
-        _updatedOn: 1616236792930
-    },
-    "61a19986-3b86-4347-8ca4-8c074ed87591": {
-        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-        teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-        status: "member",
-        _createdOn: 1616237188183,
-        _updatedOn: 1616237189016
-    },
-    "8a03aa56-7a82-4a6b-9821-91349fbc552f": {
-        _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-        teamId: "733fa9a1-26b6-490d-b299-21f120b2f53a",
-        status: "member",
-        _createdOn: 1616237193355,
-        _updatedOn: 1616237195145
-    },
-    "9be3ac7d-2c6e-4d74-b187-04105ab7e3d6": {
-        _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-        teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-        status: "member",
-        _createdOn: 1616237231299,
-        _updatedOn: 1616237235713
-    },
-    "280b4a1a-d0f3-4639-aa54-6d9158365152": {
-        _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-        teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-        status: "member",
-        _createdOn: 1616237257265,
-        _updatedOn: 1616237278248
-    },
-    "e797fa57-bf0a-4749-8028-72dba715e5f8": {
-        _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-        teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
-        status: "member",
-        _createdOn: 1616237272948,
-        _updatedOn: 1616237293676
-    }
-}
-    };
-var rules$1 = {
-    users: {
-        ".create": false,
-        ".read": [
-            "Owner"
-        ],
-        ".update": false,
-        ".delete": false
-    },
-    members: {
-        ".update": "isOwner(user, get('teams', data.teamId))",
-        ".delete": "isOwner(user, get('teams', data.teamId)) || isOwner(user, data)",
-        "*": {
-            teamId: {
-                ".update": "newData.teamId = data.teamId"
+        },
+        reviews: {
+            "ff8c5265-fa87-4abf-8b83-e0b24ef8d13b": {
+                "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806",
+                "review": "Can''t wait",
+                "rating": "5",
+                "itemId": "80170509-75cd-451d-9e24-9c565728301a",
+                "user": "Bozhidar Zlatev",
+                "_createdOn": 1742816421696,
+                "_id": "ff8c5265-fa87-4abf-8b83-e0b24ef8d13b"
             },
-            status: {
-                ".create": "newData.status = 'pending'"
+            "a230ec3e-6a90-4cb0-9d2e-fbb09dcffa83": {
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "review": "Къртачка!!",
+                "rating": "5",
+                "itemId": "80170509-75cd-451d-9e24-9c565728301a",
+                "user": "Pesho Minkov",
+                "_createdOn": 1742867563334,
+                "_id": "a230ec3e-6a90-4cb0-9d2e-fbb09dcffa83"
+            },
+            "66892ccc-323b-4abb-aaf3-a6dc3ac6f8fe": {
+                "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc303",
+                "review": "Rubish",
+                "rating": "3",
+                "itemId": "c3f0800c-a349-4eec-a8a0-cc8a1d90513c",
+                "user": "Boyko Borisov",
+                "_createdOn": 1741687729577,
+                "_id": "66892ccc-323b-4abb-aaf3-a6dc3ac6f8fe"
+            },
+            "01889573-a87d-45bb-b964-27723b06f88e": {
+                "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16d0d",
+                "review": "Great album! One of my favorites!",
+                "rating": "4",
+                "itemId": "bb4ab202-a637-4b47-9a5a-066e78c2fb7c",
+                "user": "Maria Atanasova",
+                "_createdOn": 1743648491065,
+                "_id": "01889573-a87d-45bb-b964-27723b06f88e"
+            },
+            "d3e7fa7a-d02e-40d5-8ba5-4f7eb7fe37cc": {
+                "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16111",
+                "review": "Слушам албума всеки ден!",
+                "rating": "5",
+                "itemId": "1cfc3490-14f0-4e37-b540-68fe267c4197",
+                "user": "Chudomir Vuproskov",
+                "_createdOn": 1743626942527,
+                "_id": "d3e7fa7a-d02e-40d5-8ba5-4f7eb7fe37cc"
+            },
+            "33754f43-7943-4a54-9321-8c2932792d60": {
+                "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16999",
+                "review": "Great guitar for beginners",
+                "rating": "4",
+                "itemId": "868091a4-62ff-411e-bbfb-513f167c7382",
+                "user": "Ernesto Dominges",
+                "_createdOn": 1743674981941,
+                "_id": "33754f43-7943-4a54-9321-8c2932792d60"
+            },
+            "5e2ea9b3-e55c-478b-acbe-5506510f1cfb": {
+                "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16111",
+                "review": "Великан, нямам търпение!",
+                "rating": "4",
+                "itemId": "80170509-75cd-451d-9e24-9c565728301a",
+                "user": "Chudomir Vuproskov",
+                "_createdOn": 1743612612110,
+                "_id": "5e2ea9b3-e55c-478b-acbe-5506510f1cfb"
+            },
+            "f7520bae-7848-47e6-95e3-13f16easad12b": {
+                "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc3q8",
+                "review": "Взех я на приятеля ми, остава да му взема и мустак!",
+                "rating": "5",
+                "itemId": "b74c5caa-564e-4926-8a32-96f4e37d2eb6",
+                "user": "Krisi Stoqnova",
+                "_createdOn": 1743611088311,
+                "_id": "f7520bae-7848-47e6-95e3-13f16easad12b"
+            },
+            "a29e7223-ae65-4d03-a302-f59051911b00": {
+                "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16aaa",
+                "review": "Късам риза!",
+                "rating": "4",
+                "itemId": "b9678b92-0bf8-4b54-9510-aa70071eb64c",
+                "user": "stella Artois ",
+                "_createdOn": 1743115042378,
+                "_id": "a29e7223-ae65-4d03-a302-f59051911b00"
+            },
+            "7db5a052-319a-4f49-a3e2-5bec207cf561": {
+                "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16100",
+                "review": "Smoke weed every day",
+                "rating": "5",
+                "itemId": "afdcb5ed-8704-4397-bff3-d9161f605775",
+                "user": "100 Kila",
+                "_createdOn": 1743615139994,
+                "_id": "7db5a052-319a-4f49-a3e2-5bec207cf561"
+            },
+            "f7520bae-7848-47e6-95e3-13f16ea80e7b": {
+                "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc303",
+                "review": "Чудесна тениска, бях с нея на бала!",
+                "rating": "5",
+                "itemId": "b74c5caa-564e-4926-8a32-96f4e37d2eb6",
+                "user": "Boyko Borisov",
+                "_createdOn": 1743611098311,
+                "_id": "f7520bae-7848-47e6-95e3-13f16ea80e7b"
+            },
+            "d3e7fa7a-d02e-40d5-8ba5-4f7eb7fe312c": {
+                "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16221",
+                "review": "Супер лигав албум... ",
+                "rating": "2",
+                "itemId": "1cfc3490-14f0-4e37-b540-68fe267c4197",
+                "user": "Metal Fen",
+                "_createdOn": 1741114942427,
+                "_id": "d3e7fa7a-d02e-40d5-8ba5-4f7eb7fe312c"
+            },
+            "00690824-cf13-4f9b-b913-24d86cd8d372": {
+                "_ownerId": "c56d4f06-4016-42f0-ab8e-dbe52cb16she",
+                "review": "Good fit and materials",
+                "rating": "4",
+                "itemId": "7c7617d3-e0ab-41c7-b342-d85d3a4e8bea",
+                "user": "Charlie Sheen",
+                "_createdOn": 1743610427472,
+                "_id": "00690824-cf13-4f9b-b913-24d86cd8d372"
+            },
+            "f7520bae-7848-47e6-95e3-13f16ea8012b": {
+                "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc388",
+                "review": "Не препоръчвам, жените не ме оставят, откакто си я взех!",
+                "rating": "4",
+                "itemId": "b74c5caa-564e-4926-8a32-96f4e37d2eb6",
+                "user": "Toni Montana",
+                "_createdOn": 1743612008311,
+                "_id": "f7520bae-7848-47e6-95e3-13f16ea8012b"
+            },
+        },
+        carts: {
+            "e6a4d9d6-fbba-46a6-9ff6-425a372d9d12": {
+                "_ownerId": "1839c2b8-2aee-4f09-b28b-fe893ccfc806",
+                "items": ["149de21e-a780-43c4-9c09-088181ff0337", "80170509-75cd-451d-9e24-9c565728301a", "c3f0800c-a349-4eec-a8a0-cc8a1d90513c"],
+                "_createdOn": 1742992149028,
+                "_id": "e6a4d9d6-fbba-46a6-9ff6-425a372d9d12"
+            }
+        },
+        recipes: {
+            "3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                name: "Easy Lasagna",
+                img: "assets/lasagna.jpg",
+                ingredients: [
+                    "1 tbsp Ingredient 1",
+                    "2 cups Ingredient 2",
+                    "500 g  Ingredient 3",
+                    "25 g Ingredient 4"
+                ],
+                steps: [
+                    "Prepare ingredients",
+                    "Mix ingredients",
+                    "Cook until done"
+                ],
+                _createdOn: 1613551279012
+            },
+            "8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                name: "Grilled Duck Fillet",
+                img: "assets/roast.jpg",
+                ingredients: [
+                    "500 g  Ingredient 1",
+                    "3 tbsp Ingredient 2",
+                    "2 cups Ingredient 3"
+                ],
+                steps: [
+                    "Prepare ingredients",
+                    "Mix ingredients",
+                    "Cook until done"
+                ],
+                _createdOn: 1613551344360
+            },
+            "985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                name: "Roast Trout",
+                img: "assets/fish.jpg",
+                ingredients: [
+                    "4 cups Ingredient 1",
+                    "1 tbsp Ingredient 2",
+                    "1 tbsp Ingredient 3",
+                    "750 g  Ingredient 4",
+                    "25 g Ingredient 5"
+                ],
+                steps: [
+                    "Prepare ingredients",
+                    "Mix ingredients",
+                    "Cook until done"
+                ],
+                _createdOn: 1613551388703
+            }
+        },
+        comments: {
+            "0a272c58-b7ea-4e09-a000-7ec988248f66": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                content: "Great recipe!",
+                recipeId: "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
+                _createdOn: 1614260681375,
+                _id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
+            }
+        },
+        records: {
+            i01: {
+                name: "John1",
+                val: 1,
+                _createdOn: 1613551388703
+            },
+            i02: {
+                name: "John2",
+                val: 1,
+                _createdOn: 1613551388713
+            },
+            i03: {
+                name: "John3",
+                val: 2,
+                _createdOn: 1613551388723
+            },
+            i04: {
+                name: "John4",
+                val: 2,
+                _createdOn: 1613551388733
+            },
+            i05: {
+                name: "John5",
+                val: 2,
+                _createdOn: 1613551388743
+            },
+            i06: {
+                name: "John6",
+                val: 3,
+                _createdOn: 1613551388753
+            },
+            i07: {
+                name: "John7",
+                val: 3,
+                _createdOn: 1613551388763
+            },
+            i08: {
+                name: "John8",
+                val: 2,
+                _createdOn: 1613551388773
+            },
+            i09: {
+                name: "John9",
+                val: 3,
+                _createdOn: 1613551388783
+            },
+            i10: {
+                name: "John10",
+                val: 1,
+                _createdOn: 1613551388793
+            }
+        },
+        catches: {
+            "07f260f4-466c-4607-9a33-f7273b24f1b4": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                angler: "Paulo Admorim",
+                weight: 636,
+                species: "Atlantic Blue Marlin",
+                location: "Vitoria, Brazil",
+                bait: "trolled pink",
+                captureTime: 80,
+                _createdOn: 1614760714812,
+                _id: "07f260f4-466c-4607-9a33-f7273b24f1b4"
+            },
+            "bdabf5e9-23be-40a1-9f14-9117b6702a9d": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                angler: "John Does",
+                weight: 554,
+                species: "Atlantic Blue Marlin",
+                location: "Buenos Aires, Argentina",
+                bait: "trolled pink",
+                captureTime: 120,
+                _createdOn: 1614760782277,
+                _id: "bdabf5e9-23be-40a1-9f14-9117b6702a9d"
+            }
+        },
+        furniture: {
+        },
+        orders: {
+        },
+        movies: {
+            "1240549d-f0e0-497e-ab99-eb8f703713d7": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "Black Widow",
+                description: "Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Comes on the screens 2020.",
+                img: "https://miro.medium.com/max/735/1*akkAa2CcbKqHsvqVusF3-w.jpeg",
+                _createdOn: 1614935055353,
+                _id: "1240549d-f0e0-497e-ab99-eb8f703713d7"
+            },
+            "143e5265-333e-4150-80e4-16b61de31aa0": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "Wonder Woman 1984",
+                description: "Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient artifact that grants wishes goes missing.",
+                img: "https://pbs.twimg.com/media/ETINgKwWAAAyA4r.jpg",
+                _createdOn: 1614935181470,
+                _id: "143e5265-333e-4150-80e4-16b61de31aa0"
+            },
+            "a9bae6d8-793e-46c4-a9db-deb9e3484909": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                title: "Top Gun 2",
+                description: "After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.",
+                img: "https://i.pinimg.com/originals/f2/a4/58/f2a458048757bc6914d559c9e4dc962a.jpg",
+                _createdOn: 1614935268135,
+                _id: "a9bae6d8-793e-46c4-a9db-deb9e3484909"
+            }
+        },
+        likes: {
+        },
+        ideas: {
+            "833e0e57-71dc-42c0-b387-0ce0caf5225e": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "Best Pilates Workout To Do At Home",
+                description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima possimus eveniet ullam aspernatur corporis tempore quia nesciunt nostrum mollitia consequatur. At ducimus amet aliquid magnam nulla sed totam blanditiis ullam atque facilis corrupti quidem nisi iusto saepe, consectetur culpa possimus quos? Repellendus, dicta pariatur! Delectus, placeat debitis error dignissimos nesciunt magni possimus quo nulla, fuga corporis maxime minus nihil doloremque aliquam quia recusandae harum. Molestias dolorum recusandae commodi velit cum sapiente placeat alias rerum illum repudiandae? Suscipit tempore dolore autem, neque debitis quisquam molestias officia hic nesciunt? Obcaecati optio fugit blanditiis, explicabo odio at dicta asperiores distinctio expedita dolor est aperiam earum! Molestias sequi aliquid molestiae, voluptatum doloremque saepe dignissimos quidem quas harum quo. Eum nemo voluptatem hic corrupti officiis eaque et temporibus error totam numquam sequi nostrum assumenda eius voluptatibus quia sed vel, rerum, excepturi maxime? Pariatur, provident hic? Soluta corrupti aspernatur exercitationem vitae accusantium ut ullam dolor quod!",
+                img: "./images/best-pilates-youtube-workouts-2__medium_4x3.jpg",
+                _createdOn: 1615033373504,
+                _id: "833e0e57-71dc-42c0-b387-0ce0caf5225e"
+            },
+            "247efaa7-8a3e-48a7-813f-b5bfdad0f46c": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                title: "4 Eady DIY Idea To Try!",
+                description: "Similique rem culpa nemo hic recusandae perspiciatis quidem, quia expedita, sapiente est itaque optio enim placeat voluptates sit, fugit dignissimos tenetur temporibus exercitationem in quis magni sunt vel. Corporis officiis ut sapiente exercitationem consectetur debitis suscipit laborum quo enim iusto, labore, quod quam libero aliquid accusantium! Voluptatum quos porro fugit soluta tempore praesentium ratione dolorum impedit sunt dolores quod labore laudantium beatae architecto perspiciatis natus cupiditate, iure quia aliquid, iusto modi esse!",
+                img: "./images/brightideacropped.jpg",
+                _createdOn: 1615033452480,
+                _id: "247efaa7-8a3e-48a7-813f-b5bfdad0f46c"
+            },
+            "b8608c22-dd57-4b24-948e-b358f536b958": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                title: "Dinner Recipe",
+                description: "Consectetur labore et corporis nihil, officiis tempora, hic ex commodi sit aspernatur ad minima? Voluptas nesciunt, blanditiis ex nulla incidunt facere tempora laborum ut aliquid beatae obcaecati quidem reprehenderit consequatur quis iure natus quia totam vel. Amet explicabo quidem repellat unde tempore et totam minima mollitia, adipisci vel autem, enim voluptatem quasi exercitationem dolor cum repudiandae dolores nostrum sit ullam atque dicta, tempora iusto eaque! Rerum debitis voluptate impedit corrupti quibusdam consequatur minima, earum asperiores soluta. A provident reiciendis voluptates et numquam totam eveniet! Dolorum corporis libero dicta laborum illum accusamus ullam?",
+                img: "./images/dinner.jpg",
+                _createdOn: 1615033491967,
+                _id: "b8608c22-dd57-4b24-948e-b358f536b958"
+            }
+        },
+        catalog: {
+            "53d4dbf5-7f41-47ba-b485-43eccb91cb95": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                make: "Table",
+                model: "Swedish",
+                year: 2015,
+                description: "Medium table",
+                price: 235,
+                img: "./images/table.png",
+                material: "Hardwood",
+                _createdOn: 1615545143015,
+                _id: "53d4dbf5-7f41-47ba-b485-43eccb91cb95"
+            },
+            "f5929b5c-bca4-4026-8e6e-c09e73908f77": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                make: "Sofa",
+                model: "ES-549-M",
+                year: 2018,
+                description: "Three-person sofa, blue",
+                price: 1200,
+                img: "./images/sofa.jpg",
+                material: "Frame - steel, plastic; Upholstery - fabric",
+                _createdOn: 1615545572296,
+                _id: "f5929b5c-bca4-4026-8e6e-c09e73908f77"
+            },
+            "c7f51805-242b-45ed-ae3e-80b68605141b": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                make: "Chair",
+                model: "Bright Dining Collection",
+                year: 2017,
+                description: "Dining chair",
+                price: 180,
+                img: "./images/chair.jpg",
+                material: "Wood laminate; leather",
+                _createdOn: 1615546332126,
+                _id: "c7f51805-242b-45ed-ae3e-80b68605141b"
+            }
+        },
+        teams: {
+            "34a1cab1-81f1-47e5-aec3-ab6c9810efe1": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                name: "Storm Troopers",
+                logoUrl: "/assets/atat.png",
+                description: "These ARE the droids we're looking for",
+                _createdOn: 1615737591748,
+                _id: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1"
+            },
+            "dc888b1a-400f-47f3-9619-07607966feb8": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                name: "Team Rocket",
+                logoUrl: "/assets/rocket.png",
+                description: "Gotta catch 'em all!",
+                _createdOn: 1615737655083,
+                _id: "dc888b1a-400f-47f3-9619-07607966feb8"
+            },
+            "733fa9a1-26b6-490d-b299-21f120b2f53a": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                name: "Minions",
+                logoUrl: "/assets/hydrant.png",
+                description: "Friendly neighbourhood jelly beans, helping evil-doers succeed.",
+                _createdOn: 1615737688036,
+                _id: "733fa9a1-26b6-490d-b299-21f120b2f53a"
+            }
+        },
+        members: {
+            "cc9b0a0f-655d-45d7-9857-0a61c6bb2c4d": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
+                status: "member",
+                _createdOn: 1616236790262,
+                _updatedOn: 1616236792930
+            },
+            "61a19986-3b86-4347-8ca4-8c074ed87591": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
+                status: "member",
+                _createdOn: 1616237188183,
+                _updatedOn: 1616237189016
+            },
+            "8a03aa56-7a82-4a6b-9821-91349fbc552f": {
+                _ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
+                teamId: "733fa9a1-26b6-490d-b299-21f120b2f53a",
+                status: "member",
+                _createdOn: 1616237193355,
+                _updatedOn: 1616237195145
+            },
+            "9be3ac7d-2c6e-4d74-b187-04105ab7e3d6": {
+                _ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
+                teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
+                status: "member",
+                _createdOn: 1616237231299,
+                _updatedOn: 1616237235713
+            },
+            "280b4a1a-d0f3-4639-aa54-6d9158365152": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
+                status: "member",
+                _createdOn: 1616237257265,
+                _updatedOn: 1616237278248
+            },
+            "e797fa57-bf0a-4749-8028-72dba715e5f8": {
+                _ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
+                teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
+                status: "member",
+                _createdOn: 1616237272948,
+                _updatedOn: 1616237293676
             }
         }
-    }
-};
-var settings = {
-    identity: identity,
-    protectedData: protectedData,
-    seedData: seedData,
-    rules: rules$1
-};
+    };
+    var rules$1 = {
+        users: {
+            ".create": false,
+            ".read": [
+                "Owner"
+            ],
+            ".update": false,
+            ".delete": false
+        },
+        members: {
+            ".update": "isOwner(user, get('teams', data.teamId))",
+            ".delete": "isOwner(user, get('teams', data.teamId)) || isOwner(user, data)",
+            "*": {
+                teamId: {
+                    ".update": "newData.teamId = data.teamId"
+                },
+                status: {
+                    ".create": "newData.status = 'pending'"
+                }
+            }
+        }
+    };
+    var settings = {
+        identity: identity,
+        protectedData: protectedData,
+        seedData: seedData,
+        rules: rules$1
+    };
 
-const plugins = [
-    storage(settings),
-    auth(settings),
-    util$2(),
-    rules(settings)
-];
+    const plugins = [
+        storage(settings),
+        auth(settings),
+        util$2(),
+        rules(settings)
+    ];
 
-const server = http__default['default'].createServer(requestHandler(plugins, services));
+    const server = http__default['default'].createServer(requestHandler(plugins, services));
 
-const port = 3030;
+    const port = 3030;
 
-server.listen(port);
+    server.listen(port);
 
-console.log(`Server started on port ${port}. You can make requests to http://localhost:${port}/`);
-console.log(`Admin panel located at http://localhost:${port}/admin`);
+    console.log(`Server started on port ${port}. You can make requests to http://localhost:${port}/`);
+    console.log(`Admin panel located at http://localhost:${port}/admin`);
 
-var softuniPracticeServer = server;
+    var softuniPracticeServer = server;
 
-return softuniPracticeServer;
+    return softuniPracticeServer;
 
 })));

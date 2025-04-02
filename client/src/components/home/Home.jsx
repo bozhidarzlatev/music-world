@@ -11,7 +11,7 @@ export default function Home() {
     const { latestItems } = useLatestUploads()
     const { topRatingtItems } = useTopRatingUploads();
     const { topReviews } = useTopReviews();
-
+    
     let topRating = {};
     topRatingtItems.forEach(item => {
         if (!topRating.hasOwnProperty(item.itemId)) {

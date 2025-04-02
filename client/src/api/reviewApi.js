@@ -99,8 +99,8 @@ export const useTopReviews = () => {
         });
 
         request.get(`${urls.reviewsUrl}?${searchParams}`)
-            .then(setTopReviews)
-                
+            .then(setTopReviews);
+        
     }, [])
 
     return {

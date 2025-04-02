@@ -38,8 +38,8 @@ export default function Register() {
       error = "Invalid email format. - jon@doe.com";
     }
 
-    if (name === "password" && value.length < 6) {
-      error = "Password must be at least 6 characters.";
+    if (name === "password" && value.length < 5) {
+      error = "Password must be at least 5 characters.";
     }
 
     if (name === "rePassword" && value !== formData.password) {

@@ -24,8 +24,8 @@ export default function Login() {
     }
 
 
-    if (name === "password" && value.length < 6) {
-      error = "Password must be at least 6 characters.";
+    if (name === "password" && value.length < 5) {
+      error = "Password must be at least 5 characters.";
     }
     setErrors((prevErrors) => ({ ...prevErrors, [name]: error }));
   }
@@ -105,7 +105,6 @@ export default function Login() {
               ? <p className="text-red-500">{errors.email || "Please fill email"}</p>
               : null
             }
-            {/* {&& <p className="text-red-500">Please fill email</p>} */}
 
             <input
               type="password"

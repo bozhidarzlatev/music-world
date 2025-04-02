@@ -42,18 +42,18 @@ export default function CatalogCard({
                         <>
                             <div className="flex items-center mt-2">
                                 {[...Array(5)].map((_, index) => {
-                                    const fullStars = Math.floor(item.rating); // Whole number part of the rating
-                                    const decimal = item.rating - fullStars; // Decimal part
+                                    const fullStars = Math.floor(item.rating); 
+                                    const decimal = item.rating - fullStars; 
 
                                     if (index < fullStars) {
-                                        return <span key={index} className="text-yellow-600 text-2xl">★</span>; // Full star
+                                        return <span key={index} className="text-yellow-500 text-2xl">★</span>; 
                                     } else if (index === fullStars && decimal >= 0.01 && decimal <= 0.49) {
-                                        return <span key={index} className="text-yellow-200 text-2xl">★</span>; // Half star
+                                        return <span key={index} className="text-yellow-200 text-2xl">★</span>; 
                                 
-                                    } else if (index === fullStars && decimal >= 0.51 && decimal <= 0.99) {
-                                        return <span key={index} className="text-yellow-400 text-2xl">★</span>; // Half star
+                                    } else if (index === fullStars && decimal >= 0.50 && decimal <= 0.99) {
+                                        return <span key={index} className="text-yellow-300 text-2xl">★</span>; 
                                     } else {
-                                        return <span key={index} className="text-gray-300 text-2xl">★</span>; // Empty star
+                                        return <span key={index} className="text-gray-300 text-2xl">★</span>; 
                                     }
                                 })}
                                 <span className="text-sm text-gray-600 ml-2">{Number(item.rating).toFixed(1)}</span>

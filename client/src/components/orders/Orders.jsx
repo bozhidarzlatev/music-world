@@ -37,7 +37,7 @@ export default function Orders() {
                 <p className="text-lg font-medium">Order ID: {order._id}</p>
                 <p className="text-sm text-gray-500">Date: {new Date(order._createdOn).toLocaleDateString()}</p>
                 <p className="text-sm text-gray-600">Items: {order.orderData.length}</p>
-                <p className="text-xl font-bold text-green-600">{orderTotal} lv</p> {/* Total Price */}
+                <p className="text-xl font-bold text-green-600">{orderTotal} lv</p> 
               </div>
 
               {expandedOrder === order._id && (

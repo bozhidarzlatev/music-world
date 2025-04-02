@@ -1,17 +1,57 @@
 # music-world
-My SoftUni ReactJS Course final project
+Hello there!
+My name is Bozhidar Zlatev and this is my SoftUni ReactJS Course final project - apr 2025.
+
+ 
 
 # Summary
-Hello there this is React app for music lovers where you can buy instruments, albums and book concert tickets, all in one place.
-Basic features of the app are:
-    - register and login functionalities
-    - guest and user features based on the state
-    - browse all and add new item features
-    - add to cart
-    - make order 
-    - leave reviews and comments
+This is my React app for music lovers where you can buy instruments, albums, merch and book concert tickets, all in one place.
+Main features of the app are:
+    - register and login functionalities  
+    - guest and user features based on the state  
+    - Browse all and add new item features  
+    - Search
+    - Add to cart  
+    - Make order   
+    - Leave reviews
+    - Toast notifications
 
-For front-end development is used React with Vite and for back-end is used SoftUni Practice server - / For now... ;) / 
+For front-end development is used React with Vite and for back-end is used SoftUni Practice server 
+
+# Music World App Features
+    1 - Home menu  - Available for everyone  
+        - Quick links to login and register
+        - Lates item
+        - Top rated item
+        - Top Reviews 
+    2 - Browse All - Available for everyone  
+        - Gives quick links to all categories  
+        - When category is chosen you are redirected to all items of that categoty  
+        - You can go to details view from catalog card  
+    3 - Details View - Available for everyone    
+        - Gives detailed view about the item  
+        - Buttons appears according to state and activity    
+        - Only owner can Edit and Delete items  
+        - Owner can't review item, but cat add it to cart  
+        - Only one review can be placed  
+    4 - Search - Available for everyone  
+        - Search based on title, case insensitive, partial search  
+    5 - Add/Edit items - Available only for logged-in users  
+        - Gives ability to add and edit - only owner of the item can edit it  
+    6 - Cart - Available only for logged-in users  
+        - Tracks count of items in the cart  
+        - Gives ability to place order  
+    7 - Profile - Available only for logged-in users  
+        - Quick links to all your activities  
+    8 - Login, Logout, Register 
+        - Login users can't access Login and Register
+        - Guest users can't access Logout
+
+Enjoy!
+
+# How to run the app
+    - client - from main folder - cd server => npm i => npm run dev
+    - server - from main folder - cd server => node server
 
 # Development steps
     - Add basic summary
@@ -69,3 +109,4 @@ For front-end development is used React with Vite and for back-end is used SoftU
     - Search fix
     - Profile data - user items and user reviews added
     - Final touches
+    - Final commit with app description
