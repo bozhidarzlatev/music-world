@@ -5,6 +5,7 @@ import styles from "./Home.module.css"
 
 import { motion } from "framer-motion";
 import { useTopReviews } from "../../api/reviewApi";
+import ReviewCarousel from "../reviewCarousel/ReviewCarousel";
 
 
 
@@ -12,7 +13,7 @@ export default function Home() {
     const { latestItems } = useLatestUploads()
     const { topRatingtItems } = useTopRatingUploads();
     const { topReviews } = useTopReviews();
-console.log(topRatingtItems);
+console.log(topReviews);
 
     let topRating = {};
     topRatingtItems.forEach(item => {
@@ -87,46 +88,7 @@ console.log(topRatingtItems);
                 <hr />
 
                 <p>Our satisfied clients:</p>
-
-                <div className="overflow-hidden w-full bg-none-100 py-4">
-                    <motion.div
-                        className="flex space-x-6"
-                        initial={{ x: "0%" }}
-                        animate={{ x: "-100%" }}
-                        transition={{ repeat: Infinity, duration: 30, ease: "linear" }} // Slow, smooth scrolling
-                    >
-                        {topReviews.concat(topReviews).map((comment, index) => ( // Duplicate for seamless loop
-                            <div
-                                key={comment._id} // Fix key reference
-                                className="min-w-[300px] p-6 rounded-lg shadow-lg bg-white"
-                            >
-                                <div className="flex items-center space-x-4">
-                                    <div className="flex flex-col">
-                                        <h3 className="text-xl font-semibold text-gray-800">
-                                            {comment.user} {/* Fix reference */}
-                                        </h3>
-                                        <div className="flex space-x-1">
-                                            {[...Array(5)].map((_, i) => (
-                                                <span
-                                                    key={i} // Fix key inside the rating loop
-                                                    className={`text-2xl ${i < comment.rating
-                                                        ? "text-yellow-400"
-                                                        : "text-gray-300"
-                                                        }`}
-                                                >
-                                                    ★
-                                                </span>
-                                            ))}
-                                        </div>
-                                    </div>
-                                </div>
-                                <p className="mt-4 text-gray-600">
-                                    {comment.review}
-                                </p>
-                            </div>
-                        ))}
-                    </motion.div>
-                </div>
+                    <ReviewCarousel topReviews={topReviews}/>
 
             </div>
 
