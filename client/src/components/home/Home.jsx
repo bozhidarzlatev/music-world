@@ -6,17 +6,13 @@ import styles from "./Home.module.css"
 import { motion } from "framer-motion";
 import { useTopReviews } from "../../api/reviewApi";
 
-const comments = [
-    { id: 1, review: "Great service!", rating: 3, user: "Alice" },
-    { id: 2, review: "Amazing experience, will buy again!", rating: 3, user: "Bob" },
-    { id: 3, review: "Fast shipping and excellent support!", rating: 4.4, user: "Charlie" },
-    { id: 4, review: "The quality exceeded my expectations!", rating: 4.7, user: "Diana" },
-];
+
 
 export default function Home() {
     const { latestItems } = useLatestUploads()
     const { topRatingtItems } = useTopRatingUploads();
     const { topReviews } = useTopReviews();
+console.log(topRatingtItems);
 
     let topRating = {};
     topRatingtItems.forEach(item => {

@@ -8,6 +8,7 @@ import { useCanReview, useCreateReview, useReviews } from '../../api/reviewApi';
 import { v4 as uuid } from 'uuid'
 import { useCartData } from '../../api/cartApi';
 import { useCartContext } from '../../contexts/CartContext';
+import { useToastContext } from '../../contexts/ToastContext';
 
 export default function Details() {
     const { categoriId, itemId } = useParams();
@@ -21,7 +22,7 @@ export default function Details() {
     const { cart, updateCart } = useCartData(userId)
     const { hasReview, hasBought } = useCanReview(itemId)
     const { addToCart } = useCartContext()
-
+    const {addToast , showToast} = useToastContext()
     const [optimisticReviews, setOptimisticReviews] = useOptimistic(reviews)
 
     let rating = 0;
@@ -47,8 +48,22 @@ export default function Details() {
             return <Navigate to="/categories" />
         }
 
-        await deleteItem(itemId)
-        navigate(`/categories/${categoriId}`)
+        try {
+            const responce = await deleteItem(itemId)
+            if (!!responce._deletedOn !== true) {
+                addToast({ code: 403, message: responce.message });
+                showToast()
+                throw new Error(responce.message);
+            }
+            addToast({ code: 200, message: `Item was successfully deleted!` });
+            showToast()
+            navigate(`/categories/${categoriId}`)
+
+        } catch (error) {
+            
+            console.log(error);
+        }
+        
     }
 
     const reviewCreateHandler = async (formData) => {

@@ -3,6 +3,7 @@ import { useEditItem, useItem } from "../../api/itemApi";
 import useAuth from "../../hooks/useAuth";
 import Spinner from "../spinner/Spinner";
 import { items } from "../structure/forms";
+import { useToastContext } from "../../contexts/ToastContext";
 
 
 export default function () {
@@ -12,20 +13,29 @@ export default function () {
     const { userId } = useAuth()
     const { item } = useItem(itemId)
     const { edit } = useEditItem()
-
+    const {addToast , showToast} = useToastContext()
+    
     const navigate = useNavigate()
-
+    
     const editItemHanlder = async (formData) => {
         const editData = Object.fromEntries(formData);
         
-        const result = await edit(itemId, {...editData, category: params.categoriId});
-
-        if (result.code === 401) {
-
-            navigate(`/404`)
-        } else {
+        try {
+            const result = await edit(itemId, {...editData, category: params.categoriId});
+result
+            if (!!result._id !== true) {
+                addToast({ code: 403, message: result.message });
+                showToast()
+                throw new Error(result.message);
+            }
+            addToast({ code: 200, message: 'Item was successfully edited!' });
+            showToast()
             navigate(`/categories/${params.categoriId}/${itemId}/details`)
+        } catch (error) {
+            
+            console.log(error);
         }
+
 
     }
 
