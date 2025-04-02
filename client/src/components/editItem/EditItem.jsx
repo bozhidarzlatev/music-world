@@ -66,6 +66,7 @@ result
                                             id={key}
                                             name={key}
                                             placeholder={`Enter ${value.name}`.toLowerCase()}
+                                            required
                                             className="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
                                         >
                                             {value.options?.map(option => (
@@ -84,6 +85,7 @@ result
                                             type={value.type}
                                             id={key}
                                             name={key}
+                                            required
                                             placeholder={`Enter ${value.name}`}
                                             className="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
                                             defaultValue={item[key]}

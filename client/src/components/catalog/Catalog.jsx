@@ -31,6 +31,9 @@ export default function Catalog() {
     return <Spinner />
   }
 
+  console.log(JSON.stringify(items));
+  
+
   return (
     <div className="min-h-screen bg-gray-100 p-8">
       
@@ -50,7 +53,7 @@ export default function Catalog() {
         </>
         :
         <>
-          <h1 className="text-3xl font-bold text-center mb-8">{categoriId} Catalog - {totalItems} items</h1>
+          <h1 className="text-3xl font-bold text-center mb-8">{categoriId.slice(0,1).toUpperCase()}{categoriId.slice(1)} Catalog - {totalItems} items</h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
             {items.map((item) =>
               <CatalogCard categoriId={categoriId} item={item} />

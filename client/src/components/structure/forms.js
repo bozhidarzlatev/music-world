@@ -34,7 +34,7 @@ export const items = {
     },
     events: {
         id: 3,
-        subCategory: { render: false, type: 'option', name: 'Type' },
+        subCategory: { render: false, type: 'option', name: 'Type'  },
         subCategory2: { render: false, type: 'option', name: 'subCat2' },
         title: { render: true, type: 'text', name: 'Title' },
         genre: { render: true, type: 'text', name: 'Genre' },
@@ -51,7 +51,7 @@ export const items = {
     },
     merch: {
         id: 4,
-        subCategory: { render: true, type: 'option', name: 'Type' },
+        subCategory: { render: true, type: 'option', name: 'Type', options: ['Apparel', 'Accessories', 'Drinkware', 'Fitness & Outdoor', 'Collectibles', 'Home Decor' ] },
         subCategory2: { render: false, type: 'option', name: 'subCat2' },
         title: { render: true, type: 'text', name: 'Title' },
         genre: { render: true, type: 'text', name: 'Genre' },

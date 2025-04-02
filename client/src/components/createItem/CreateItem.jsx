@@ -53,6 +53,7 @@ export default function CreateItem() {
                                             id={key}
                                             name={key}
                                             placeholder={`Enter ${value.name}`.toLowerCase()}
+                                            required
                                             className="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
                                         >
                                             <option defaultValue="default" key="default" disabled selected >-Please select-</option>
@@ -69,6 +70,7 @@ export default function CreateItem() {
                                             type={value.type}
                                             id={key}
                                             name={key}
+                                            required
                                             placeholder={`Enter ${value.name}`.toLowerCase()}
                                             className="mt-2 w-full p-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
                                         />
