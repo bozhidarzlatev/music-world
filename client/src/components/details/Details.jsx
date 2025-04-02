@@ -22,7 +22,7 @@ export default function Details() {
     const { cart, updateCart } = useCartData(userId)
     const { hasReview, hasBought } = useCanReview(itemId)
     const { addToCart } = useCartContext()
-    const {addToast , showToast} = useToastContext()
+    const { addToast, showToast } = useToastContext()
     const [optimisticReviews, setOptimisticReviews] = useOptimistic(reviews)
 
     let rating = 0;
@@ -60,10 +60,10 @@ export default function Details() {
             navigate(`/categories/${categoriId}`)
 
         } catch (error) {
-            
+
             console.log(error);
         }
-        
+
     }
 
     const reviewCreateHandler = async (formData) => {
@@ -93,8 +93,8 @@ export default function Details() {
             ...cartDataItems,
             item._id
         ]
-            console.log(addToCart);
-            
+        console.log(addToCart);
+
         updateCart(item._id)
         addToCart(dataToPush.length)
     }
@@ -171,10 +171,26 @@ export default function Details() {
                         <h3 className="font-semibold text-xl">Price:</h3>
                         <p className="text-xl font-bold text-green-500">{Number(item.price).toFixed(2)} lv</p>
                     </div>
-                    {userId && 
-                    <button onClick={onAddToCartHandler} className="w-full bg-green-600 text-white py-3 rounded-md transition-transform transform hover:scale-105 hover:bg-green-700 hover:shadow-lg">
-                        Add to Cart
-                    </button>
+                    {!userId
+                        ?
+                        <>
+                        <Link
+                            to={`/login`}
+                            className="w-full bg-green-600 text-white py-3 rounded-md hover:bg-blue-400 transition-colors flex items-center justify-center"
+                            >
+                            Log in to buy and review items.
+                        </Link>
+                        <Link
+                            to={`/register`}
+                            className="w-full bg-yellow-600 text-white py-3 rounded-md hover:bg-blue-400 transition-colors flex items-center justify-center"
+                            >
+                            Don't have account? -> Register here.
+                        </Link>
+                            </>
+                        :
+                        <button onClick={onAddToCartHandler} className="w-full bg-green-600 text-white py-3 rounded-md transition-transform transform hover:scale-105 hover:bg-green-700 hover:shadow-lg">
+                            Add to Cart
+                        </button>
                     }
 
                     {isOwner && (
@@ -204,6 +220,7 @@ export default function Details() {
                         </button>
                         : null
                     }
+
                 </div>
             </div>
 
